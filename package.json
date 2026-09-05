@@ -18,6 +18,10 @@
   },
   "devDependencies": {
     "@toeic-master/config": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
     "prisma": "^5.18.0",
     "turbo": "^2.1.3",
