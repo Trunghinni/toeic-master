@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties (Design Tokens) ─────────────────── */
+:root {
+  /* Surface colors — Light mode */
+  --surface-primary: 220 20% 98%;
+  --surface-secondary: 220 15% 94%;
+  --surface-tertiary: 220 12% 90%;
+  --surface-inverse: 220 88% 12%;
+
+  /* Brand */
+  --brand-hue: 220;
+  --brand-sat: 78%;
+
+  /* Foreground */
+  --foreground: 220 25% 10%;
+  --foreground-muted: 220 15% 45%;
+  --foreground-subtle: 220 10% 65%;
+
+  /* Border */
+  --border: 220 15% 88%;
+  --border-strong: 220 20% 75%;
+
+  /* Radius */
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Surface colors — Dark mode */
+  --surface-primary: 220 25% 8%;
+  --surface-secondary: 220 22% 12%;
+  --surface-tertiary: 220 20% 17%;
+  --surface-inverse: 220 100% 97%;
+
+  --foreground: 220 15% 94%;
+  --foreground-muted: 220 10% 60%;
+  --foreground-subtle: 220 8% 45%;
+
+  --border: 220 20% 22%;
+  --border-strong: 220 20% 32%;
+}
+
+/* ── Base Styles ────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: hsl(var(--surface-primary));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  min-height: 100vh;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border-strong));
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground-subtle));
+}
+
+/* ── Focus Styles ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid hsl(var(--brand-hue) var(--brand-sat) 42%);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Utility Classes ────────────────────────────────────────── */
+@layer utilities {
+  /* Glassmorphism card */
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .glass-dark {
+    background: rgba(10, 15, 30, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Gradient text */
+  .text-gradient-brand {
+    background: linear-gradient(135deg, hsl(220, 75%, 62%) 0%, hsl(178, 80%, 46%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Shimmer loading skeleton */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--surface-secondary)) 0%,
+      hsl(var(--surface-tertiary)) 50%,
+      hsl(var(--surface-secondary)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+
+  /* Noise texture overlay */
+  .noise {
+    position: relative;
+  }
+  .noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+/* ── Component Defaults ─────────────────────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           font-semibold text-sm text-white
+           bg-gradient-to-r from-brand-600 to-accent-500
+           shadow-glow transition-all duration-200
+           hover:from-brand-500 hover:to-accent-400 hover:shadow-glow hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-none
+           focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           font-semibold text-sm
+           border border-[hsl(var(--border-strong))]
+           bg-[hsl(var(--surface-secondary))]
+           text-[hsl(var(--foreground))]
+           transition-all duration-200
+           hover:bg-[hsl(var(--surface-tertiary))] hover:-translate-y-0.5
+           active:translate-y-0
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply rounded-2xl border border-[hsl(var(--border))]
+           bg-[hsl(var(--surface-secondary))]
+           shadow-sm transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-card-hover hover:-translate-y-1 cursor-pointer;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-xl text-sm
+           border border-[hsl(var(--border))]
+           bg-[hsl(var(--surface-primary))]
+           text-[hsl(var(--foreground))]
+           placeholder:text-[hsl(var(--foreground-subtle))]
+           transition-colors duration-150
+           focus:outline-none focus:border-brand-500
+           focus:ring-2 focus:ring-brand-500/20
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}

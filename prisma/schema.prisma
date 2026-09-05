@@ -1,0 +1,878 @@
+// ─────────────────────────────────────────────────────────────
+// TOEIC Master — Prisma Schema
+// Full data model covering all Phase 0-9 entities
+// ─────────────────────────────────────────────────────────────
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────
+
+enum UserRole {
+  ADMIN
+  CONTENT_EDITOR
+  USER
+}
+
+enum SubscriptionTier {
+  FREE
+  PREMIUM
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELLED
+  EXPIRED
+  PAST_DUE
+}
+
+enum BandLevel {
+  BAND_1 // ~10-250
+  BAND_2 // ~255-400
+  BAND_3 // ~405-600
+  BAND_4 // ~605-750
+  BAND_5 // ~755-900
+  BAND_6 // ~905-990
+}
+
+enum SkillType {
+  LISTENING
+  READING
+  SPEAKING
+  WRITING
+  VOCABULARY
+  GRAMMAR
+}
+
+enum ExerciseType {
+  MULTIPLE_CHOICE
+  FILL_IN_THE_BLANK
+  ERROR_CORRECTION
+  MATCHING
+  ORDERING
+  SHORT_ANSWER
+}
+
+enum StudyMode {
+  FLIP_CARD
+  MULTIPLE_CHOICE
+  FILL_IN_BLANK
+  LISTEN_CHOOSE
+  MATCH_IMAGE
+}
+
+enum TestPartType {
+  PART_1 // Photos
+  PART_2 // Question-Response
+  PART_3 // Conversations
+  PART_4 // Talks
+  PART_5 // Incomplete Sentences
+  PART_6 // Text Completion
+  PART_7 // Reading Comprehension
+}
+
+enum TestMode {
+  PRACTICE  // No timer, single part
+  FULL_TEST // Timed, all parts
+  MINI_TEST // Timed subset
+}
+
+enum AttemptStatus {
+  IN_PROGRESS
+  COMPLETED
+  ABANDONED
+}
+
+enum FriendshipStatus {
+  PENDING
+  ACCEPTED
+  BLOCKED
+}
+
+enum NotificationType {
+  STREAK_REMINDER
+  REVIEW_DUE
+  FRIEND_REQUEST
+  CHALLENGE_INVITE
+  GROUP_ACTIVITY
+  ACHIEVEMENT_UNLOCKED
+  SYSTEM
+}
+
+enum AchievementCategory {
+  STREAK
+  VOCABULARY
+  GRAMMAR
+  LISTENING
+  READING
+  SPEAKING
+  WRITING
+  TEST_SCORE
+  SOCIAL
+  MILESTONE
+}
+
+enum ChallengeStatus {
+  PENDING
+  ACTIVE
+  COMPLETED
+  CANCELLED
+}
+
+enum WordType {
+  NOUN
+  VERB
+  ADJECTIVE
+  ADVERB
+  PREPOSITION
+  CONJUNCTION
+  PRONOUN
+  INTERJECTION
+  PHRASE
+  OTHER
+}
+
+enum RoadmapNodeType {
+  VOCABULARY_TOPIC
+  GRAMMAR_TOPIC
+  LISTENING_SKILL
+  READING_SKILL
+  SPEAKING_SKILL
+  WRITING_SKILL
+  MINI_TEST
+  FULL_TEST
+}
+
+enum RoadmapNodeStatus {
+  LOCKED
+  AVAILABLE
+  IN_PROGRESS
+  COMPLETED
+}
+
+// ─── User & Auth ─────────────────────────────────────────────
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String   @unique
+  password  String?  // null for OAuth-only users
+  role      UserRole @default(USER)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  profile              UserProfile?
+  oauthAccounts        OAuthAccount[]
+  refreshTokens        RefreshToken[]
+  subscription         Subscription?
+  placementTestResults PlacementTestResult[]
+  roadmaps             Roadmap[]
+  cardProgress         UserCardProgress[]
+  exerciseAttempts     ExerciseAttempt[]
+  testAttempts         TestAttempt[]
+  speakingSubmissions  SpeakingSubmission[]
+  writingSubmissions   WritingSubmission[]
+  ownedVocabTopics     VocabularyTopic[]    @relation("TopicOwner")
+  sentFriendRequests   Friendship[]         @relation("FriendshipRequester")
+  receivedFriendReqs   Friendship[]         @relation("FriendshipAddressee")
+  ownedGroups          StudyGroup[]         @relation("GroupOwner")
+  groupMemberships     StudyGroupMember[]
+  challengesSent       Challenge[]          @relation("ChallengeSender")
+  challengesReceived   Challenge[]          @relation("ChallengeReceiver")
+  challengeResults     ChallengeResult[]
+  achievements         UserAchievement[]
+  notifications        Notification[]
+  xpLogs               XpLog[]
+
+  @@index([email])
+  @@index([username])
+  @@map("users")
+}
+
+model UserProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  displayName     String
+  avatarUrl       String?
+  bio             String?
+  targetScore     Int       @default(700)     // TOEIC target: 10-990
+  currentBand     BandLevel @default(BAND_1)
+  targetBand      BandLevel @default(BAND_4)
+  studyDeadline   DateTime?
+  dailyGoalMinutes Int      @default(30)
+  totalXp         Int       @default(0)
+  currentStreak   Int       @default(0)
+  longestStreak   Int       @default(0)
+  lastStudiedAt   DateTime?
+  timezone        String    @default("Asia/Ho_Chi_Minh")
+  language        String    @default("vi")    // UI language
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("user_profiles")
+}
+
+model OAuthAccount {
+  id             String   @id @default(cuid())
+  userId         String
+  provider       String   // "google", "facebook"
+  providerUserId String
+  accessToken    String?
+  refreshToken   String?
+  expiresAt      DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerUserId])
+  @@index([userId])
+  @@map("oauth_accounts")
+}
+
+model RefreshToken {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  isRevoked Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([token])
+  @@map("refresh_tokens")
+}
+
+model Subscription {
+  id                 String             @id @default(cuid())
+  userId             String             @unique
+  tier               SubscriptionTier   @default(FREE)
+  status             SubscriptionStatus @default(ACTIVE)
+  stripeCustomerId   String?
+  stripeSubId        String?
+  vnpayOrderId       String?
+  currentPeriodStart DateTime?
+  currentPeriodEnd   DateTime?
+  aiGradingsUsed     Int                @default(0)
+  aiGradingsLimit    Int                @default(5)  // Free tier: 5/month
+  testAttemptsUsed   Int                @default(0)
+  testAttemptsLimit  Int                @default(3)  // Free tier: 3 full tests/month
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("subscriptions")
+}
+
+// ─── Placement Test & Roadmap ─────────────────────────────────
+
+model PlacementTestResult {
+  id              String    @id @default(cuid())
+  userId          String
+  totalScore      Int       // Raw score out of placement test
+  estimatedBand   BandLevel
+  listeningScore  Int
+  readingScore    Int
+  grammarScore    Int
+  vocabularyScore Int
+  completedAt     DateTime  @default(now())
+  answers         Json      // { questionId: answerId }
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  roadmap Roadmap?
+
+  @@index([userId])
+  @@map("placement_test_results")
+}
+
+model Roadmap {
+  id                    String    @id @default(cuid())
+  userId                String    @unique // One active roadmap per user
+  placementTestResultId String?   @unique
+  targetBand            BandLevel
+  targetScore           Int
+  studyDeadline         DateTime?
+  totalWeeks            Int
+  currentWeek           Int       @default(1)
+  isActive              Boolean   @default(true)
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  user                User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  placementTestResult PlacementTestResult? @relation(fields: [placementTestResultId], references: [id])
+  nodes               RoadmapNode[]
+
+  @@index([userId])
+  @@map("roadmaps")
+}
+
+model RoadmapNode {
+  id           String            @id @default(cuid())
+  roadmapId    String
+  type         RoadmapNodeType
+  status       RoadmapNodeStatus @default(LOCKED)
+  title        String
+  description  String?
+  weekNumber   Int
+  dayNumber    Int               // Day within the week (1-7)
+  orderInDay   Int               @default(1)
+  xpReward     Int               @default(10)
+  // Reference to actual content (optional - one of these is set)
+  vocabTopicId    String?
+  grammarTopicId  String?
+  testId          String?
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+
+  roadmap Roadmap @relation(fields: [roadmapId], references: [id], onDelete: Cascade)
+
+  @@index([roadmapId])
+  @@index([roadmapId, weekNumber])
+  @@map("roadmap_nodes")
+}
+
+// ─── Vocabulary ───────────────────────────────────────────────
+
+model VocabularyTopic {
+  id          String   @id @default(cuid())
+  ownerId     String?  // null = system topic, userId = user-created
+  title       String
+  description String?
+  coverImage  String?
+  isPublic    Boolean  @default(false)
+  isSystem    Boolean  @default(false)
+  targetBand  BandLevel?
+  cardCount   Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  owner User?                  @relation("TopicOwner", fields: [ownerId], references: [id], onDelete: SetNull)
+  cards VocabularyCard[]
+
+  @@index([ownerId])
+  @@index([isSystem])
+  @@map("vocabulary_topics")
+}
+
+model VocabularyCard {
+  id           String   @id @default(cuid())
+  topicId      String
+  word         String
+  phonetic     String?  // IPA: /ˈwɜːrd/
+  wordType     WordType @default(OTHER)
+  definition   String   // Primary Vietnamese definition
+  definitionEn String?  // English definition
+  example      String?  // Example sentence
+  exampleVi    String?  // Vietnamese translation of example
+  imageUrl     String?
+  audioUsUrl   String?  // US pronunciation audio
+  audioUkUrl   String?  // UK pronunciation audio
+  tags         String[] // e.g. ["business", "finance"]
+  orderInTopic Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  topic     VocabularyTopic   @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  progress  UserCardProgress[]
+
+  @@index([topicId])
+  @@map("vocabulary_cards")
+}
+
+model UserCardProgress {
+  id              String    @id @default(cuid())
+  userId          String
+  cardId          String
+  // SM-2 Algorithm fields
+  repetitions     Int       @default(0)  // Number of successful reviews
+  easinessFactor  Float     @default(2.5) // EF: 1.3-2.5
+  interval        Int       @default(1)  // Days until next review
+  nextReviewAt    DateTime  @default(now())
+  lastReviewedAt  DateTime?
+  // Performance tracking
+  totalReviews    Int       @default(0)
+  correctCount    Int       @default(0)
+  incorrectCount  Int       @default(0)
+  isLearned       Boolean   @default(false) // EF >= 2.5 && repetitions >= 3
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card VocabularyCard @relation(fields: [cardId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, cardId])
+  @@index([userId])
+  @@index([userId, nextReviewAt])
+  @@index([nextReviewAt])
+  @@map("user_card_progress")
+}
+
+// ─── Grammar ─────────────────────────────────────────────────
+
+model GrammarTopic {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  rule        String     // Main grammar rule explanation (Markdown)
+  formula     String?    // Sentence structure formula
+  examples    Json       // Array of { sentence, translation, highlight }
+  tips        String?    // Study tips (Markdown)
+  commonErrors Json?     // Array of { wrong, correct, explanation }
+  targetBand  BandLevel?
+  isSystem    Boolean    @default(true)
+  orderIndex  Int        @default(0)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  exercises GrammarCard[]
+
+  @@index([isSystem])
+  @@map("grammar_topics")
+}
+
+model GrammarCard {
+  id           String       @id @default(cuid())
+  grammarTopicId String
+  type         ExerciseType
+  question     String
+  options      Json?        // Array of { id, text } for MC
+  correctAnswer String      // For MC: option id; for fill-in: the answer
+  explanation  String       // Why this answer is correct
+  difficulty   Int          @default(1) // 1-5
+  orderIndex   Int          @default(0)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  grammarTopic GrammarTopic     @relation(fields: [grammarTopicId], references: [id], onDelete: Cascade)
+  attempts     ExerciseAttempt[]
+
+  @@index([grammarTopicId])
+  @@map("grammar_cards")
+}
+
+model ExerciseAttempt {
+  id            String   @id @default(cuid())
+  userId        String
+  grammarCardId String
+  userAnswer    String
+  isCorrect     Boolean
+  timeSpentMs   Int?
+  createdAt     DateTime @default(now())
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  grammarCard GrammarCard @relation(fields: [grammarCardId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, grammarCardId])
+  @@map("exercise_attempts")
+}
+
+// ─── Listening & Reading Content ──────────────────────────────
+
+model ListeningItem {
+  id          String       @id @default(cuid())
+  part        TestPartType // PART_1 to PART_4
+  title       String
+  audioUrl    String
+  transcriptUrl String?    // URL to transcript text file
+  transcript  String?      // Full transcript text
+  duration    Int          // Seconds
+  targetBand  BandLevel?
+  isSystem    Boolean      @default(true)
+  tags        String[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  questions TestQuestion[]
+
+  @@index([part])
+  @@map("listening_items")
+}
+
+model ReadingItem {
+  id         String       @id @default(cuid())
+  part       TestPartType // PART_5, PART_6, PART_7
+  title      String
+  content    String       // Passage or incomplete sentence
+  imageUrl   String?      // For visual passages
+  targetBand BandLevel?
+  isSystem   Boolean      @default(true)
+  tags       String[]
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+
+  questions TestQuestion[]
+
+  @@index([part])
+  @@map("reading_items")
+}
+
+// ─── Speaking ─────────────────────────────────────────────────
+
+model SpeakingTask {
+  id             String   @id @default(cuid())
+  taskNumber     Int      // 1-11 (TOEIC Speaking task types)
+  title          String
+  instructions   String
+  sampleImageUrl String?
+  sampleAudioUrl String?  // Model answer audio
+  sampleScript   String?  // Model answer text
+  targetBand     BandLevel?
+  prepTimeSeconds Int     @default(30)
+  speakTimeSeconds Int    @default(45)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  submissions SpeakingSubmission[]
+
+  @@index([taskNumber])
+  @@map("speaking_tasks")
+}
+
+model SpeakingSubmission {
+  id              String   @id @default(cuid())
+  userId          String
+  speakingTaskId  String
+  audioUrl        String   // S3 URL of recorded audio
+  transcript      String?  // STT output
+  waveformData    Json?    // Amplitude data for waveform visualization
+  // AI Scoring
+  pronunciationScore Float?  // 0-100
+  fluencyScore       Float?  // 0-100
+  grammarScore       Float?  // 0-100
+  vocabularyScore    Float?  // 0-100
+  estimatedScore     Float?  // 0-200 (TOEIC Speaking scale)
+  aiFeedback         String? // Detailed feedback from AI
+  aiRawResponse      Json?   // Full AI response for debugging
+  gradingStatus      String  @default("pending") // pending|processing|done|failed
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  speakingTask SpeakingTask @relation(fields: [speakingTaskId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, speakingTaskId])
+  @@map("speaking_submissions")
+}
+
+// ─── Writing ─────────────────────────────────────────────────
+
+model WritingTask {
+  id            String    @id @default(cuid())
+  taskNumber    Int       // 1-8 (TOEIC Writing task types)
+  title         String
+  instructions  String
+  imageUrl      String?   // For "write sentence based on picture"
+  wordLimit     Int?
+  timeLimit     Int?      // Minutes
+  sampleAnswer  String?
+  rubric        Json      // { criteria: [{ name, description, maxScore }] }
+  targetBand    BandLevel?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  submissions WritingSubmission[]
+
+  @@index([taskNumber])
+  @@map("writing_tasks")
+}
+
+model WritingSubmission {
+  id            String   @id @default(cuid())
+  userId        String
+  writingTaskId String
+  content       String   // User's written response
+  wordCount     Int?
+  // AI Scoring (per rubric criteria)
+  scores        Json?    // { criterion: score, ... }
+  totalScore    Float?   // 0-200 (TOEIC Writing scale)
+  feedback      String?  // Detailed AI feedback
+  corrections   Json?    // Array of { original, corrected, explanation }
+  aiFeedback    String?
+  aiRawResponse Json?
+  gradingStatus String   @default("pending")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  writingTask WritingTask @relation(fields: [writingTaskId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, writingTaskId])
+  @@map("writing_submissions")
+}
+
+// ─── Tests (Full & Practice) ──────────────────────────────────
+
+model Test {
+  id            String       @id @default(cuid())
+  title         String
+  description   String?
+  mode          TestMode     @default(PRACTICE)
+  parts         TestPartType[]
+  bandRange     BandLevel[]  // Which bands this test targets
+  durationMins  Int          @default(120)
+  totalQuestions Int         @default(200)
+  isPublished   Boolean      @default(false)
+  isFree        Boolean      @default(false) // Free tier access
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  questions TestQuestion[]
+  attempts  TestAttempt[]
+
+  @@index([mode])
+  @@index([isPublished])
+  @@map("tests")
+}
+
+model TestQuestion {
+  id              String       @id @default(cuid())
+  testId          String
+  part            TestPartType
+  questionNumber  Int
+  questionText    String?
+  options         Json         // Array of { id, text }
+  correctOptionId String
+  explanation     String?
+  imageUrl        String?
+  // Link to content (one of these)
+  listeningItemId String?
+  readingItemId   String?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  test          Test          @relation(fields: [testId], references: [id], onDelete: Cascade)
+  listeningItem ListeningItem? @relation(fields: [listeningItemId], references: [id])
+  readingItem   ReadingItem?   @relation(fields: [readingItemId], references: [id])
+  answers       TestAnswer[]
+
+  @@index([testId])
+  @@index([testId, part])
+  @@map("test_questions")
+}
+
+model TestAttempt {
+  id                  String        @id @default(cuid())
+  userId              String
+  testId              String
+  status              AttemptStatus @default(IN_PROGRESS)
+  mode                TestMode
+  startedAt           DateTime      @default(now())
+  completedAt         DateTime?
+  timeSpentSeconds    Int?
+  // TOEIC scaled scores (5-495 each)
+  listeningScaled     Int?
+  readingScaled       Int?
+  totalScaled         Int?          // listeningScaled + readingScaled
+  // Breakdown by part
+  partBreakdown       Json?         // { PART_1: { correct, total }, ... }
+  // Raw counts
+  totalCorrect        Int?
+  totalQuestions      Int?
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+
+  user    User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  test    Test         @relation(fields: [testId], references: [id], onDelete: Cascade)
+  answers TestAnswer[]
+
+  @@index([userId])
+  @@index([userId, testId])
+  @@index([userId, completedAt])
+  @@map("test_attempts")
+}
+
+model TestAnswer {
+  id             String   @id @default(cuid())
+  testAttemptId  String
+  testQuestionId String
+  selectedOptionId String?
+  isCorrect      Boolean?
+  timeSpentMs    Int?
+  createdAt      DateTime @default(now())
+
+  testAttempt  TestAttempt  @relation(fields: [testAttemptId], references: [id], onDelete: Cascade)
+  testQuestion TestQuestion @relation(fields: [testQuestionId], references: [id], onDelete: Cascade)
+
+  @@unique([testAttemptId, testQuestionId])
+  @@index([testAttemptId])
+  @@map("test_answers")
+}
+
+// ─── Social Features ─────────────────────────────────────────
+
+model Friendship {
+  id           String           @id @default(cuid())
+  requesterId  String
+  addresseeId  String
+  status       FriendshipStatus @default(PENDING)
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+
+  requester User @relation("FriendshipRequester", fields: [requesterId], references: [id], onDelete: Cascade)
+  addressee User @relation("FriendshipAddressee", fields: [addresseeId], references: [id], onDelete: Cascade)
+
+  @@unique([requesterId, addresseeId])
+  @@index([requesterId])
+  @@index([addresseeId])
+  @@map("friendships")
+}
+
+model StudyGroup {
+  id          String   @id @default(cuid())
+  ownerId     String
+  name        String
+  description String?
+  avatarUrl   String?
+  targetBand  BandLevel?
+  isPublic    Boolean  @default(true)
+  maxMembers  Int      @default(20)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  owner   User               @relation("GroupOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  members StudyGroupMember[]
+
+  @@index([ownerId])
+  @@map("study_groups")
+}
+
+model StudyGroupMember {
+  id        String   @id @default(cuid())
+  groupId   String
+  userId    String
+  isAdmin   Boolean  @default(false)
+  joinedAt  DateTime @default(now())
+
+  group StudyGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  user  User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([groupId, userId])
+  @@index([groupId])
+  @@index([userId])
+  @@map("study_group_members")
+}
+
+model Challenge {
+  id         String          @id @default(cuid())
+  senderId   String
+  receiverId String
+  testId     String?
+  status     ChallengeStatus @default(PENDING)
+  durationMs Int             @default(600000) // 10 minutes
+  startedAt  DateTime?
+  endsAt     DateTime?
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+
+  sender   User              @relation("ChallengeSender", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User              @relation("ChallengeReceiver", fields: [receiverId], references: [id], onDelete: Cascade)
+  results  ChallengeResult[]
+
+  @@index([senderId])
+  @@index([receiverId])
+  @@map("challenges")
+}
+
+model ChallengeResult {
+  id          String   @id @default(cuid())
+  challengeId String
+  userId      String
+  score       Int      @default(0)
+  correctCount Int     @default(0)
+  totalCount   Int     @default(0)
+  completedAt  DateTime?
+  createdAt    DateTime @default(now())
+
+  challenge Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([challengeId, userId])
+  @@index([challengeId])
+  @@map("challenge_results")
+}
+
+// ─── Gamification ─────────────────────────────────────────────
+
+model Achievement {
+  id          String              @id @default(cuid())
+  key         String              @unique // e.g. "streak_7", "words_100"
+  title       String
+  description String
+  iconUrl     String?
+  category    AchievementCategory
+  xpReward    Int                 @default(50)
+  requirement Json                // { type: "streak_days", value: 7 }
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  userAchievements UserAchievement[]
+
+  @@map("achievements")
+}
+
+model UserAchievement {
+  id            String   @id @default(cuid())
+  userId        String
+  achievementId String
+  unlockedAt    DateTime @default(now())
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@index([userId])
+  @@map("user_achievements")
+}
+
+model XpLog {
+  id        String   @id @default(cuid())
+  userId    String
+  xp        Int
+  source    String   // "vocabulary", "grammar", "test", "challenge", etc.
+  sourceId  String?  // ID of the activity that granted XP
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, createdAt])
+  @@map("xp_logs")
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  type      NotificationType
+  title     String
+  body      String
+  data      Json?            // Additional payload
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, isRead])
+  @@index([userId, createdAt])
+  @@map("notifications")
+}
