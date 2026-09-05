@@ -9,6 +9,8 @@ build/
 .next/
 .turbo/
 out/
+*.tsbuildinfo
+.tsbuildinfo
 
 # Environment files
 .env
@@ -36,9 +38,6 @@ Thumbs.db
 
 # Testing
 coverage/
-
-# Prisma
-prisma/migrations/
 
 # Docker
 docker-data/
