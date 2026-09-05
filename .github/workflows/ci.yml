@@ -12,6 +12,7 @@ env:
   REDIS_URL: "redis://localhost:6379"
   JWT_ACCESS_SECRET: "ci_access_secret_placeholder_min_32chars"
   JWT_REFRESH_SECRET: "ci_refresh_secret_placeholder_min_32chars"
+  NEXT_PUBLIC_API_URL: "http://localhost:3001/api"
   NODE_ENV: "test"
 
 jobs:
