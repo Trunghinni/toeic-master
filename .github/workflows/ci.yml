@@ -63,7 +63,7 @@ jobs:
         run: pnpm prisma:generate
 
       - name: Build all apps
-        run: pnpm build -- --verbose
+        run: pnpm turbo run build --verbosity=2
 
   # ── Unit Tests ────────────────────────────────────────────────
   test:
