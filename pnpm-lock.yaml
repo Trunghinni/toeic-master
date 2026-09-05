@@ -202,6 +202,9 @@ importers:
       '@toeic-master/shared-types':
         specifier: workspace:*
         version: link:../../packages/shared-types
+      '@toeic-master/ui':
+        specifier: workspace:^
+        version: link:../../packages/ui
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
