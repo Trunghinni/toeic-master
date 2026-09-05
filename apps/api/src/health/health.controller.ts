@@ -24,12 +24,16 @@ export class HealthController {
     }
 
     // Redis check placeholder — will be wired in Phase 1 with RedisModule
-    // For now, mark as ok if env var is set
-    if (!process.env['REDIS_URL']) {
+    // For now, report status from env var but do NOT fail overall health check
+    if (process.env['REDIS_URL']) {
+      redisStatus = 'ok';
+    } else {
       redisStatus = 'error';
     }
 
-    const allOk = dbStatus === 'ok' && redisStatus === 'ok';
+    // Overall status: only DB is a hard dependency in Phase 0
+    // Redis is informational until Phase 1 wires up RedisModule
+    const allOk = dbStatus === 'ok';
 
     return {
       status: allOk ? 'ok' : 'error',
