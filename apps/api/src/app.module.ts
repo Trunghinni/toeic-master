@@ -18,6 +18,7 @@ import { TestModule } from './modules/test/test.module';
 import { SkillsModule } from './modules/skills/skills.module';
 import { SpeakingWritingModule } from './modules/speaking-writing/speaking-writing.module';
 import { SocialModule } from './modules/social/social.module';
+import { AdminModule } from './modules/admin/admin.module';
 import { appConfig } from './common/config/app.config';
 
 // Resolve .env from the monorepo root regardless of where the process is started
@@ -53,6 +54,7 @@ const ROOT_ENV = path.resolve(__dirname, '..', '..', '..', '..', '.env');
     SkillsModule,
     SpeakingWritingModule,
     SocialModule,
+    AdminModule,
   ],
   providers: [
     // Apply rate limiting globally

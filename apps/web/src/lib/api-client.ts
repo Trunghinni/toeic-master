@@ -422,5 +422,93 @@ export const socialApi = {
     }[]>('/v1/social/leaderboard'),
 };
 
+// ── Admin & Subscription endpoints ────────────────────────────────
+
+export const adminApi = {
+  getStats: () =>
+    apiRequest<{
+      totalUsers: number;
+      activeToday: number;
+      totalTestAttempts: number;
+      premiumUsers: number;
+      totalVocabTopics: number;
+      revenueEstimatedVnd: number;
+    }>('/v1/admin/stats'),
+
+  getUsers: (params?: { page?: number; limit?: number; search?: string }) => {
+    const q = new URLSearchParams();
+    if (params?.page) q.append('page', params.page.toString());
+    if (params?.limit) q.append('limit', params.limit.toString());
+    if (params?.search) q.append('search', params.search);
+    return apiRequest<{
+      users: {
+        id: string;
+        email: string;
+        username: string;
+        role: 'ADMIN' | 'CONTENT_EDITOR' | 'USER';
+        isActive: boolean;
+        displayName: string;
+        avatarUrl?: string;
+        streak: number;
+        totalXp: number;
+        targetScore: number;
+        subscriptionTier: 'FREE' | 'PREMIUM';
+        subscriptionEnd?: string;
+        createdAt: string;
+      }[];
+      total: number;
+      page: number;
+      totalPages: number;
+    }>(`/v1/admin/users?${q.toString()}`);
+  },
+
+  updateUserRole: (userId: string, role: string) =>
+    apiRequest<unknown>(`/v1/admin/users/${userId}/role`, {
+      method: 'PATCH',
+      body: JSON.stringify({ role }),
+    }),
+
+  updateUserStatus: (userId: string, isActive: boolean) =>
+    apiRequest<unknown>(`/v1/admin/users/${userId}/status`, {
+      method: 'PATCH',
+      body: JSON.stringify({ isActive }),
+    }),
+
+  grantPremium: (userId: string, months: number = 1) =>
+    apiRequest<unknown>(`/v1/admin/users/${userId}/grant-premium`, {
+      method: 'POST',
+      body: JSON.stringify({ months }),
+    }),
+};
+
+export const subscriptionApi = {
+  getMySubscription: () =>
+    apiRequest<{
+      id: string;
+      userId: string;
+      tier: 'FREE' | 'PREMIUM';
+      status: string;
+      currentPeriodEnd?: string;
+      aiGradingsUsed: number;
+      aiGradingsLimit: number;
+      testAttemptsUsed: number;
+      testAttemptsLimit: number;
+    }>('/v1/admin/subscription/me'),
+
+  checkout: (body: { planId: 'PRO_MONTHLY' | 'COUPLE_VIP_YEARLY'; paymentMethod: 'VNPAY' | 'STRIPE' | 'MOMO' }) =>
+    apiRequest<{
+      success: boolean;
+      message: string;
+      planId: string;
+      paymentMethod: string;
+      orderId: string;
+      subscription: unknown;
+    }>('/v1/admin/subscription/checkout', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+};
+
+
 
 
