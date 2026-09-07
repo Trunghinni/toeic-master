@@ -17,6 +17,7 @@ import { GrammarModule } from './modules/grammar/grammar.module';
 import { TestModule } from './modules/test/test.module';
 import { SkillsModule } from './modules/skills/skills.module';
 import { SpeakingWritingModule } from './modules/speaking-writing/speaking-writing.module';
+import { SocialModule } from './modules/social/social.module';
 import { appConfig } from './common/config/app.config';
 
 // Resolve .env from the monorepo root regardless of where the process is started
@@ -51,6 +52,7 @@ const ROOT_ENV = path.resolve(__dirname, '..', '..', '..', '..', '.env');
     TestModule,
     SkillsModule,
     SpeakingWritingModule,
+    SocialModule,
   ],
   providers: [
     // Apply rate limiting globally

@@ -328,4 +328,99 @@ export const speakingWritingApi = {
     }),
 };
 
+// ── Social & Couple Mode endpoints ────────────────────────────────
+
+export const socialApi = {
+  getFriends: () =>
+    apiRequest<{
+      friends: {
+        friendshipId: string;
+        userId: string;
+        username: string;
+        displayName: string;
+        avatarUrl?: string;
+        currentStreak: number;
+        totalXp: number;
+        lastStudiedAt?: string;
+        targetScore: number;
+      }[];
+      pendingRequests: {
+        friendshipId: string;
+        requesterId: string;
+        username: string;
+        displayName: string;
+        avatarUrl?: string;
+        createdAt: string;
+      }[];
+    }>('/v1/social/friends'),
+
+  sendFriendRequest: (targetIdentifier: string) =>
+    apiRequest<{ message: string; friendshipId: string }>('/v1/social/friends/request', {
+      method: 'POST',
+      body: JSON.stringify({ targetIdentifier }),
+    }),
+
+  acceptFriendRequest: (friendshipId: string) =>
+    apiRequest<{ message: string }> (`/v1/social/friends/${friendshipId}/accept`, {
+      method: 'POST',
+    }),
+
+  getCoupleDashboard: () =>
+    apiRequest<{
+      hasPartner: boolean;
+      userA: {
+        id: string;
+        role: string;
+        colorHex: string;
+        name: string;
+        avatarUrl?: string;
+        streak: number;
+        targetScore: number;
+        minutesToday: number;
+        isStudyingNow: boolean;
+        lastStudiedAt?: string;
+      };
+      userB: {
+        id: string;
+        role: string;
+        colorHex: string;
+        name: string;
+        avatarUrl?: string;
+        streak: number;
+        targetScore: number;
+        minutesToday: number;
+        isStudyingNow: boolean;
+        lastStudiedAt?: string;
+      };
+      sharedGoal: {
+        sharedStreak: number;
+        weeklyWordsLearned: number;
+        weeklyWordsTarget: number;
+        percent: number;
+      };
+      habitWeek: {
+        day: string;
+        userACompleted: boolean;
+        userBCompleted: boolean;
+        togetherCompleted: boolean;
+      }[];
+    }>('/v1/social/couple-dashboard'),
+
+  sendStudyPulse: (minutes?: number) =>
+    apiRequest<{ success: boolean; message: string }>('/v1/social/study-pulse', {
+      method: 'POST',
+      body: JSON.stringify({ minutes: minutes || 15 }),
+    }),
+
+  getLeaderboard: () =>
+    apiRequest<{
+      rank: number;
+      displayName: string;
+      totalXp: number;
+      currentStreak: number;
+      targetScore: number;
+    }[]>('/v1/social/leaderboard'),
+};
+
+
 
