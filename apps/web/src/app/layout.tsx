@@ -32,12 +32,13 @@ export const metadata: Metadata = {
     title: 'TOEIC Master',
     description: 'Học TOEIC hiệu quả với AI, flashcard SRS, và lộ trình cá nhân hoá.',
   },
+  manifest: '/manifest.json',
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f5f7ff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0d1117' },
+    { media: '(prefers-color-scheme: light)', color: '#FFF1F2' },
+    { media: '(prefers-color-scheme: dark)', color: '#1E1B2E' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -52,6 +53,17 @@ export default function RootLayout({
     <html lang="vi" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('/sw.js').catch(() => {});
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   );

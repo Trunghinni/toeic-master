@@ -3,7 +3,21 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Compass, BookOpen, Flame, User, LogOut, Award, Heart, Layers } from 'lucide-react';
+import { 
+  Compass, 
+  BookOpen, 
+  Flame, 
+  User, 
+  LogOut, 
+  Award, 
+  Heart, 
+  Layers,
+  Headphones,
+  Mic,
+  PenTool,
+  Crown,
+  Shield
+} from 'lucide-react';
 import { useAuthStore } from '@/stores/auth.store';
 import { authApi } from '@/lib/api-client';
 import type { UserDto } from '@toeic-master/shared-types';
@@ -56,8 +70,13 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     { href: '/roadmap', label: 'Lộ trình', icon: Compass },
     { href: '/vocabulary', label: 'Từ vựng (3D)', icon: Layers },
     { href: '/grammar', label: 'Ngữ pháp', icon: BookOpen },
+    { href: '/skills', label: 'Kỹ năng (7 Part)', icon: Headphones },
     { href: '/tests', label: 'Đề thi', icon: Award },
-    { href: '/placement-test', label: 'Test đầu vào', icon: Flame },
+    { href: '/speaking', label: 'Luyện nói', icon: Mic },
+    { href: '/writing', label: 'Luyện viết', icon: PenTool },
+    { href: '/social', label: 'Góc đôi 💕', icon: Heart },
+    { href: '/subscription', label: 'Nâng cấp VIP', icon: Crown },
+    { href: '/admin', label: 'Admin', icon: Shield },
   ];
 
   return (
