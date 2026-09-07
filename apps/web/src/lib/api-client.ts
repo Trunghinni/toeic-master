@@ -278,3 +278,54 @@ export const skillsApi = {
     }),
 };
 
+// ── Speaking & Writing endpoints ──────────────────────────────────
+
+export const speakingWritingApi = {
+  getSpeakingPrompts: () => apiRequest<unknown[]>('/v1/speaking-writing/speaking/prompts'),
+  getSpeakingPromptById: (id: string) => apiRequest<unknown>(`/v1/speaking-writing/speaking/prompts/${id}`),
+  evaluateSpeaking: (body: { promptId: string; speechText: string; durationSeconds?: number }) =>
+    apiRequest<{
+      promptId: string;
+      promptTitle: string;
+      speechText: string;
+      wordCount: number;
+      estimatedWpm: number;
+      scaledScore: number;
+      proficiencyLevel: number;
+      pronunciationScore: number;
+      fluencyScore: number;
+      intonationScore: number;
+      matchedKeywords: number;
+      totalKeywords: number;
+      feedback: string[];
+      sampleTranscript: string;
+    }>('/v1/speaking-writing/speaking/evaluate', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+
+  getWritingPrompts: () => apiRequest<unknown[]>('/v1/speaking-writing/writing/prompts'),
+  getWritingPromptById: (id: string) => apiRequest<unknown>(`/v1/speaking-writing/writing/prompts/${id}`),
+  evaluateWriting: (body: { promptId: string; text: string }) =>
+    apiRequest<{
+      promptId: string;
+      promptTitle: string;
+      wordCount: number;
+      minWords: number;
+      scaledScore: number;
+      writingLevel: number;
+      rubrics: {
+        grammar: number;
+        vocabulary: number;
+        organization: number;
+        relevance: number;
+      };
+      suggestions: string[];
+      sampleAnswer: string;
+    }>('/v1/speaking-writing/writing/evaluate', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+};
+
+
