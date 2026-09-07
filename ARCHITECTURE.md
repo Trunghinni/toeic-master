@@ -1,7 +1,7 @@
 # TOEIC Master — Architecture Document
 
 > Living document — updated after each Phase.
-> Last updated: Phase 0
+> Last updated: Phase 1
 
 ---
 
@@ -202,3 +202,47 @@ See `.env.example` for the full list. Required for each phase:
 | Redis | Upstash (serverless Redis) |
 | Media | Cloudflare R2 (S3-compatible, egress-free) |
 | AI | Anthropic + OpenAI APIs (direct) |
+
+---
+
+## 7. Security Notes
+
+### Auth (Phase 1)
+
+- **Access token**: 15m expiry, stored in Zustand (memory only — never localStorage/sessionStorage).
+- **Refresh token**: 7d expiry, `HttpOnly` cookie — not readable by JS. Hashed with argon2 before DB storage.
+- **CORS**: `origin: FRONTEND_URL` (explicit, no wildcard). `credentials: true` required for cookie exchange.
+- **Cookie config**: `sameSite: 'lax'` (dev, localhost), `sameSite: 'none'` + `secure: true` (prod, cross-origin HTTPS).
+- **Token rotation**: each `/auth/refresh` call revokes the old `RefreshToken` record and issues a new one.
+- **Logout**: revokes specific `RefreshToken` by ID. `logoutAll()` revokes all tokens for a user.
+
+> [!NOTE]
+> **CSRF**: `/auth/refresh` hiện chỉ dựa vào HttpOnly cookie, chưa có CSRF token.
+> Chấp nhận được ở quy mô 2 người dùng hiện tại (private app, không public).
+> Nếu mở rộng user base trong tương lai, cần bổ sung:
+> - Double-submit cookie pattern, hoặc
+> - `SameSite=strict` (nhưng sẽ break cross-origin prod setup), hoặc
+> - Custom `X-CSRF-Token` header + server-side validation.
+
+- **Google OAuth**: Phase 2. `OAuthAccount` model đã có sẵn trong schema.
+- **Password hashing**: argon2id (argon2 package), 12 iterations — stronger than bcrypt.
+- **Rate limiting**: ThrottlerModule — 10 req/s, 100 req/min globally. Auth endpoints thêm stricter limit Phase 2.
+
+---
+
+## 8. Animation Priority Backlog
+
+> Ghi chú kế hoạch — KHÔNG code cho đến Phase tương ứng.
+
+| Phase | Feature | Library | Notes |
+|---|---|---|---|
+| Phase 2 | **Flashcard flip 3D** | Framer Motion | `rotateY: 180deg`, `backfaceVisibility: 'hidden'`, perspective wrapper |
+| Phase 2 | **Confetti milestone** | `lottie-react` | JSON animation file hoặc `canvas-confetti` npm package |
+| Phase 4 | **Score reveal** | Framer Motion | Số đếm từ 0 → final score với `useMotionValue` + `useTransform` |
+| Phase 5 | **Waveform luyện nói** | `lottie-react` | Waveform Lottie JSON đồng bộ với audio playback state |
+| Phase 7 | **Couple-mode streak bar** | Framer Motion | Animated bar race so sánh streak/XP giữa 2 users, layout animation |
+| Phase 7 | **Couple-mode XP race** | Framer Motion | `AnimatePresence` + `layoutId` để transition khi thứ tự đổi |
+| Phase 7 | **Notification badge pulse** | Framer Motion | `scale` + `opacity` keyframes khi có notification mới |
+
+---
+

@@ -10,6 +10,8 @@ import { PrismaModule } from './common/prisma/prisma.module';
 import { HealthModule } from './health/health.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserModule } from './modules/user/user.module';
+import { PlacementModule } from './modules/placement/placement.module';
+import { RoadmapModule } from './modules/roadmap/roadmap.module';
 import { appConfig } from './common/config/app.config';
 
 // Resolve .env from the monorepo root regardless of where the process is started
@@ -26,16 +28,8 @@ const ROOT_ENV = path.resolve(__dirname, '..', '..', '..', '..', '.env');
 
     // ── Rate Limiting ─────────────────────────────────────────
     ThrottlerModule.forRoot([
-      {
-        name: 'short',
-        ttl: 1000,    // 1 second
-        limit: 10,    // 10 requests per second
-      },
-      {
-        name: 'medium',
-        ttl: 60000,   // 1 minute
-        limit: 100,   // 100 requests per minute
-      },
+      { name: 'short',  ttl: 1000,  limit: 10  },
+      { name: 'medium', ttl: 60000, limit: 100 },
     ]),
 
     // ── Core Modules ──────────────────────────────────────────
@@ -45,6 +39,8 @@ const ROOT_ENV = path.resolve(__dirname, '..', '..', '..', '..', '.env');
     // ── Feature Modules ───────────────────────────────────────
     AuthModule,
     UserModule,
+    PlacementModule,
+    RoadmapModule,
   ],
   providers: [
     // Apply rate limiting globally

@@ -2,44 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── CSS Custom Properties (Design Tokens) ─────────────────── */
+/* ── CSS Custom Properties (Rose + Indigo Pastel Design Tokens) ─── */
 :root {
-  /* Surface colors — Light mode */
-  --surface-primary: 220 20% 98%;
-  --surface-secondary: 220 15% 94%;
-  --surface-tertiary: 220 12% 90%;
-  --surface-inverse: 220 88% 12%;
+  /* Surface colors — Light mode (Rose 50 + Indigo 50 pastel) */
+  --surface-primary:   355 100% 97%;   /* #FFF1F2 rose-50 */
+  --surface-secondary: 0 0% 100%;      /* #FFFFFF pure white card */
+  --surface-tertiary:  226 100% 97%;   /* #EEF2FF indigo-50 */
+  --surface-inverse:   263 25% 20%;    /* #2D243D deep violet */
 
-  /* Brand */
-  --brand-hue: 220;
-  --brand-sat: 78%;
+  /* Brand — Rose (#FB7185) */
+  --brand-hue: 350;
+  --brand-sat: 89%;
+  --brand-light: 60%;
 
-  /* Foreground */
-  --foreground: 220 25% 10%;
-  --foreground-muted: 220 15% 45%;
-  --foreground-subtle: 220 10% 65%;
+  /* Accent / Secondary — Indigo (#818CF8) */
+  --accent-hue: 234;
+  --accent-sat: 89%;
+  --accent-light: 74%;
 
-  /* Border */
-  --border: 220 15% 88%;
-  --border-strong: 220 20% 75%;
+  /* Couple-mode accents */
+  --couple-userA: 350 89% 60%;         /* Rose-400 */
+  --couple-userB: 234 89% 74%;         /* Indigo-400 */
+
+  /* Foreground / Text */
+  --foreground:        263 25% 27%;    /* #3F3355 deep violet text */
+  --foreground-muted:  266 13% 55%;    /* #8B7E9C soft purple-gray */
+  --foreground-subtle: 266 12% 70%;    /* lighter muted */
+
+  /* Border — Pink-200 / Lavender subtle */
+  --border:       326 78% 88%;         /* #FBCFE8 pink-200 */
+  --border-strong: 326 65% 78%;
+
+  /* Status Colors */
+  --success: 156 72% 67%;              /* #34D399 emerald-400 */
+  --error:   348 83% 47%;              /* #F43F5E rose-500 */
+  --warning: 38 92% 50%;
 
   /* Radius */
-  --radius: 0.75rem;
+  --radius: 0.85rem;
 }
 
 .dark {
-  /* Surface colors — Dark mode */
-  --surface-primary: 220 25% 8%;
-  --surface-secondary: 220 22% 12%;
-  --surface-tertiary: 220 20% 17%;
-  --surface-inverse: 220 100% 97%;
+  /* Surface colors — Dark mode (deep violet theme) */
+  --surface-primary:   251 26% 14%;    /* #1E1B2E deep violet */
+  --surface-secondary: 255 26% 19%;    /* #2A243D card dark */
+  --surface-tertiary:  255 22% 24%;    /* #362F4E card hover */
+  --surface-inverse:   355 100% 97%;
 
-  --foreground: 220 15% 94%;
-  --foreground-muted: 220 10% 60%;
-  --foreground-subtle: 220 8% 45%;
+  --foreground:        250 100% 98%;   /* #F5F3FF bright lavender */
+  --foreground-muted:  255 15% 72%;    /* #A59DB8 soft lavender */
+  --foreground-subtle: 255 12% 55%;
 
-  --border: 220 20% 22%;
-  --border-strong: 220 20% 32%;
+  --border:        255 24% 28%;        /* #443A60 */
+  --border-strong: 255 24% 38%;        /* #584B7C */
 }
 
 /* ── Base Styles ────────────────────────────────────────────── */
@@ -76,39 +91,48 @@ body {
   border-radius: 100px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--foreground-subtle));
+  background: hsl(var(--foreground-muted));
 }
 
 /* ── Focus Styles ───────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid hsl(var(--brand-hue) var(--brand-sat) 42%);
+  outline: 2px solid hsl(var(--brand-hue) var(--brand-sat) var(--brand-light));
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 /* ── Utility Classes ────────────────────────────────────────── */
 @layer utilities {
-  /* Glassmorphism card */
+  /* Pastel glassmorphism card */
   .glass {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(251, 207, 232, 0.7);
   }
 
   .glass-dark {
-    background: rgba(10, 15, 30, 0.6);
+    background: rgba(42, 36, 61, 0.80);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(251, 113, 133, 0.15);
   }
 
-  /* Gradient text */
+  /* Gradient text — Rose-400 to Indigo-400 */
   .text-gradient-brand {
-    background: linear-gradient(135deg, hsl(220, 75%, 62%) 0%, hsl(178, 80%, 46%) 100%);
+    background: linear-gradient(135deg, #FB7185 0%, #818CF8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Pastel gradient background (135deg Rose-50 to Indigo-50) */
+  .bg-pastel-gradient {
+    background: linear-gradient(135deg, #FFF1F2 0%, #EEF2FF 100%);
+  }
+
+  .dark .bg-pastel-gradient {
+    background: linear-gradient(135deg, #1E1B2E 0%, #171526 100%);
   }
 
   /* Shimmer loading skeleton */
@@ -122,66 +146,75 @@ body {
     background-size: 200% 100%;
     animation: shimmer 1.8s linear infinite;
   }
-
-  /* Noise texture overlay */
-  .noise {
-    position: relative;
-  }
-  .noise::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    border-radius: inherit;
-    pointer-events: none;
-    opacity: 0.3;
-  }
 }
 
 /* ── Component Defaults ─────────────────────────────────────── */
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl
            font-semibold text-sm text-white
-           bg-gradient-to-r from-brand-600 to-accent-500
-           shadow-glow transition-all duration-200
-           hover:from-brand-500 hover:to-accent-400 hover:shadow-glow hover:-translate-y-0.5
+           bg-gradient-to-r from-rose-400 to-rose-500
+           shadow-md shadow-rose-400/25 transition-all duration-200
+           hover:from-rose-500 hover:to-rose-600 hover:shadow-lg hover:shadow-rose-500/30 hover:-translate-y-0.5
            active:translate-y-0 active:shadow-none
-           focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2
+           focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl
+           font-semibold text-sm text-white
+           bg-gradient-to-r from-indigo-400 to-indigo-500
+           shadow-md shadow-indigo-400/25 transition-all duration-200
+           hover:from-indigo-500 hover:to-indigo-600 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5
+           active:translate-y-0
+           focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2
            disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl
            font-semibold text-sm
-           border border-[hsl(var(--border-strong))]
-           bg-[hsl(var(--surface-secondary))]
-           text-[hsl(var(--foreground))]
-           transition-all duration-200
-           hover:bg-[hsl(var(--surface-tertiary))] hover:-translate-y-0.5
+           border border-pink-200/90
+           bg-white/90 text-[#3F3355]
+           shadow-xs transition-all duration-200
+           hover:bg-rose-50/70 hover:border-pink-300 hover:-translate-y-0.5
            active:translate-y-0
            disabled:opacity-50 disabled:cursor-not-allowed;
   }
 
   .card {
-    @apply rounded-2xl border border-[hsl(var(--border))]
-           bg-[hsl(var(--surface-secondary))]
-           shadow-sm transition-all duration-200;
+    @apply rounded-3xl border border-pink-200/70
+           bg-white shadow-xs transition-all duration-200;
   }
 
   .card-hover {
-    @apply card hover:shadow-card-hover hover:-translate-y-1 cursor-pointer;
+    @apply card hover:shadow-card-hover hover:-translate-y-0.5 cursor-pointer;
   }
 
   .input {
     @apply w-full px-4 py-3 rounded-xl text-sm
-           border border-[hsl(var(--border))]
-           bg-[hsl(var(--surface-primary))]
-           text-[hsl(var(--foreground))]
-           placeholder:text-[hsl(var(--foreground-subtle))]
+           border border-pink-200
+           bg-white text-[#3F3355]
+           placeholder:text-[#8B7E9C]
            transition-colors duration-150
-           focus:outline-none focus:border-brand-500
-           focus:ring-2 focus:ring-brand-500/20
+           focus:outline-none focus:border-rose-400
+           focus:ring-2 focus:ring-rose-200
            disabled:opacity-50 disabled:cursor-not-allowed;
   }
+
+  .form-label {
+    @apply block text-xs font-bold uppercase tracking-wider text-[#3F3355] mb-1.5;
+  }
+}
+
+/* ── Keyframe Animations ────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.65; }
 }
