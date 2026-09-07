@@ -201,3 +201,27 @@ export const userApi = {
       body:   JSON.stringify(body),
     }),
 };
+
+// ── Vocabulary endpoints ──────────────────────────────────────────
+
+export const vocabularyApi = {
+  getTopics: () => apiRequest<unknown[]>('/v1/vocabulary/topics'),
+  getTopicCards: (topicId: string) => apiRequest<{ topic: unknown; cards: unknown[] }>(`/v1/vocabulary/topics/${topicId}`),
+  reviewCard: (cardId: string, quality: number) =>
+    apiRequest<unknown>(`/v1/vocabulary/cards/${cardId}/review`, {
+      method: 'POST',
+      body:   JSON.stringify({ quality }),
+    }),
+  getDueCards: () => apiRequest<unknown[]>('/v1/vocabulary/due'),
+  getNotebooks: () => apiRequest<unknown[]>('/v1/vocabulary/notebooks'),
+  createNotebook: (title: string, description?: string) =>
+    apiRequest<unknown>('/v1/vocabulary/notebooks', {
+      method: 'POST',
+      body:   JSON.stringify({ title, description }),
+    }),
+  addCardToNotebook: (notebookId: string, cardId: string) =>
+    apiRequest<unknown>(`/v1/vocabulary/notebooks/${notebookId}/cards`, {
+      method: 'POST',
+      body:   JSON.stringify({ cardId }),
+    }),
+};

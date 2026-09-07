@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Compass, BookOpen, Flame, User, LogOut, Award, Heart } from 'lucide-react';
+import { Compass, BookOpen, Flame, User, LogOut, Award, Heart, Layers } from 'lucide-react';
 import { useAuthStore } from '@/stores/auth.store';
 import { authApi } from '@/lib/api-client';
 import type { UserDto } from '@toeic-master/shared-types';
@@ -54,6 +54,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
   const navLinks = [
     { href: '/roadmap', label: 'Lộ trình học', icon: Compass },
+    { href: '/vocabulary', label: 'Từ vựng (Flashcard)', icon: Layers },
     { href: '/placement-test', label: 'Test xếp lớp', icon: BookOpen },
   ];
 
