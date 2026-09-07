@@ -112,6 +112,7 @@ const tailwindConfig = {
           "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
       },
       boxShadow: {
+        xs:           "0 1px 2px 0 rgba(0, 0, 0, 0.04)",
         glow:         "0 0 20px rgba(251, 113, 133, 0.35)",
         "glow-accent": "0 0 20px rgba(129, 140, 248, 0.35)",
         "card-hover": "0 12px 32px -4px rgba(63, 51, 85, 0.08)",
