@@ -250,3 +250,31 @@ export const testApi = {
       body:   JSON.stringify({ answers, timeSpentSeconds }),
     }),
 };
+
+// ── Skills Practice endpoints ─────────────────────────────────────
+
+export const skillsApi = {
+  getOverview: () => apiRequest<{ parts: unknown[] }>('/v1/skills/overview'),
+  getItemsByPart: (part: string) => apiRequest<{ part: string; count: number; items: unknown[] }>(`/v1/skills/parts/${part}`),
+  getItemDetail: (itemId: string) => apiRequest<unknown>(`/v1/skills/items/${itemId}`),
+  submitAnswer: (itemId: string, answers: Record<number, string>) =>
+    apiRequest<{
+      itemId: string;
+      part: string;
+      totalQuestions: number;
+      correctCount: number;
+      accuracy: number;
+      autoSavedToMistakeNotebook: boolean;
+      feedback: {
+        questionNumber: number;
+        chosenAnswer: string;
+        correctAnswer: string;
+        isCorrect: boolean;
+        explanation: string;
+      }[];
+    }>(`/v1/skills/items/${itemId}/submit`, {
+      method: 'POST',
+      body: JSON.stringify({ answers }),
+    }),
+};
+
