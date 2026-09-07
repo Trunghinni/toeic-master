@@ -237,3 +237,16 @@ export const grammarApi = {
       body:   JSON.stringify({ answer }),
     }),
 };
+
+// ── Test Bank endpoints ───────────────────────────────────────────
+
+export const testApi = {
+  getTests: (mode?: string) => apiRequest<unknown[]>(`/v1/tests${mode ? `?mode=${mode}` : ''}`),
+  getHistory: () => apiRequest<unknown[]>('/v1/tests/history'),
+  getTestForTaking: (testId: string) => apiRequest<unknown>(`/v1/tests/${testId}`),
+  submitAttempt: (testId: string, answers: Record<string, string>, timeSpentSeconds: number) =>
+    apiRequest<unknown>(`/v1/tests/${testId}/submit`, {
+      method: 'POST',
+      body:   JSON.stringify({ answers, timeSpentSeconds }),
+    }),
+};

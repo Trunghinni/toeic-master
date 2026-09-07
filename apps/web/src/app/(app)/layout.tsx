@@ -56,7 +56,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     { href: '/roadmap', label: 'Lộ trình', icon: Compass },
     { href: '/vocabulary', label: 'Từ vựng (3D)', icon: Layers },
     { href: '/grammar', label: 'Ngữ pháp', icon: BookOpen },
-    { href: '/placement-test', label: 'Test xếp lớp', icon: Award },
+    { href: '/tests', label: 'Đề thi', icon: Award },
+    { href: '/placement-test', label: 'Test đầu vào', icon: Flame },
   ];
 
   return (
