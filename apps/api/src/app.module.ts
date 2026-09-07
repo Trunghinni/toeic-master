@@ -13,6 +13,7 @@ import { UserModule } from './modules/user/user.module';
 import { PlacementModule } from './modules/placement/placement.module';
 import { RoadmapModule } from './modules/roadmap/roadmap.module';
 import { VocabularyModule } from './modules/vocabulary/vocabulary.module';
+import { GrammarModule } from './modules/grammar/grammar.module';
 import { appConfig } from './common/config/app.config';
 
 // Resolve .env from the monorepo root regardless of where the process is started
@@ -43,6 +44,7 @@ const ROOT_ENV = path.resolve(__dirname, '..', '..', '..', '..', '.env');
     PlacementModule,
     RoadmapModule,
     VocabularyModule,
+    GrammarModule,
   ],
   providers: [
     // Apply rate limiting globally

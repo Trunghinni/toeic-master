@@ -53,9 +53,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   };
 
   const navLinks = [
-    { href: '/roadmap', label: 'Lộ trình học', icon: Compass },
-    { href: '/vocabulary', label: 'Từ vựng (Flashcard)', icon: Layers },
-    { href: '/placement-test', label: 'Test xếp lớp', icon: BookOpen },
+    { href: '/roadmap', label: 'Lộ trình', icon: Compass },
+    { href: '/vocabulary', label: 'Từ vựng (3D)', icon: Layers },
+    { href: '/grammar', label: 'Ngữ pháp', icon: BookOpen },
+    { href: '/placement-test', label: 'Test xếp lớp', icon: Award },
   ];
 
   return (

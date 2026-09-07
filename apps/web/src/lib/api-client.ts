@@ -225,3 +225,15 @@ export const vocabularyApi = {
       body:   JSON.stringify({ cardId }),
     }),
 };
+
+// ── Grammar endpoints ─────────────────────────────────────────────
+
+export const grammarApi = {
+  getTopics: () => apiRequest<unknown[]>('/v1/grammar/topics'),
+  getTopicDetail: (topicId: string) => apiRequest<unknown>(`/v1/grammar/topics/${topicId}`),
+  submitAnswer: (cardId: string, answer: string) =>
+    apiRequest<unknown>(`/v1/grammar/cards/${cardId}/submit`, {
+      method: 'POST',
+      body:   JSON.stringify({ answer }),
+    }),
+};
