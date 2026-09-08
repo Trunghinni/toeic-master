@@ -1,0 +1,57 @@
+{
+  "topics": [
+    {
+      "id": "sample_marketing_advertising",
+      "title": "Marketing & Advertising",
+      "description": "Chiến lược tiếp thị, quảng cáo truyền thông và nghiên cứu thị trường trong TOEIC",
+      "targetBand": "BAND_3",
+      "isPublic": true,
+      "cards": [
+        {
+          "word": "campaign",
+          "phonetic": "/kæmˈpeɪn/",
+          "wordType": "NOUN",
+          "definition": "Chiến dịch (quảng bá, tiếp thị, kinh doanh)",
+          "definitionEn": "A planned series of activities designed to produce a specific outcome",
+          "example": "The marketing team launched a nationwide advertising campaign.",
+          "exampleVi": "Đội ngũ tiếp thị đã phát động một chiến dịch quảng cáo trên toàn quốc.",
+          "tags": ["marketing", "business", "media"],
+          "orderInTopic": 1
+        },
+        {
+          "word": "consumer",
+          "phonetic": "/kənˈsjuːmər/",
+          "wordType": "NOUN",
+          "definition": "Người tiêu dùng, khách hàng",
+          "definitionEn": "A person who purchases goods and services for personal use",
+          "example": "Consumer demand for eco-friendly packaging has increased sharply.",
+          "exampleVi": "Nhu cầu của người tiêu dùng đối với bao bì thân thiện môi trường đã tăng mạnh.",
+          "tags": ["retail", "marketing", "economy"],
+          "orderInTopic": 2
+        },
+        {
+          "word": "persuasive",
+          "phonetic": "/pərˈsweɪsɪv/",
+          "wordType": "ADJECTIVE",
+          "definition": "Có sức thuyết phục",
+          "definitionEn": "Good at convincing someone to do or believe something",
+          "example": "She delivered a persuasive presentation that won over the investors.",
+          "exampleVi": "Cô ấy đã thuyết trình một cách đầy thuyết phục làm xiêu lòng các nhà đầu tư.",
+          "tags": ["communication", "sales", "presentation"],
+          "orderInTopic": 3
+        },
+        {
+          "word": "promote",
+          "phonetic": "/prəˈmoʊt/",
+          "wordType": "VERB",
+          "definition": "Quảng bá sản phẩm, thúc đẩy hoặc thăng chức",
+          "definitionEn": "To publicize or support a product, service, or venture",
+          "example": "The company uses social media influencers to promote its new fragrance.",
+          "exampleVi": "Công ty sử dụng người có sức ảnh hưởng trên mạng xã hội để quảng bá dòng nước hoa mới.",
+          "tags": ["marketing", "branding"],
+          "orderInTopic": 4
+        }
+      ]
+    }
+  ]
+}

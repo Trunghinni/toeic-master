@@ -1,0 +1,49 @@
+{
+  "topics": [
+    {
+      "id": "sample_relative_clauses",
+      "title": "Mệnh Đề Quan Hệ (Relative Clauses)",
+      "description": "Cách sử dụng who, whom, which, that và mệnh đề quan hệ rút gọn trong Part 5 & 6",
+      "targetBand": "BAND_3",
+      "orderIndex": 1,
+      "rule": "Mệnh đề quan hệ dùng để bổ nghĩa cho danh từ đứng trước nó. Đại từ quan hệ thay thế cho người là **who** (chủ ngữ) hoặc **whom** (tân ngữ); thay thế cho vật là **which**; **that** có thể thay thế cho cả người và vật trong mệnh đề xác định.",
+      "formula": "S + [Relative Pronoun + V/S-V] + Main Verb + O",
+      "examples": [
+        {
+          "sentence": "The candidate who performed best in the interview was offered the managerial position.",
+          "translation": "Ứng viên thể hiện tốt nhất trong buổi phỏng vấn đã được đề nghị vị trí quản lý.",
+          "highlight": "who performed best in the interview"
+        },
+        {
+          "sentence": "Please review the financial report which was emailed this morning.",
+          "translation": "Vui lòng xem lại báo cáo tài chính đã được gửi qua email sáng nay.",
+          "highlight": "which was emailed this morning"
+        }
+      ],
+      "tips": "Khi phía sau chỗ trống là một động từ (V), cần chọn đại từ quan hệ đóng vai trò chủ ngữ (Who / Which / That). Tránh chọn Whom vì Whom chỉ làm tân ngữ.",
+      "commonErrors": [
+        {
+          "wrong": "The employee whom called the client was praised.",
+          "correct": "The employee who called the client was praised.",
+          "explanation": "Chỗ trống đứng trước động từ 'called' nên cần đại từ làm chủ ngữ 'who', không dùng 'whom'."
+        }
+      ],
+      "exercises": [
+        {
+          "question": "The technician _______ installed the software update will return tomorrow to inspect the system.",
+          "options": ["who", "whom", "which", "whose"],
+          "correctAnswer": "who",
+          "explanation": "Danh từ 'technician' là người, và vị trí cần điền đứng trước động từ 'installed' làm chủ ngữ, nên đáp án đúng là 'who'.",
+          "difficulty": 2
+        },
+        {
+          "question": "All attendees must display the security badges _______ were distributed at the front desk.",
+          "options": ["which", "who", "whom", "where"],
+          "correctAnswer": "which",
+          "explanation": "Danh từ 'badges' là đồ vật, đóng vai trò chủ ngữ của động từ bị động 'were distributed', nên đại từ quan hệ thích hợp là 'which'.",
+          "difficulty": 2
+        }
+      ]
+    }
+  ]
+}

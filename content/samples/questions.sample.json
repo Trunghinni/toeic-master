@@ -1,0 +1,60 @@
+{
+  "tests": [
+    {
+      "id": "sample_mini_test_01",
+      "title": "Mini Test 01 — Part 5 & Part 6 Luyện Phản Xạ",
+      "description": "Bài thi thu nhỏ kiểm tra ngữ pháp câu đơn và điền đoạn văn bản TOEIC chuẩn ETS",
+      "type": "MINI_TEST",
+      "mode": "PRACTICE",
+      "timeLimit": 15,
+      "totalQuestions": 3,
+      "targetBand": "BAND_3",
+      "isOfficial": true,
+      "questions": [
+        {
+          "part": "PART_5",
+          "questionNumber": 101,
+          "prompt": "Ms. Johnson requested that all department managers submit their quarterly budgets _______ Friday afternoon.",
+          "options": [
+            { "id": "A", "text": "by" },
+            { "id": "B", "text": "until" },
+            { "id": "C", "text": "during" },
+            { "id": "D", "text": "among" }
+          ],
+          "correctOptionId": "A",
+          "explanation": "Giới từ 'by' chỉ thời hạn chót (deadline) trước hoặc muộn nhất vào một thời điểm ('by Friday afternoon'). 'Until' diễn tả hành động kéo dài liên tục tới thời điểm đó.",
+          "grammarPoint": "Prepositions of Time"
+        },
+        {
+          "part": "PART_5",
+          "questionNumber": 102,
+          "prompt": "The catering company provided a _______ selection of appetizers for the annual gala dinner.",
+          "options": [
+            { "id": "A", "text": "delight" },
+            { "id": "B", "text": "delightful" },
+            { "id": "C", "text": "delightfully" },
+            { "id": "D", "text": "delighting" }
+          ],
+          "correctOptionId": "B",
+          "explanation": "Vị trí cần điền đứng sau mạo từ 'a' và trước danh từ 'selection', do đó ta cần một tính từ (adjective) 'delightful' mang nghĩa tuyệt vời, thú vị.",
+          "grammarPoint": "Word Forms (Adjective before Noun)"
+        },
+        {
+          "part": "PART_6",
+          "questionNumber": 103,
+          "prompt": "We appreciate your patience while we renovate our downtown branch. We look forward to _______ you next month.",
+          "passageText": "Dear Valued Customer,\nThank you for banking with Horizon Federal. We are pleased to announce renovations at our flagship downtown branch.\nWe appreciate your patience while we renovate our downtown branch. We look forward to [103] you next month.\nSincerely,\nManagement Team",
+          "options": [
+            { "id": "A", "text": "serve" },
+            { "id": "B", "text": "service" },
+            { "id": "C", "text": "serving" },
+            { "id": "D", "text": "served" }
+          ],
+          "correctOptionId": "C",
+          "explanation": "Cấu trúc 'look forward to + V-ing/Noun' mang nghĩa mong đợi làm gì, nên đáp án đúng là 'serving'.",
+          "grammarPoint": "Gerunds after Prepositional Idioms"
+        }
+      ]
+    }
+  ]
+}

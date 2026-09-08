@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../common/prisma/prisma.service';
-import { Prisma, UserRole } from '@prisma/client';
+import { Prisma, UserRole, BandLevel, WordType } from '@prisma/client';
 
 @Injectable()
 export class AdminService {
@@ -206,5 +206,92 @@ export class AdminService {
       orderId: vnpayOrderId,
       subscription: sub,
     };
+  }
+
+  /**
+   * Vocabulary CMS: Get all system topics with cards
+   */
+  async getAdminVocabularyTopics() {
+    return this.prisma.vocabularyTopic.findMany({
+      include: {
+        cards: {
+          orderBy: { orderInTopic: 'asc' },
+        },
+      },
+      orderBy: { createdAt: 'desc' },
+    });
+  }
+
+  /**
+   * Vocabulary CMS: Create new system vocabulary topic
+   */
+  async createVocabularyTopic(data: {
+    title: string;
+    description?: string;
+    targetBand?: BandLevel;
+  }) {
+    return this.prisma.vocabularyTopic.create({
+      data: {
+        title: data.title,
+        description: data.description,
+        targetBand: data.targetBand || 'BAND_2',
+        isSystem: true,
+        isPublic: true,
+      },
+      include: {
+        cards: true,
+      },
+    });
+  }
+
+  /**
+   * Vocabulary CMS: Add a card to a topic
+   */
+  async createVocabularyCard(
+    topicId: string,
+    data: {
+      word: string;
+      phonetic?: string;
+      wordType?: WordType;
+      definition: string;
+      definitionEn?: string;
+      example?: string;
+      exampleVi?: string;
+      tags?: string[];
+    },
+  ) {
+    const card = await this.prisma.vocabularyCard.create({
+      data: {
+        topicId,
+        word: data.word,
+        phonetic: data.phonetic,
+        wordType: data.wordType || 'NOUN',
+        definition: data.definition,
+        definitionEn: data.definitionEn,
+        example: data.example,
+        exampleVi: data.exampleVi,
+        tags: data.tags || [],
+      },
+    });
+
+    // Update topic cardCount
+    const count = await this.prisma.vocabularyCard.count({
+      where: { topicId },
+    });
+    await this.prisma.vocabularyTopic.update({
+      where: { id: topicId },
+      data: { cardCount: count },
+    });
+
+    return card;
+  }
+
+  /**
+   * Vocabulary CMS: Delete a topic and its cards
+   */
+  async deleteVocabularyTopic(topicId: string) {
+    return this.prisma.vocabularyTopic.delete({
+      where: { id: topicId },
+    });
   }
 }

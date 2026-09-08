@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Param,
   Patch,
@@ -11,7 +12,7 @@ import {
 import { CurrentUser } from '../../common/decorators/current-user.decorator';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { AdminService } from './admin.service';
-import { UserRole } from '@prisma/client';
+import { UserRole, BandLevel, WordType } from '@prisma/client';
 
 @Controller('admin')
 @UseGuards(JwtAuthGuard)
@@ -81,5 +82,47 @@ export class AdminController {
       body.planId || 'PRO_MONTHLY',
       body.paymentMethod || 'VNPAY',
     );
+  }
+
+  // ── Vocabulary CMS Endpoints ─────────────────────────────────
+
+  @Get('vocabulary/topics')
+  getAdminVocabularyTopics() {
+    return this.adminService.getAdminVocabularyTopics();
+  }
+
+  @Post('vocabulary/topics')
+  createVocabularyTopic(
+    @Body()
+    body: {
+      title: string;
+      description?: string;
+      targetBand?: BandLevel;
+    },
+  ) {
+    return this.adminService.createVocabularyTopic(body);
+  }
+
+  @Post('vocabulary/topics/:id/cards')
+  createVocabularyCard(
+    @Param('id') topicId: string,
+    @Body()
+    body: {
+      word: string;
+      phonetic?: string;
+      wordType?: WordType;
+      definition: string;
+      definitionEn?: string;
+      example?: string;
+      exampleVi?: string;
+      tags?: string[];
+    },
+  ) {
+    return this.adminService.createVocabularyCard(topicId, body);
+  }
+
+  @Delete('vocabulary/topics/:id')
+  deleteVocabularyTopic(@Param('id') topicId: string) {
+    return this.adminService.deleteVocabularyTopic(topicId);
   }
 }

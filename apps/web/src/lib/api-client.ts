@@ -479,6 +479,54 @@ export const adminApi = {
       method: 'POST',
       body: JSON.stringify({ months }),
     }),
+
+  getVocabularyTopics: () =>
+    apiRequest<{
+      id: string;
+      title: string;
+      description?: string;
+      targetBand: string;
+      cardCount: number;
+      cards: {
+        id: string;
+        word: string;
+        phonetic?: string;
+        wordType: string;
+        definition: string;
+        definitionEn?: string;
+        example?: string;
+        exampleVi?: string;
+      }[];
+    }[]>('/v1/admin/vocabulary/topics'),
+
+  createVocabularyTopic: (body: { title: string; description?: string; targetBand?: string }) =>
+    apiRequest<unknown>('/v1/admin/vocabulary/topics', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+
+  createVocabularyCard: (
+    topicId: string,
+    body: {
+      word: string;
+      phonetic?: string;
+      wordType?: string;
+      definition: string;
+      definitionEn?: string;
+      example?: string;
+      exampleVi?: string;
+      tags?: string[];
+    },
+  ) =>
+    apiRequest<unknown>(`/v1/admin/vocabulary/topics/${topicId}/cards`, {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+
+  deleteVocabularyTopic: (topicId: string) =>
+    apiRequest<unknown>(`/v1/admin/vocabulary/topics/${topicId}`, {
+      method: 'DELETE',
+    }),
 };
 
 export const subscriptionApi = {
