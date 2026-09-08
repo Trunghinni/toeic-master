@@ -11,20 +11,24 @@ import {
 } from '@nestjs/common';
 import { CurrentUser } from '../../common/decorators/current-user.decorator';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
+import { RolesGuard } from '../../common/guards/roles.guard';
+import { Roles } from '../../common/decorators/roles.decorator';
 import { AdminService } from './admin.service';
 import { UserRole, BandLevel, WordType } from '@prisma/client';
 
 @Controller('admin')
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
 export class AdminController {
   constructor(private adminService: AdminService) {}
 
   @Get('stats')
+  @Roles(UserRole.ADMIN)
   getSystemStats() {
     return this.adminService.getSystemStats();
   }
 
   @Get('users')
+  @Roles(UserRole.ADMIN)
   getUsers(
     @Query('page') page?: string,
     @Query('limit') limit?: string,
@@ -38,6 +42,7 @@ export class AdminController {
   }
 
   @Patch('users/:userId/role')
+  @Roles(UserRole.ADMIN)
   updateUserRole(
     @Param('userId') userId: string,
     @Body() body: { role: UserRole },
@@ -46,6 +51,7 @@ export class AdminController {
   }
 
   @Patch('users/:userId/status')
+  @Roles(UserRole.ADMIN)
   updateUserStatus(
     @Param('userId') userId: string,
     @Body() body: { isActive: boolean },
@@ -54,6 +60,7 @@ export class AdminController {
   }
 
   @Post('users/:userId/grant-premium')
+  @Roles(UserRole.ADMIN)
   grantPremium(
     @Param('userId') userId: string,
     @Body() body: { months?: number },
@@ -87,11 +94,13 @@ export class AdminController {
   // ── Vocabulary CMS Endpoints ─────────────────────────────────
 
   @Get('vocabulary/topics')
+  @Roles(UserRole.ADMIN)
   getAdminVocabularyTopics() {
     return this.adminService.getAdminVocabularyTopics();
   }
 
   @Post('vocabulary/topics')
+  @Roles(UserRole.ADMIN)
   createVocabularyTopic(
     @Body()
     body: {
@@ -104,6 +113,7 @@ export class AdminController {
   }
 
   @Post('vocabulary/topics/:id/cards')
+  @Roles(UserRole.ADMIN)
   createVocabularyCard(
     @Param('id') topicId: string,
     @Body()
@@ -122,6 +132,7 @@ export class AdminController {
   }
 
   @Delete('vocabulary/topics/:id')
+  @Roles(UserRole.ADMIN)
   deleteVocabularyTopic(@Param('id') topicId: string) {
     return this.adminService.deleteVocabularyTopic(topicId);
   }
