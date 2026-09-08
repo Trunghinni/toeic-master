@@ -17,6 +17,7 @@ import {
   Loader2,
 } from 'lucide-react';
 import { vocabularyApi, ApiResult } from '@/lib/api-client';
+import { fireConfetti } from '@/lib/confetti';
 
 interface CardItem {
   id: string;
@@ -97,6 +98,10 @@ export default function TopicStudyPage() {
 
     await vocabularyApi.reviewCard(currentCard.id, quality);
 
+    if (currentIndex === cards.length - 1) {
+      fireConfetti({ particleCount: 60 });
+    }
+
     // Reset flip and go to next card
     setIsFlipped(false);
     setTimeout(() => {
@@ -132,6 +137,9 @@ export default function TopicStudyPage() {
   };
 
   const handleNextQuiz = () => {
+    if (currentIndex === cards.length - 1) {
+      fireConfetti({ particleCount: 60 });
+    }
     setQuizSelectedOption(null);
     setQuizIsAnswered(false);
     setCurrentIndex((prev) => Math.min(cards.length - 1, prev + 1));
@@ -248,7 +256,7 @@ export default function TopicStudyPage() {
               {/* FRONT OF CARD */}
               <div
                 className="absolute inset-0 w-full h-full glass rounded-3xl p-8 border border-pink-200 shadow-md flex flex-col justify-between items-center text-center backdrop-blur-xl"
-                style={{ backfaceVisibility: 'hidden' }}
+                style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
               >
                 <div className="flex items-center justify-between w-full">
                   <span className="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-rose-50 text-rose-500 border border-rose-200">
@@ -291,6 +299,7 @@ export default function TopicStudyPage() {
                 className="absolute inset-0 w-full h-full bg-white rounded-3xl p-8 border border-pink-200 shadow-md flex flex-col justify-between items-center text-center"
                 style={{
                   backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)',
                 }}
               >

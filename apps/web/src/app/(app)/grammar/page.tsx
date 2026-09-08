@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   AlertTriangle,
   CheckCircle2,
@@ -129,45 +130,52 @@ export default function GrammarHubPage() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {topics.map((topic) => (
-            <Link
+          {topics.map((topic, index) => (
+            <motion.div
               key={topic.id}
-              href={`/grammar/${topic.id}`}
-              className="glass rounded-3xl p-5 border border-pink-200/80 shadow-xs hover:border-indigo-300 hover:shadow-md transition-all flex flex-col justify-between group"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.04, 0.4) }}
+              className="flex flex-col"
             >
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-lg bg-indigo-50 text-indigo-600 border border-indigo-200">
-                    {topic.targetBand.replace('_', ' ')}
-                  </span>
-                  <span className="text-xs text-[#8B7E9C] font-semibold">
-                    {topic.exerciseCount} bài tập
-                  </span>
+              <Link
+                href={`/grammar/${topic.id}`}
+                className="glass rounded-3xl p-5 border border-pink-200/80 shadow-xs hover:border-indigo-300 hover:shadow-md transition-all flex flex-col justify-between group h-full"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-lg bg-indigo-50 text-indigo-600 border border-indigo-200">
+                      {topic.targetBand.replace('_', ' ')}
+                    </span>
+                    <span className="text-xs text-[#8B7E9C] font-semibold">
+                      {topic.exerciseCount} bài tập
+                    </span>
+                  </div>
+
+                  <h3 className="font-extrabold text-base text-[#3F3355] group-hover:text-indigo-600 transition-colors mb-1">
+                    {topic.title}
+                  </h3>
+                  <p className="text-xs text-[#8B7E9C] line-clamp-2 font-medium mb-3">
+                    {topic.description}
+                  </p>
+
+                  {topic.formula && (
+                    <div className="p-2.5 rounded-xl bg-pink-50/50 border border-pink-100 text-[11px] font-mono text-indigo-600">
+                      💡 {topic.formula}
+                    </div>
+                  )}
                 </div>
 
-                <h3 className="font-extrabold text-base text-[#3F3355] group-hover:text-indigo-600 transition-colors mb-1">
-                  {topic.title}
-                </h3>
-                <p className="text-xs text-[#8B7E9C] line-clamp-2 font-medium mb-3">
-                  {topic.description}
-                </p>
-
-                {topic.formula && (
-                  <div className="p-2.5 rounded-xl bg-pink-50/50 border border-pink-100 text-[11px] font-mono text-indigo-600">
-                    💡 {topic.formula}
-                  </div>
-                )}
-              </div>
-
-              <div className="mt-4 pt-3 border-t border-pink-100 flex items-center justify-between text-xs font-bold text-indigo-600">
-                <span>
-                  {topic.attemptsCount > 0
-                    ? `Đã làm ${topic.attemptsCount} lần (${topic.accuracyPercent}% đúng)`
-                    : 'Chưa làm bài tập'}
-                </span>
-                <ChevronRight className="w-4 h-4 text-[#8B7E9C] group-hover:translate-x-0.5 transition-transform" />
-              </div>
-            </Link>
+                <div className="mt-4 pt-3 border-t border-pink-100 flex items-center justify-between text-xs font-bold text-indigo-600">
+                  <span>
+                    {topic.attemptsCount > 0
+                      ? `Đã làm ${topic.attemptsCount} lần (${topic.accuracyPercent}% đúng)`
+                      : 'Chưa làm bài tập'}
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-[#8B7E9C] group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

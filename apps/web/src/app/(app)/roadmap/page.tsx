@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { roadmapApi, ApiResult } from '@/lib/api-client';
 import { useAuthStore } from '@/stores/auth.store';
+import { fireConfetti } from '@/lib/confetti';
 
 interface RoadmapNode {
   id: string;
@@ -167,6 +168,7 @@ export default function RoadmapPage() {
     setIsUpdatingNode(node.id);
     const res = await roadmapApi.updateNodeStatus(node.id, 'COMPLETED');
     if (res.success) {
+      fireConfetti({ particleCount: 50 });
       await fetchRoadmap();
     }
     setIsUpdatingNode(null);
@@ -195,6 +197,7 @@ export default function RoadmapPage() {
 
     const res = await roadmapApi.checkIn(checkinWeek, checkinFeedback);
     if (res.success) {
+      fireConfetti({ particleCount: 80 });
       setCheckinSuccessMsg(`Đã ghi nhận đánh giá tuần ${checkinWeek}. Hệ thống đã cân chỉnh độ khó phù hợp! 💕`);
       setTimeout(() => {
         setCheckinWeek(null);

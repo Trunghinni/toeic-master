@@ -12,6 +12,7 @@ import {
   Lightbulb,
 } from 'lucide-react';
 import { grammarApi, ApiResult } from '@/lib/api-client';
+import { fireConfetti } from '@/lib/confetti';
 
 interface GrammarExercise {
   id: string;
@@ -76,14 +77,20 @@ export default function GrammarDetailPage() {
     }>;
 
     if (res.success && res.data) {
-      setExerciseResults((prev) => ({
-        ...prev,
-        [cardId]: {
-          isCorrect: res.data.isCorrect,
-          explanation: res.data.explanation,
-          isMistakeLogged: res.data.isMistakeLogged,
-        },
-      }));
+      setExerciseResults((prev) => {
+        const next = {
+          ...prev,
+          [cardId]: {
+            isCorrect: res.data.isCorrect,
+            explanation: res.data.explanation,
+            isMistakeLogged: res.data.isMistakeLogged,
+          },
+        };
+        if (topic && Object.keys(next).length === topic.exercises.length) {
+          fireConfetti({ particleCount: 65 });
+        }
+        return next;
+      });
     }
     setIsSubmitting(null);
   };
@@ -305,6 +312,25 @@ export default function GrammarDetailPage() {
             </div>
           );
         })}
+
+        {answeredCount === topic.exercises.length && (
+          <div className="glass rounded-3xl p-6 sm:p-8 border border-pink-200 text-center space-y-4 backdrop-blur-xl bg-gradient-to-r from-indigo-50/60 to-rose-50/60">
+            <h3 className="text-xl font-black text-[#3F3355]">
+              Hoàn thành bài tập chuyên đề! 🎉
+            </h3>
+            <p className="text-sm text-[#8B7E9C] font-medium">
+              Bạn đã hoàn thành chính xác <strong className="text-emerald-600 font-bold">{correctCount}</strong> / {topic.exercises.length} câu hỏi.
+            </p>
+            <div className="flex justify-center gap-3 pt-2">
+              <Link href="/grammar" className="btn-primary text-xs px-5 py-2.5">
+                Chuyên đề khác
+              </Link>
+              <Link href="/roadmap" className="btn-secondary text-xs px-5 py-2.5">
+                Xem lộ trình
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

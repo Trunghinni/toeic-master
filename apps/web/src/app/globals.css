@@ -146,6 +146,15 @@ body {
     background-size: 200% 100%;
     animation: shimmer 1.8s linear infinite;
   }
+
+  /* Hide scrollbar for clean horizontal nav */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 /* ── Component Defaults ─────────────────────────────────────── */

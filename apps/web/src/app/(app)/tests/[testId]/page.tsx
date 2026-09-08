@@ -13,6 +13,7 @@ import {
   Loader2,
 } from 'lucide-react';
 import { testApi, ApiResult } from '@/lib/api-client';
+import { fireConfetti } from '@/lib/confetti';
 
 interface QuestionOption {
   id: string;
@@ -101,6 +102,7 @@ export default function TestTakingPage() {
 
     if (res.success && res.data) {
       setResult(res.data);
+      fireConfetti({ particleCount: 75 });
     }
     setIsSubmitting(false);
     isSubmittingRef.current = false;

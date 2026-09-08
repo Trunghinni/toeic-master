@@ -209,44 +209,51 @@ export default function VocabularyHubPage() {
       {/* Main Content Area */}
       {activeTab === 'topics' ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredTopics.map((topic) => (
-            <Link
+          {filteredTopics.map((topic, index) => (
+            <motion.div
               key={topic.id}
-              href={`/vocabulary/${topic.id}`}
-              className="glass rounded-3xl p-5 border border-pink-200/80 shadow-xs hover:border-rose-300 hover:shadow-md transition-all group flex flex-col justify-between"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.04, 0.4) }}
+              className="flex flex-col"
             >
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-lg bg-pink-50 text-rose-500 border border-pink-200">
-                    {topic.targetBand.replace('_', ' ')}
-                  </span>
-                  <span className="text-xs text-[#8B7E9C] font-semibold">
-                    {topic.cardCount} từ
-                  </span>
+              <Link
+                href={`/vocabulary/${topic.id}`}
+                className="glass rounded-3xl p-5 border border-pink-200/80 shadow-xs hover:border-rose-300 hover:shadow-md transition-all group flex flex-col justify-between h-full"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-lg bg-pink-50 text-rose-500 border border-pink-200">
+                      {topic.targetBand.replace('_', ' ')}
+                    </span>
+                    <span className="text-xs text-[#8B7E9C] font-semibold">
+                      {topic.cardCount} từ
+                    </span>
+                  </div>
+
+                  <h3 className="font-extrabold text-base text-[#3F3355] group-hover:text-rose-500 transition-colors mb-1.5">
+                    {topic.title}
+                  </h3>
+                  <p className="text-xs text-[#8B7E9C] line-clamp-2 leading-relaxed font-medium">
+                    {topic.description}
+                  </p>
                 </div>
 
-                <h3 className="font-extrabold text-base text-[#3F3355] group-hover:text-rose-500 transition-colors mb-1.5">
-                  {topic.title}
-                </h3>
-                <p className="text-xs text-[#8B7E9C] line-clamp-2 leading-relaxed font-medium">
-                  {topic.description}
-                </p>
-              </div>
-
-              {/* Progress bar */}
-              <div className="mt-5 pt-4 border-t border-pink-100">
-                <div className="flex justify-between text-[11px] font-bold text-[#8B7E9C] mb-1.5">
-                  <span>Tiến độ ghi nhớ</span>
-                  <span className="text-rose-500">{topic.progressPercent}%</span>
+                {/* Progress bar */}
+                <div className="mt-5 pt-4 border-t border-pink-100">
+                  <div className="flex justify-between text-[11px] font-bold text-[#8B7E9C] mb-1.5">
+                    <span>Tiến độ ghi nhớ</span>
+                    <span className="text-rose-500">{topic.progressPercent}%</span>
+                  </div>
+                  <div className="w-full h-2 bg-pink-100 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-rose-400 to-indigo-400 rounded-full transition-all duration-500"
+                      style={{ width: `${topic.progressPercent}%` }}
+                    />
+                  </div>
                 </div>
-                <div className="w-full h-2 bg-pink-100 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-rose-400 to-indigo-400 rounded-full transition-all duration-500"
-                    style={{ width: `${topic.progressPercent}%` }}
-                  />
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       ) : (

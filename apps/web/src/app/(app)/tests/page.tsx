@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Award,
   Clock,
@@ -15,7 +16,7 @@ interface TestItem {
   id: string;
   title: string;
   description: string;
-  mode: 'PRACTICE' | 'MOCK_TEST';
+  mode: 'PRACTICE' | 'MINI_TEST' | 'FULL_TEST' | 'MOCK_TEST';
   durationMins: number;
   questionCount: number;
   bestScore: number | null;
@@ -56,8 +57,8 @@ export default function TestBankHubPage() {
   }, []);
 
   const filteredTests = tests.filter((t) => {
-    if (activeTab === 'mini') return t.mode === 'PRACTICE';
-    if (activeTab === 'full') return t.mode === 'MOCK_TEST';
+    if (activeTab === 'mini') return t.mode === 'MINI_TEST' || t.mode === 'PRACTICE';
+    if (activeTab === 'full') return t.mode === 'FULL_TEST' || t.mode === 'MOCK_TEST';
     return true;
   });
 
@@ -128,21 +129,24 @@ export default function TestBankHubPage() {
       {/* Test List or History */}
       {activeTab !== 'history' ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {filteredTests.map((test) => (
-            <div
+          {filteredTests.map((test, index) => (
+            <motion.div
               key={test.id}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.05, 0.4) }}
               className="glass rounded-3xl p-6 border border-pink-200/80 shadow-xs hover:border-rose-300 hover:shadow-md transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <span
                     className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-lg border ${
-                      test.mode === 'MOCK_TEST'
+                      test.mode === 'FULL_TEST' || test.mode === 'MOCK_TEST'
                         ? 'bg-purple-50 text-purple-600 border-purple-200'
                         : 'bg-rose-50 text-rose-500 border-rose-200'
                     }`}
                   >
-                    {test.mode === 'MOCK_TEST' ? 'Full Test 120p' : 'Mini-Test 25p'}
+                    {test.mode === 'FULL_TEST' || test.mode === 'MOCK_TEST' ? 'Full Test 120p' : 'Mini-Test'}
                   </span>
                   <span className="text-xs text-[#8B7E9C] font-semibold flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5 text-indigo-400" />
@@ -172,7 +176,7 @@ export default function TestBankHubPage() {
                   Bắt đầu làm bài
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       ) : (
