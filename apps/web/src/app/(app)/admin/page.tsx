@@ -16,8 +16,12 @@ import {
   ChevronDown,
   ChevronUp,
   Layers,
+  GraduationCap,
+  FileText,
 } from 'lucide-react';
 import { adminApi } from '@/lib/api-client';
+import AdminGrammarTab from './components/AdminGrammarTab';
+import AdminTestsTab from './components/AdminTestsTab';
 
 interface AdminStats {
   totalUsers: number;
@@ -132,7 +136,7 @@ export default function AdminDashboardPage() {
   };
 
   // Navigation tab
-  const [activeTab, setActiveTab] = useState<'USERS' | 'VOCAB'>('USERS');
+  const [activeTab, setActiveTab] = useState<'USERS' | 'VOCAB' | 'GRAMMAR' | 'TESTS'>('USERS');
 
   // Vocabulary CMS State
   const [vocabTopics, setVocabTopics] = useState<AdminVocabTopic[]>([]);
@@ -351,6 +355,30 @@ export default function AdminDashboardPage() {
         >
           <BookOpen className="w-4 h-4" />
           Quản Lý Từ Vựng (Vocabulary CMS)
+        </button>
+
+        <button
+          onClick={() => setActiveTab('GRAMMAR')}
+          className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all ${
+            activeTab === 'GRAMMAR'
+              ? 'bg-brand-500 text-white shadow-md shadow-brand-200'
+              : 'bg-white text-gray-600 hover:bg-pink-50 border border-pink-200'
+          }`}
+        >
+          <GraduationCap className="w-4 h-4" />
+          Quản Lý Ngữ Pháp (Grammar CMS)
+        </button>
+
+        <button
+          onClick={() => setActiveTab('TESTS')}
+          className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all ${
+            activeTab === 'TESTS'
+              ? 'bg-brand-500 text-white shadow-md shadow-brand-200'
+              : 'bg-white text-gray-600 hover:bg-pink-50 border border-pink-200'
+          }`}
+        >
+          <FileText className="w-4 h-4" />
+          Quản Lý Đề Thi (Tests CMS)
         </button>
       </div>
 
@@ -770,6 +798,16 @@ export default function AdminDashboardPage() {
             </div>
           )}
         </div>
+      )}
+
+      {/* ── TAB 3: GRAMMAR CMS ──────────────────────────────────── */}
+      {activeTab === 'GRAMMAR' && (
+        <AdminGrammarTab setActionMsg={setActionMsg} />
+      )}
+
+      {/* ── TAB 4: TESTS CMS ────────────────────────────────────── */}
+      {activeTab === 'TESTS' && (
+        <AdminTestsTab setActionMsg={setActionMsg} />
       )}
     </div>
   );

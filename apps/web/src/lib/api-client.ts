@@ -527,6 +527,116 @@ export const adminApi = {
     apiRequest<unknown>(`/v1/admin/vocabulary/topics/${topicId}`, {
       method: 'DELETE',
     }),
+
+  // Grammar CMS
+  getGrammarTopics: () =>
+    apiRequest<{
+      id: string;
+      title: string;
+      description?: string;
+      rule: string;
+      formula?: string;
+      tips?: string;
+      targetBand?: string;
+      exercises: {
+        id: string;
+        question: string;
+        options: { id: string; text: string }[];
+        correctAnswer: string;
+        explanation: string;
+        difficulty: number;
+      }[];
+    }[]>('/v1/admin/grammar/topics'),
+
+  createGrammarTopic: (body: {
+    title: string;
+    description?: string;
+    rule: string;
+    formula?: string;
+    tips?: string;
+    targetBand?: string;
+  }) =>
+    apiRequest<unknown>('/v1/admin/grammar/topics', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+
+  createGrammarCard: (
+    topicId: string,
+    body: {
+      question: string;
+      options: { id: string; text: string }[];
+      correctAnswer: string;
+      explanation: string;
+      difficulty?: number;
+    },
+  ) =>
+    apiRequest<unknown>(`/v1/admin/grammar/topics/${topicId}/cards`, {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+
+  deleteGrammarTopic: (topicId: string) =>
+    apiRequest<unknown>(`/v1/admin/grammar/topics/${topicId}`, {
+      method: 'DELETE',
+    }),
+
+  // Tests CMS
+  getTests: () =>
+    apiRequest<{
+      id: string;
+      title: string;
+      description?: string;
+      mode: string;
+      durationMins: number;
+      totalQuestions: number;
+      parts: string[];
+      bandRange: string[];
+      questions: {
+        id: string;
+        part: string;
+        questionNumber: number;
+        questionText: string;
+        options: { id: string; text: string }[];
+        correctOptionId: string;
+        explanation?: string;
+      }[];
+    }[]>('/v1/admin/tests'),
+
+  createTest: (body: {
+    title: string;
+    description?: string;
+    mode?: string;
+    durationMins?: number;
+    parts?: string[];
+    bandRange?: string[];
+  }) =>
+    apiRequest<unknown>('/v1/admin/tests', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+
+  createTestQuestion: (
+    testId: string,
+    body: {
+      part: string;
+      questionNumber: number;
+      questionText: string;
+      options: { id: string; text: string }[];
+      correctOptionId: string;
+      explanation?: string;
+      imageUrl?: string;
+    },
+  ) =>
+    apiRequest<unknown>(`/v1/admin/tests/${testId}/questions`, {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+
+  deleteTest: (testId: string) =>
+    apiRequest<unknown>(`/v1/admin/tests/${testId}`, {
+      method: 'DELETE',
+    }),
 };
 
 export const subscriptionApi = {

@@ -1,14 +1,7 @@
+#!/usr/bin/env node
 /**
- * TOEIC Master — Content Import Script
- * 
- * Nạp dữ liệu học tập thủ công từ file JSON vào cơ sở dữ liệu PostgreSQL qua Prisma.
- * Không phụ thuộc AI, đảm bảo dữ liệu chuẩn xác 100% theo nội dung do bạn biên soạn.
- * 
- * Cách sử dụng:
- *   npm run content:import -- --type=vocab --file=content/samples/vocabulary.sample.json
- *   npm run content:import -- --type=grammar --file=content/samples/grammar.sample.json
- *   npm run content:import -- --type=questions --file=content/samples/questions.sample.json
- *   npm run content:import -- --all
+ * TOEIC Master — Content Import CLI Tool (Production-Grade)
+ * Idempotent, High-Performance, Anti-Duplication Pipeline
  */
 
 const fs = require('fs');
@@ -17,7 +10,19 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-// Parse command line arguments
+// Helper to generate clean deterministic slug if ID is omitted
+function slugify(text, prefix = 'item') {
+  const clean = String(text || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .slice(0, 40);
+  return `${prefix}_${clean || Date.now()}`;
+}
+
+// ── 0. Parse Command Line Arguments ──────────────────────────────
 function parseArgs() {
   const args = process.argv.slice(2);
   const options = {
@@ -30,9 +35,9 @@ function parseArgs() {
     if (arg === '--all') {
       options.all = true;
     } else if (arg.startsWith('--type=')) {
-      options.type = arg.split('=')[1].toLowerCase();
+      options.type = arg.split('=')[1].toLowerCase().trim();
     } else if (arg.startsWith('--file=')) {
-      options.file = arg.split('=')[1];
+      options.file = arg.split('=')[1].trim();
     }
   }
 
@@ -47,60 +52,74 @@ async function importVocabulary(filePath) {
   }
 
   const rawData = JSON.parse(fs.readFileSync(absPath, 'utf8'));
-  const topics = rawData.topics || [];
+  const topics = Array.isArray(rawData) ? rawData : (rawData.topics || []);
 
   console.log(`\n📚 [VOCABULARY] Bắt đầu nạp ${topics.length} chủ đề từ vựng từ ${filePath}...`);
-  let totalCards = 0;
+  let globalCreatedCards = 0;
+  let globalUpdatedCards = 0;
 
-  for (const topicData of topics) {
+  for (const [tIdx, topicData] of topics.entries()) {
     if (!topicData.title) {
-      console.warn(`  ⚠️ Bỏ qua chủ đề thiếu trường title:`, topicData);
+      console.warn(`  ⚠️ [${tIdx + 1}] Bỏ qua chủ đề thiếu trường title:`, topicData);
       continue;
     }
 
-    // Upsert topic
-    const topicId = topicData.id || `topic_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+    // Anti-duplication: Find by ID or Title
+    let existingTopic = null;
+    if (topicData.id) {
+      existingTopic = await prisma.vocabularyTopic.findUnique({ where: { id: topicData.id } });
+    }
+    if (!existingTopic) {
+      existingTopic = await prisma.vocabularyTopic.findFirst({
+        where: { title: { equals: topicData.title.trim(), mode: 'insensitive' } },
+      });
+    }
+
+    const topicId = existingTopic ? existingTopic.id : (topicData.id || slugify(topicData.title, 'top'));
+    const isUpdate = Boolean(existingTopic);
+
     const topic = await prisma.vocabularyTopic.upsert({
       where: { id: topicId },
       create: {
         id: topicId,
-        title: topicData.title,
+        title: topicData.title.trim(),
         description: topicData.description || null,
-        targetBand: topicData.targetBand || 'BAND_2',
+        targetBand: topicData.targetBand || 'BAND_3',
         isPublic: topicData.isPublic !== false,
         isSystem: true,
       },
       update: {
-        title: topicData.title,
+        title: topicData.title.trim(),
         description: topicData.description || null,
-        targetBand: topicData.targetBand || 'BAND_2',
+        targetBand: topicData.targetBand || 'BAND_3',
         isPublic: topicData.isPublic !== false,
       },
     });
 
-    console.log(`  ✅ Đã đồng bộ chủ đề: "${topic.title}" (Band: ${topic.targetBand})`);
+    console.log(`  ${isUpdate ? '🔄 Đã cập nhật' : '✨ Đã tạo mới'} chủ đề: "${topic.title}" (ID: ${topic.id})`);
 
-    // Process cards
+    // Process cards with deduplication
     const cards = topicData.cards || [];
     let cardOrder = 1;
+    let topicCreated = 0;
+    let topicUpdated = 0;
 
     for (const cardData of cards) {
       if (!cardData.word || !cardData.definition) {
-        console.warn(`    ⚠️ Bỏ qua từ thiếu word hoặc definition:`, cardData);
         continue;
       }
 
-      // Check if card exists in this topic by word
+      const wordClean = cardData.word.trim();
       const existingCard = await prisma.vocabularyCard.findFirst({
         where: {
           topicId: topic.id,
-          word: { equals: cardData.word, mode: 'insensitive' },
+          word: { equals: wordClean, mode: 'insensitive' },
         },
       });
 
       const cardPayload = {
         topicId: topic.id,
-        word: cardData.word.trim(),
+        word: wordClean,
         phonetic: cardData.phonetic || null,
         wordType: cardData.wordType || 'NOUN',
         definition: cardData.definition.trim(),
@@ -119,15 +138,17 @@ async function importVocabulary(filePath) {
           where: { id: existingCard.id },
           data: cardPayload,
         });
+        topicUpdated++;
+        globalUpdatedCards++;
       } else {
         await prisma.vocabularyCard.create({
           data: cardPayload,
         });
+        topicCreated++;
+        globalCreatedCards++;
       }
-      totalCards++;
     }
 
-    // Update count on topic
     const currentCardCount = await prisma.vocabularyCard.count({
       where: { topicId: topic.id },
     });
@@ -136,10 +157,10 @@ async function importVocabulary(filePath) {
       data: { cardCount: currentCardCount },
     });
 
-    console.log(`     └─ Tổng cộng: ${currentCardCount} thẻ từ trong chủ đề này.`);
+    console.log(`     └─ Tổng: ${currentCardCount} thẻ (${topicCreated} tạo mới, ${topicUpdated} cập nhật chống trùng lặp)`);
   }
 
-  console.log(`🎉 [VOCABULARY] Hoàn thành: ${topics.length} chủ đề, ${totalCards} thẻ từ được nạp thành công!`);
+  console.log(`🎉 [VOCABULARY] Hoàn thành: ${topics.length} chủ đề, ${globalCreatedCards} thẻ mới, ${globalUpdatedCards} thẻ cập nhật.`);
 }
 
 // ── 2. Import Grammar ────────────────────────────────────────────
@@ -150,23 +171,36 @@ async function importGrammar(filePath) {
   }
 
   const rawData = JSON.parse(fs.readFileSync(absPath, 'utf8'));
-  const topics = rawData.topics || [];
+  const topics = Array.isArray(rawData) ? rawData : (rawData.topics || []);
 
   console.log(`\n📖 [GRAMMAR] Bắt đầu nạp ${topics.length} chủ điểm ngữ pháp từ ${filePath}...`);
-  let totalExercises = 0;
+  let globalCreatedEx = 0;
+  let globalUpdatedEx = 0;
 
-  for (const topicData of topics) {
+  for (const [tIdx, topicData] of topics.entries()) {
     if (!topicData.title || !topicData.rule) {
-      console.warn(`  ⚠️ Bỏ qua chủ điểm ngữ pháp thiếu title hoặc rule:`, topicData);
+      console.warn(`  ⚠️ [${tIdx + 1}] Bỏ qua chủ điểm thiếu title hoặc rule:`, topicData);
       continue;
     }
 
-    const topicId = topicData.id || `grammar_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+    let existingTopic = null;
+    if (topicData.id) {
+      existingTopic = await prisma.grammarTopic.findUnique({ where: { id: topicData.id } });
+    }
+    if (!existingTopic) {
+      existingTopic = await prisma.grammarTopic.findFirst({
+        where: { title: { equals: topicData.title.trim(), mode: 'insensitive' } },
+      });
+    }
+
+    const topicId = existingTopic ? existingTopic.id : (topicData.id || slugify(topicData.title, 'gram'));
+    const isUpdate = Boolean(existingTopic);
+
     const topic = await prisma.grammarTopic.upsert({
       where: { id: topicId },
       create: {
         id: topicId,
-        title: topicData.title,
+        title: topicData.title.trim(),
         description: topicData.description || null,
         rule: topicData.rule,
         formula: topicData.formula || null,
@@ -174,11 +208,11 @@ async function importGrammar(filePath) {
         tips: topicData.tips || null,
         commonErrors: topicData.commonErrors || [],
         targetBand: topicData.targetBand || 'BAND_3',
-        orderIndex: topicData.orderIndex || 0,
+        orderIndex: topicData.orderIndex || tIdx,
         isSystem: true,
       },
       update: {
-        title: topicData.title,
+        title: topicData.title.trim(),
         description: topicData.description || null,
         rule: topicData.rule,
         formula: topicData.formula || null,
@@ -186,22 +220,24 @@ async function importGrammar(filePath) {
         tips: topicData.tips || null,
         commonErrors: topicData.commonErrors || [],
         targetBand: topicData.targetBand || 'BAND_3',
-        orderIndex: topicData.orderIndex || 0,
       },
     });
 
-    console.log(`  ✅ Đã đồng bộ chủ điểm: "${topic.title}"`);
+    console.log(`  ${isUpdate ? '🔄 Đã cập nhật' : '✨ Đã tạo mới'} chủ điểm: "${topic.title}" (ID: ${topic.id})`);
 
-    // Process exercises
     const exercises = topicData.exercises || [];
     let cardIndex = 0;
+    let topicCreated = 0;
+    let topicUpdated = 0;
+
     for (const ex of exercises) {
       if (!ex.question || !ex.correctAnswer) continue;
 
+      const qTrimmed = ex.question.trim();
       const existingCard = await prisma.grammarCard.findFirst({
         where: {
           grammarTopicId: topic.id,
-          question: ex.question.trim(),
+          question: qTrimmed,
         },
       });
 
@@ -215,7 +251,7 @@ async function importGrammar(filePath) {
       const exercisePayload = {
         grammarTopicId: topic.id,
         type: 'MULTIPLE_CHOICE',
-        question: ex.question.trim(),
+        question: qTrimmed,
         options: optionsFormatted,
         correctAnswer: ex.correctAnswer.trim(),
         explanation: ex.explanation || '',
@@ -228,21 +264,24 @@ async function importGrammar(filePath) {
           where: { id: existingCard.id },
           data: exercisePayload,
         });
+        topicUpdated++;
+        globalUpdatedEx++;
       } else {
         await prisma.grammarCard.create({
           data: exercisePayload,
         });
+        topicCreated++;
+        globalCreatedEx++;
       }
-      totalExercises++;
     }
 
     const exerciseCount = await prisma.grammarCard.count({
       where: { grammarTopicId: topic.id },
     });
-    console.log(`     └─ Tổng cộng: ${exerciseCount} bài tập trắc nghiệm.`);
+    console.log(`     └─ Tổng: ${exerciseCount} bài tập (${topicCreated} tạo mới, ${topicUpdated} cập nhật chống trùng lặp)`);
   }
 
-  console.log(`🎉 [GRAMMAR] Hoàn thành: ${topics.length} chủ điểm, ${totalExercises} bài tập trắc nghiệm!`);
+  console.log(`🎉 [GRAMMAR] Hoàn thành: ${topics.length} chủ điểm, ${globalCreatedEx} bài mới, ${globalUpdatedEx} bài cập nhật.`);
 }
 
 // ── 3. Import Questions & Tests ──────────────────────────────────
@@ -253,18 +292,31 @@ async function importQuestions(filePath) {
   }
 
   const rawData = JSON.parse(fs.readFileSync(absPath, 'utf8'));
-  const tests = rawData.tests || [];
+  const tests = Array.isArray(rawData) ? rawData : (rawData.tests || []);
 
   console.log(`\n📝 [TESTS & QUESTIONS] Bắt đầu nạp ${tests.length} bộ đề thi từ ${filePath}...`);
-  let totalQuestions = 0;
+  let globalCreatedQ = 0;
+  let globalUpdatedQ = 0;
 
-  for (const testData of tests) {
+  for (const [tIdx, testData] of tests.entries()) {
     if (!testData.title) {
-      console.warn(`  ⚠️ Bỏ qua đề thi thiếu title:`, testData);
+      console.warn(`  ⚠️ [${tIdx + 1}] Bỏ qua đề thi thiếu title:`, testData);
       continue;
     }
 
-    const testId = testData.id || `test_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+    let existingTest = null;
+    if (testData.id) {
+      existingTest = await prisma.test.findUnique({ where: { id: testData.id } });
+    }
+    if (!existingTest) {
+      existingTest = await prisma.test.findFirst({
+        where: { title: { equals: testData.title.trim(), mode: 'insensitive' } },
+      });
+    }
+
+    const testId = existingTest ? existingTest.id : (testData.id || slugify(testData.title, 'test'));
+    const isUpdate = Boolean(existingTest);
+
     const questions = testData.questions || [];
     const partsList = Array.from(new Set(questions.map((q) => q.part || 'PART_5')));
 
@@ -272,29 +324,32 @@ async function importQuestions(filePath) {
       where: { id: testId },
       create: {
         id: testId,
-        title: testData.title,
+        title: testData.title.trim(),
         description: testData.description || null,
         mode: testData.mode || 'PRACTICE',
-        parts: partsList,
+        parts: partsList.length > 0 ? partsList : ['PART_5'],
         bandRange: testData.targetBand ? [testData.targetBand] : ['BAND_3'],
-        durationMins: testData.timeLimit || 15,
+        durationMins: testData.timeLimit || testData.durationMins || 15,
         totalQuestions: questions.length || 0,
         isPublished: true,
         isFree: true,
       },
       update: {
-        title: testData.title,
+        title: testData.title.trim(),
         description: testData.description || null,
         mode: testData.mode || 'PRACTICE',
-        parts: partsList,
+        parts: partsList.length > 0 ? partsList : ['PART_5'],
         bandRange: testData.targetBand ? [testData.targetBand] : ['BAND_3'],
-        durationMins: testData.timeLimit || 15,
+        durationMins: testData.timeLimit || testData.durationMins || 15,
         totalQuestions: questions.length || 0,
         isPublished: true,
       },
     });
 
-    console.log(`  ✅ Đã đồng bộ đề thi: "${test.title}" (${test.mode}, ${test.durationMins} phút)`);
+    console.log(`  ${isUpdate ? '🔄 Đã cập nhật' : '✨ Đã tạo mới'} đề thi: "${test.title}" (ID: ${test.id}, ${test.durationMins} phút)`);
+
+    let testCreatedQ = 0;
+    let testUpdatedQ = 0;
 
     for (const q of questions) {
       if (!q.correctOptionId) continue;
@@ -326,21 +381,24 @@ async function importQuestions(filePath) {
           where: { id: existingQ.id },
           data: qPayload,
         });
+        testUpdatedQ++;
+        globalUpdatedQ++;
       } else {
         await prisma.testQuestion.create({
           data: qPayload,
         });
+        testCreatedQ++;
+        globalCreatedQ++;
       }
-      totalQuestions++;
     }
 
     const finalQCount = await prisma.testQuestion.count({
       where: { testId: test.id },
     });
-    console.log(`     └─ Tổng cộng: ${finalQCount} câu hỏi trong đề thi.`);
+    console.log(`     └─ Tổng: ${finalQCount} câu hỏi (${testCreatedQ} tạo mới, ${testUpdatedQ} cập nhật chống trùng lặp)`);
   }
 
-  console.log(`🎉 [TESTS & QUESTIONS] Hoàn thành: ${tests.length} đề thi, ${totalQuestions} câu hỏi!`);
+  console.log(`🎉 [TESTS & QUESTIONS] Hoàn thành: ${tests.length} đề thi, ${globalCreatedQ} câu mới, ${globalUpdatedQ} câu cập nhật.`);
 }
 
 // ── Main Execution ───────────────────────────────────────────────
@@ -353,9 +411,9 @@ async function main() {
 
   try {
     if (options.all) {
-      await importVocabulary('content/samples/vocabulary.sample.json');
-      await importGrammar('content/samples/grammar.sample.json');
-      await importQuestions('content/samples/questions.sample.json');
+      await importVocabulary(options.file || 'content/samples/vocabulary.sample.json');
+      await importGrammar(options.file || 'content/samples/grammar.sample.json');
+      await importQuestions(options.file || 'content/samples/questions.sample.json');
     } else if (options.type === 'vocab' || options.type === 'vocabulary') {
       await importVocabulary(options.file || 'content/samples/vocabulary.sample.json');
     } else if (options.type === 'grammar') {

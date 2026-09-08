@@ -14,7 +14,7 @@ import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { RolesGuard } from '../../common/guards/roles.guard';
 import { Roles } from '../../common/decorators/roles.decorator';
 import { AdminService } from './admin.service';
-import { UserRole, BandLevel, WordType } from '@prisma/client';
+import { UserRole, BandLevel, WordType, TestMode, TestPartType } from '@prisma/client';
 
 @Controller('admin')
 @UseGuards(JwtAuthGuard, RolesGuard)
@@ -135,5 +135,99 @@ export class AdminController {
   @Roles(UserRole.ADMIN)
   deleteVocabularyTopic(@Param('id') topicId: string) {
     return this.adminService.deleteVocabularyTopic(topicId);
+  }
+
+  // ── Grammar CMS Endpoints ────────────────────────────────────
+
+  @Get('grammar/topics')
+  @Roles(UserRole.ADMIN)
+  getAdminGrammarTopics() {
+    return this.adminService.getAdminGrammarTopics();
+  }
+
+  @Post('grammar/topics')
+  @Roles(UserRole.ADMIN)
+  createGrammarTopic(
+    @Body()
+    body: {
+      title: string;
+      description?: string;
+      rule: string;
+      formula?: string;
+      tips?: string;
+      targetBand?: BandLevel;
+    },
+  ) {
+    return this.adminService.createGrammarTopic(body);
+  }
+
+  @Post('grammar/topics/:id/cards')
+  @Roles(UserRole.ADMIN)
+  createGrammarCard(
+    @Param('id') topicId: string,
+    @Body()
+    body: {
+      question: string;
+      options: { id: string; text: string }[];
+      correctAnswer: string;
+      explanation: string;
+      difficulty?: number;
+    },
+  ) {
+    return this.adminService.createGrammarCard(topicId, body);
+  }
+
+  @Delete('grammar/topics/:id')
+  @Roles(UserRole.ADMIN)
+  deleteGrammarTopic(@Param('id') topicId: string) {
+    return this.adminService.deleteGrammarTopic(topicId);
+  }
+
+  // ── Tests CMS Endpoints ──────────────────────────────────────
+
+  @Get('tests')
+  @Roles(UserRole.ADMIN)
+  getAdminTests() {
+    return this.adminService.getAdminTests();
+  }
+
+  @Post('tests')
+  @Roles(UserRole.ADMIN)
+  createTest(
+    @Body()
+    body: {
+      title: string;
+      description?: string;
+      mode?: TestMode;
+      durationMins?: number;
+      parts?: TestPartType[];
+      bandRange?: BandLevel[];
+    },
+  ) {
+    return this.adminService.createTest(body);
+  }
+
+  @Post('tests/:id/questions')
+  @Roles(UserRole.ADMIN)
+  createTestQuestion(
+    @Param('id') testId: string,
+    @Body()
+    body: {
+      part: TestPartType;
+      questionNumber: number;
+      questionText: string;
+      options: { id: string; text: string }[];
+      correctOptionId: string;
+      explanation?: string;
+      imageUrl?: string;
+    },
+  ) {
+    return this.adminService.createTestQuestion(testId, body);
+  }
+
+  @Delete('tests/:id')
+  @Roles(UserRole.ADMIN)
+  deleteTest(@Param('id') testId: string) {
+    return this.adminService.deleteTest(testId);
   }
 }

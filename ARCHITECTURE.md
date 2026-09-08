@@ -246,3 +246,11 @@ See `.env.example` for the full list. Required for each phase:
 
 ---
 
+## 9. Quyết Định Chiến Lược (Strategic Decisions & Backlog)
+
+> **Cập nhật ngày 08/09/2026 — Lựa chọn B (Nội dung & Ổn định tối đa):**
+> 1. **Tạm hoãn AI LLM/STT thương mại (OpenAI, Anthropic, Azure Speech)**: Ứng dụng hiện tại phục vụ 2 người dùng cá nhân luyện thi thực tế. Đánh giá Speaking/Writing tiếp tục duy trì bộ công thức Heuristic nội bộ (đếm từ, WPM, rubric tiêu chuẩn) minh bạch với người dùng. AI thật tốn phí theo lượt gọi sẽ chỉ được kích hoạt sau khi hệ thống nội dung cốt lõi và bài luyện thi hoàn thiện đầy đủ.
+> 2. **Tạm hoãn tích hợp Payment Gateway thật (VNPay, Stripe)**: Hệ thống duy trì cơ chế kích hoạt VIP Premium Demo miễn phí, không phát sinh giao dịch tiền tệ thật.
+> 3. **Ưu tiên số 1**: Quy mô nội dung thực tế (10+ chủ đề từ vựng 150-200 từ, 10+ chủ điểm ngữ pháp, 3+ mini tests và Part 1-7 đầy đủ), thuật toán SM-2, hệ thống quản trị Admin CMS mở rộng (Vocabulary, Grammar, Tests), và trải nghiệm người dùng hoàn thiện, mượt mà trên cả desktop lẫn mobile.
+
+

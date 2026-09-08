@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../common/prisma/prisma.service';
-import { Prisma, UserRole, BandLevel, WordType } from '@prisma/client';
+import { Prisma, UserRole, BandLevel, WordType, TestMode, TestPartType } from '@prisma/client';
 
 @Injectable()
 export class AdminService {
@@ -292,6 +292,152 @@ export class AdminService {
   async deleteVocabularyTopic(topicId: string) {
     return this.prisma.vocabularyTopic.delete({
       where: { id: topicId },
+    });
+  }
+
+  // ── Grammar CMS ──────────────────────────────────────────────
+  async getAdminGrammarTopics() {
+    return this.prisma.grammarTopic.findMany({
+      include: {
+        exercises: {
+          orderBy: { orderIndex: 'asc' },
+        },
+      },
+      orderBy: { orderIndex: 'asc' },
+    });
+  }
+
+  async createGrammarTopic(data: {
+    title: string;
+    description?: string;
+    rule: string;
+    formula?: string;
+    tips?: string;
+    targetBand?: BandLevel;
+  }) {
+    return this.prisma.grammarTopic.create({
+      data: {
+        title: data.title,
+        description: data.description,
+        rule: data.rule,
+        formula: data.formula,
+        tips: data.tips,
+        examples: [],
+        targetBand: data.targetBand || 'BAND_3',
+        isSystem: true,
+      },
+      include: {
+        exercises: true,
+      },
+    });
+  }
+
+  async createGrammarCard(
+    grammarTopicId: string,
+    data: {
+      question: string;
+      options: { id: string; text: string }[];
+      correctAnswer: string;
+      explanation: string;
+      difficulty?: number;
+    },
+  ) {
+    const count = await this.prisma.grammarCard.count({ where: { grammarTopicId } });
+    return this.prisma.grammarCard.create({
+      data: {
+        grammarTopicId,
+        type: 'MULTIPLE_CHOICE',
+        question: data.question,
+        options: data.options,
+        correctAnswer: data.correctAnswer,
+        explanation: data.explanation || '',
+        difficulty: data.difficulty || 2,
+        orderIndex: count,
+      },
+    });
+  }
+
+  async deleteGrammarTopic(topicId: string) {
+    return this.prisma.grammarTopic.delete({
+      where: { id: topicId },
+    });
+  }
+
+  // ── Tests CMS ────────────────────────────────────────────────
+  async getAdminTests() {
+    return this.prisma.test.findMany({
+      include: {
+        questions: {
+          orderBy: { questionNumber: 'asc' },
+        },
+      },
+      orderBy: { createdAt: 'desc' },
+    });
+  }
+
+  async createTest(data: {
+    title: string;
+    description?: string;
+    mode?: TestMode;
+    durationMins?: number;
+    parts?: TestPartType[];
+    bandRange?: BandLevel[];
+  }) {
+    return this.prisma.test.create({
+      data: {
+        title: data.title,
+        description: data.description,
+        mode: data.mode || 'PRACTICE',
+        durationMins: data.durationMins || 15,
+        parts: data.parts && data.parts.length > 0 ? data.parts : ['PART_5'],
+        bandRange: data.bandRange && data.bandRange.length > 0 ? data.bandRange : ['BAND_3'],
+        totalQuestions: 0,
+        isPublished: true,
+        isFree: true,
+      },
+      include: {
+        questions: true,
+      },
+    });
+  }
+
+  async createTestQuestion(
+    testId: string,
+    data: {
+      part: TestPartType;
+      questionNumber: number;
+      questionText: string;
+      options: { id: string; text: string }[];
+      correctOptionId: string;
+      explanation?: string;
+      imageUrl?: string;
+    },
+  ) {
+    const question = await this.prisma.testQuestion.create({
+      data: {
+        testId,
+        part: data.part,
+        questionNumber: data.questionNumber,
+        questionText: data.questionText,
+        options: data.options,
+        correctOptionId: data.correctOptionId,
+        explanation: data.explanation,
+        imageUrl: data.imageUrl,
+      },
+    });
+
+    const count = await this.prisma.testQuestion.count({ where: { testId } });
+    await this.prisma.test.update({
+      where: { id: testId },
+      data: { totalQuestions: count },
+    });
+
+    return question;
+  }
+
+  async deleteTest(testId: string) {
+    return this.prisma.test.delete({
+      where: { id: testId },
     });
   }
 }
