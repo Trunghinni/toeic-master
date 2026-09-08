@@ -9,7 +9,6 @@ import {
   Clock,
   User,
   Sparkles,
-  Award,
   ArrowRight,
   ArrowLeft,
   CheckCircle2,

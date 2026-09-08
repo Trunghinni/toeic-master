@@ -3,21 +3,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Sparkles,
   Check,
   Heart,
   Crown,
   Zap,
   ShieldCheck,
   CreditCard,
-  QrCode,
   ArrowRight
 } from 'lucide-react';
 import { subscriptionApi } from '@/lib/api-client';
 
 export default function SubscriptionPage() {
-  const [currentSub, setCurrentSub] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const [currentSub, setCurrentSub] = useState<Record<string, unknown> | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<'PRO_MONTHLY' | 'COUPLE_VIP_YEARLY'>('COUPLE_VIP_YEARLY');
   const [paymentMethod, setPaymentMethod] = useState<'VNPAY' | 'STRIPE' | 'MOMO'>('VNPAY');
   const [processing, setProcessing] = useState(false);
@@ -33,7 +30,7 @@ export default function SubscriptionPage() {
       } catch (err) {
         console.error('Failed to load subscription info', err);
       } finally {
-        setLoading(false);
+        // loading complete
       }
     }
     loadSub();
@@ -53,8 +50,8 @@ export default function SubscriptionPage() {
         const updated = await subscriptionApi.getMySubscription();
         if (updated.success) setCurrentSub(updated.data);
       }
-    } catch (err: any) {
-      alert(err.message || 'Lỗi thanh toán');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Lỗi thanh toán');
     } finally {
       setProcessing(false);
     }
@@ -266,7 +263,7 @@ export default function SubscriptionPage() {
             <button
               key={m.id}
               type="button"
-              onClick={() => setPaymentMethod(m.id as any)}
+              onClick={() => setPaymentMethod(m.id as 'VNPAY' | 'STRIPE' | 'MOMO')}
               className={`p-3 rounded-2xl border text-center transition-all ${
                 paymentMethod === m.id
                   ? 'border-brand-500 bg-brand-50 text-brand-700 font-semibold'

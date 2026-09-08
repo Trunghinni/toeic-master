@@ -6,16 +6,13 @@ import { motion } from 'framer-motion';
 import { 
   Headphones, 
   BookOpen, 
-  CheckCircle2, 
   ArrowRight, 
   Sparkles, 
-  Volume2, 
   MessageSquare, 
   Users, 
   Mic, 
   FileText, 
   FileSpreadsheet,
-  AlertCircle
 } from 'lucide-react';
 import { skillsApi } from '@/lib/api-client';
 

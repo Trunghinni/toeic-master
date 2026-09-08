@@ -1,19 +1,16 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Clock,
-  CheckCircle2,
-  AlertTriangle,
   ArrowRight,
   ArrowLeft,
   Award,
   BarChart3,
   Loader2,
-  Sparkles,
 } from 'lucide-react';
 import { testApi, ApiResult } from '@/lib/api-client';
 
@@ -54,7 +51,6 @@ interface TestResultData {
 
 export default function TestTakingPage() {
   const params = useParams();
-  const router = useRouter();
   const testId = params['testId'] as string;
 
   const [test, setTest] = useState<TestDetail | null>(null);
@@ -104,7 +100,7 @@ export default function TestTakingPage() {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isLoading, result]);
+  }, [isLoading, result, handleFinalSubmit]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -116,7 +112,7 @@ export default function TestTakingPage() {
     setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
   };
 
-  const handleFinalSubmit = async () => {
+  const handleFinalSubmit = useCallback(async () => {
     if (isSubmitting || !test) return;
     setIsSubmitting(true);
     setShowConfirmModal(false);
@@ -129,7 +125,7 @@ export default function TestTakingPage() {
       setResult(res.data);
     }
     setIsSubmitting(false);
-  };
+  }, [isSubmitting, test, answers]);
 
   if (isLoading) {
     return (

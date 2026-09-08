@@ -7,8 +7,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft,
-  Headphones,
-  Volume2,
   Play,
   Pause,
   RotateCcw,
@@ -16,10 +14,8 @@ import {
   EyeOff,
   CheckCircle2,
   XCircle,
-  Sparkles,
   BookmarkCheck,
   ChevronRight,
-  BookOpen
 } from 'lucide-react';
 import { skillsApi } from '@/lib/api-client';
 

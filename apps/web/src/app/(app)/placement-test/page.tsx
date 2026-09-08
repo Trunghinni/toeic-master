@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Clock,
   CheckCircle2,
@@ -106,7 +106,7 @@ export default function PlacementTestPage() {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isTimerRunning, result, answers]);
+  }, [isTimerRunning, result, answers, handleSubmit]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -126,7 +126,7 @@ export default function PlacementTestPage() {
   const currentQuestion = questions[currentIndex];
   const isTimeLow = timeLeft < 5 * 60; // Under 5 minutes
 
-  const handleSubmit = async () => {
+  const handleSubmit = useCallback(async () => {
     if (isSubmitting || questions.length === 0) return;
 
     setIsSubmitting(true);
@@ -140,7 +140,7 @@ export default function PlacementTestPage() {
       setErrorMessage(res.error.message || 'Lỗi khi chấm điểm bài thi.');
     }
     setIsSubmitting(false);
-  };
+  }, [isSubmitting, questions.length, answers]);
 
   const handleGenerateRoadmapFromResult = async () => {
     if (!result) return;

@@ -5,21 +5,13 @@ import { motion } from 'framer-motion';
 import {
   Heart,
   Flame,
-  Users,
   UserPlus,
-  CheckCircle2,
   Clock,
-  Sparkles,
   Trophy,
   Target,
   Send,
   CalendarCheck2,
-  Smile,
-  ShieldCheck,
   MessageCircleHeart,
-  BookOpen,
-  Coffee,
-  Check
 } from 'lucide-react';
 import { socialApi } from '@/lib/api-client';
 
@@ -61,17 +53,6 @@ interface CoupleDashboardData {
     userBCompleted: boolean;
     togetherCompleted: boolean;
   }[];
-}
-
-interface FriendItem {
-  friendshipId: string;
-  userId: string;
-  username: string;
-  displayName: string;
-  avatarUrl?: string;
-  currentStreak: number;
-  totalXp: number;
-  targetScore: number;
 }
 
 interface PendingItem {
@@ -133,10 +114,8 @@ const FALLBACK_LEADERBOARD = [
 
 export default function SocialCouplePage() {
   const [data, setData] = useState<CoupleDashboardData>(FALLBACK_COUPLE_DATA);
-  const [friends, setFriends] = useState<FriendItem[]>([]);
   const [pending, setPending] = useState<PendingItem[]>([]);
-  const [leaderboard, setLeaderboard] = useState<any[]>(FALLBACK_LEADERBOARD);
-  const [loading, setLoading] = useState(false);
+  const [leaderboard, setLeaderboard] = useState<{ rank: number; displayName: string; totalXp: number; currentStreak: number; targetScore: number }[]>(FALLBACK_LEADERBOARD);
   const [isDemoMode, setIsDemoMode] = useState(false);
 
   // Love notes
@@ -168,7 +147,6 @@ export default function SocialCouplePage() {
         }
 
         if (friendRes && friendRes.success && friendRes.data) {
-          setFriends(friendRes.data.friends || []);
           setPending(friendRes.data.pendingRequests || []);
         }
 
@@ -194,10 +172,10 @@ export default function SocialCouplePage() {
         setInviteMsg('Đã gửi lời mời kết bạn thành công! 💕');
         setInviteIdentifier('');
       } else {
-        setInviteMsg((res as any).error || 'Không gửi được lời mời kết bạn');
+        setInviteMsg((res as { success: false; error: { message: string } }).error?.message || 'Không gửi được lời mời kết bạn');
       }
-    } catch (err: any) {
-      setInviteMsg(err.message || 'Lỗi gửi lời mời');
+    } catch (err: unknown) {
+      setInviteMsg((err instanceof Error ? err.message : null) || 'Lỗi gửi lời mời');
     } finally {
       setSendingInvite(false);
     }

@@ -1,20 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {
   ShieldAlert,
   Users,
   Activity,
-  Award,
   DollarSign,
   Crown,
   Search,
-  CheckCircle,
-  XCircle,
-  Clock,
-  RefreshCw,
-  Sparkles
+  RefreshCw
 } from 'lucide-react';
 import { adminApi } from '@/lib/api-client';
 
@@ -47,12 +42,14 @@ export default function AdminDashboardPage() {
   const [stats, setStats] = useState<AdminStats | null>(null);
   const [users, setUsers] = useState<UserItem[]>([]);
   const [totalUsers, setTotalUsers] = useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- pagination reserved for future
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- loading shown via RefreshCw spinner in button
   const [loading, setLoading] = useState(true);
   const [actionMsg, setActionMsg] = useState<string | null>(null);
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     setLoading(true);
     try {
       const [statsRes, usersRes] = await Promise.all([
@@ -72,11 +69,12 @@ export default function AdminDashboardPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, search]);
 
   useEffect(() => {
     loadData();
-  }, [page, search]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page, search, loadData]);
 
   const handleToggleRole = async (user: UserItem) => {
     const nextRole = user.role === 'ADMIN' ? 'USER' : 'ADMIN';
@@ -84,8 +82,8 @@ export default function AdminDashboardPage() {
       await adminApi.updateUserRole(user.id, nextRole);
       setActionMsg(`Đã cập nhật role của ${user.displayName} thành ${nextRole}`);
       loadData();
-    } catch (err: any) {
-      alert(err.message || 'Lỗi cập nhật role');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Lỗi cập nhật role');
     }
   };
 
@@ -94,8 +92,8 @@ export default function AdminDashboardPage() {
       await adminApi.updateUserStatus(user.id, !user.isActive);
       setActionMsg(`Đã ${user.isActive ? 'khóa' : 'mở khóa'} tài khoản ${user.displayName}`);
       loadData();
-    } catch (err: any) {
-      alert(err.message || 'Lỗi cập nhật trạng thái');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Lỗi cập nhật trạng thái');
     }
   };
 
@@ -104,8 +102,8 @@ export default function AdminDashboardPage() {
       await adminApi.grantPremium(userId, months);
       setActionMsg(`Đã cấp thành công ${months} tháng VIP Premium! 🌟`);
       loadData();
-    } catch (err: any) {
-      alert(err.message || 'Lỗi cấp VIP');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Lỗi cấp VIP');
     }
   };
 
@@ -296,13 +294,13 @@ export default function AdminDashboardPage() {
                       + VIP 1M
                     </button>
                     <button
-                      onClick={() => handleToggleRole(u.id as any)}
+                      onClick={() => handleToggleRole(u)}
                       className="px-2 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-[11px] transition-colors"
                     >
                       {u.role === 'ADMIN' ? 'Hạ USER' : 'Nâng ADMIN'}
                     </button>
                     <button
-                      onClick={() => handleToggleStatus(u.id as any)}
+                      onClick={() => handleToggleStatus(u)}
                       className={`px-2 py-1 rounded-lg font-semibold text-[11px] transition-colors ${
                         u.isActive ? 'bg-rose-50 text-rose-600 hover:bg-rose-100' : 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100'
                       }`}

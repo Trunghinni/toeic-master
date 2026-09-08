@@ -4,15 +4,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
-  PenTool,
   Clock,
   Sparkles,
   Award,
-  CheckCircle2,
-  AlertCircle,
-  FileText,
-  Mail,
-  HelpCircle,
   BookOpen,
   Send
 } from 'lucide-react';

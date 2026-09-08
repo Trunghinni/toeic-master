@@ -2,21 +2,13 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Mic,
   MicOff,
-  Volume2,
   Sparkles,
   Award,
-  CheckCircle2,
   Clock,
-  RotateCcw,
-  Play,
-  Pause,
-  AlertCircle,
-  HelpCircle,
-  BarChart3
 } from 'lucide-react';
 import { speakingWritingApi } from '@/lib/api-client';
 

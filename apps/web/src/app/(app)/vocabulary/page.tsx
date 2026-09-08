@@ -4,14 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  BookOpen,
   Sparkles,
-  Flame,
-  Clock,
-  Layers,
-  Award,
   ChevronRight,
-  FolderHeart,
   AlertOctagon,
   Search,
   Plus,
@@ -38,20 +32,11 @@ interface NotebookItem {
   isMistakeNotebook: boolean;
 }
 
-const CATEGORIES = [
-  'Tất cả',
-  'Office & Work',
-  'Business & Finance',
-  'Travel & Logistics',
-  'Everyday Corporate',
-  'General & Misc',
-];
 
 export default function VocabularyHubPage() {
   const [topics, setTopics] = useState<TopicItem[]>([]);
   const [notebooks, setNotebooks] = useState<NotebookItem[]>([]);
   const [dueCardsCount, setDueCardsCount] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('Tất cả');
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<'topics' | 'notebooks'>('topics');
   const [isLoading, setIsLoading] = useState(true);
@@ -224,7 +209,7 @@ export default function VocabularyHubPage() {
       {/* Main Content Area */}
       {activeTab === 'topics' ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredTopics.map((topic, index) => (
+          {filteredTopics.map((topic) => (
             <Link
               key={topic.id}
               href={`/vocabulary/${topic.id}`}

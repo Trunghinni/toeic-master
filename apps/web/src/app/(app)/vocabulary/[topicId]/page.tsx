@@ -1,19 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   ArrowLeft,
   Volume2,
   RotateCw,
   CheckCircle2,
   XCircle,
-  HelpCircle,
-  Sparkles,
-  BookOpen,
-  Award,
   ChevronRight,
   List,
   Layers,
@@ -65,7 +61,7 @@ export default function TopicStudyPage() {
   const [quizIsAnswered, setQuizIsAnswered] = useState(false);
   const [quizScore, setQuizScore] = useState(0);
 
-  const fetchTopicData = async () => {
+  const fetchTopicData = useCallback(async () => {
     setIsLoading(true);
     const res = await vocabularyApi.getTopicCards(topicId) as ApiResult<{
       topic: TopicDetail;
@@ -77,11 +73,11 @@ export default function TopicStudyPage() {
       setCards(res.data.cards);
     }
     setIsLoading(false);
-  };
+  }, [topicId]);
 
   useEffect(() => {
     if (topicId) fetchTopicData();
-  }, [topicId]);
+  }, [topicId, fetchTopicData]);
 
   const currentCard = cards[currentIndex];
 
@@ -318,7 +314,7 @@ export default function TopicStudyPage() {
                   </h3>
                   {currentCard.definitionEn && (
                     <p className="text-xs sm:text-sm text-[#8B7E9C] italic">
-                      "{currentCard.definitionEn}"
+                      &ldquo;{currentCard.definitionEn}&rdquo;
                     </p>
                   )}
 

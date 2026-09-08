@@ -7,11 +7,7 @@ import {
   ArrowLeft,
   CheckCircle2,
   XCircle,
-  Sparkles,
   BookOpen,
-  Award,
-  ChevronRight,
-  AlertTriangle,
   Loader2,
   Lightbulb,
 } from 'lucide-react';

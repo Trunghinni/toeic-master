@@ -5,12 +5,7 @@ import Link from 'next/link';
 import {
   Award,
   Clock,
-  CheckCircle2,
-  FileText,
   Sparkles,
-  ChevronRight,
-  History,
-  TrendingUp,
   Loader2,
   Play,
 } from 'lucide-react';

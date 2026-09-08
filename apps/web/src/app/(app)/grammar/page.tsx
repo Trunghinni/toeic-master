@@ -3,15 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
-  BookOpen,
   AlertTriangle,
   CheckCircle2,
   ChevronRight,
   Sparkles,
-  Award,
   Loader2,
   ArrowRight,
-  Flame,
 } from 'lucide-react';
 import { grammarApi, ApiResult } from '@/lib/api-client';
 
