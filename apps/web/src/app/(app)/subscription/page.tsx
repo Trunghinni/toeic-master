@@ -301,12 +301,12 @@ export default function SubscriptionPage() {
           disabled={processing}
           className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-brand-500 to-rose-600 hover:from-brand-600 hover:to-rose-700 text-white font-bold text-sm shadow-lg shadow-brand-200 transition-all active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2"
         >
-          {processing ? 'Đang kích hoạt gói...' : `Xác nhận nâng cấp gói (${selectedPlan === 'COUPLE_VIP_YEARLY' ? '1.499.000đ' : '199.000đ'})`}
+          {processing ? 'Đang kích hoạt gói...' : 'Kích hoạt VIP Premium (Demo — Miễn phí)'}
           <ArrowRight className="w-4 h-4" />
         </button>
 
-        <p className="text-[11px] text-gray-400 text-center">
-          Thanh toán bảo mật 256-bit SSL. Có thể hủy bất kỳ lúc nào mà không phát sinh phí ẩn.
+        <p className="text-[11px] text-amber-700 text-center font-medium bg-amber-50/90 py-2.5 px-3.5 rounded-xl border border-amber-200">
+          💡 Đang ở chế độ demo, chưa kết nối cổng thanh toán thật — nâng cấp miễn phí để trải nghiệm tính năng Premium.
         </p>
       </div>
     </div>

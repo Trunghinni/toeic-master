@@ -9,6 +9,7 @@ import {
   Sparkles,
   Award,
   Clock,
+  Info,
 } from 'lucide-react';
 import { speakingWritingApi } from '@/lib/api-client';
 
@@ -194,6 +195,14 @@ export default function SpeakingPracticePage() {
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Demo Mode Notice */}
+      <div className="p-4 bg-teal-50/80 border border-teal-200 rounded-2xl text-xs text-teal-800 flex items-start gap-2.5 shadow-xs">
+        <Info className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+        <span>
+          <strong>Chế độ demo:</strong> Điểm số hiện được tính bằng công thức nội bộ (đo độ dài, tốc độ nói WPM và mức độ bao phủ từ vựng), chưa phải AI nhận diện giọng nói thật. Hệ thống sẽ nâng cấp khi tích hợp dịch vụ AI Speech.
+        </span>
       </div>
 
       {/* Main Practice Workspace */}

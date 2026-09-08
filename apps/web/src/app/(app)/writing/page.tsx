@@ -8,7 +8,8 @@ import {
   Sparkles,
   Award,
   BookOpen,
-  Send
+  Send,
+  Info,
 } from 'lucide-react';
 import { speakingWritingApi } from '@/lib/api-client';
 
@@ -176,6 +177,14 @@ export default function WritingPracticePage() {
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Demo Mode Notice */}
+      <div className="p-4 bg-teal-50/80 border border-teal-200 rounded-2xl text-xs text-teal-800 flex items-start gap-2.5 shadow-xs">
+        <Info className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+        <span>
+          <strong>Chế độ demo:</strong> Bài viết hiện được đánh giá bằng luật tính điểm nội bộ (độ dài số từ và sự xuất hiện của từ khóa bắt buộc), chưa phải AI chấm bài thật. Hệ thống sẽ nâng cấp khi tích hợp dịch vụ AI LLM.
+        </span>
       </div>
 
       {selectedPrompt && (

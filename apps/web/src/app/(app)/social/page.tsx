@@ -12,6 +12,7 @@ import {
   Send,
   CalendarCheck2,
   MessageCircleHeart,
+  Loader2,
 } from 'lucide-react';
 import { socialApi } from '@/lib/api-client';
 
@@ -117,6 +118,7 @@ export default function SocialCouplePage() {
   const [pending, setPending] = useState<PendingItem[]>([]);
   const [leaderboard, setLeaderboard] = useState<{ rank: number; displayName: string; totalXp: number; currentStreak: number; targetScore: number }[]>(FALLBACK_LEADERBOARD);
   const [isDemoMode, setIsDemoMode] = useState(false);
+  const [isInitialLoading, setIsInitialLoading] = useState(true);
 
   // Love notes
   const [loveNote, setLoveNote] = useState('');
@@ -156,6 +158,8 @@ export default function SocialCouplePage() {
       } catch (err) {
         console.error('Failed to load social data', err);
         setIsDemoMode(true);
+      } finally {
+        setIsInitialLoading(false);
       }
     }
     loadSocialData();
@@ -207,6 +211,15 @@ export default function SocialCouplePage() {
     setLoveNote('');
   };
 
+  if (isInitialLoading) {
+    return (
+      <div className="min-h-[500px] flex flex-col items-center justify-center gap-4">
+        <Loader2 className="w-10 h-10 text-rose-400 animate-spin" />
+        <p className="text-sm font-semibold text-[#3F3355]">Đang mở góc học đôi bạn... 💕</p>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-6xl mx-auto pb-20 space-y-8">
       {/* Header Banner */}
@@ -226,13 +239,10 @@ export default function SocialCouplePage() {
 
         {/* Demo Mode Reminder Pill */}
         {isDemoMode && (
-          <div className="mt-4 p-3 bg-white/90 border border-pink-200 rounded-2xl text-xs text-brand-700 font-semibold flex items-center justify-between gap-3 shadow-xs">
+          <div className="mt-4 p-3.5 bg-white/90 border border-pink-200 rounded-2xl text-xs text-brand-700 font-semibold flex items-center justify-between gap-3 shadow-xs">
             <span>
-              💡 <strong>Bản xem trước trực quan:</strong> Khi đăng nhập và kết bạn, toàn bộ thời gian học và streak thật của hai bạn sẽ tự động hiển thị tại đây!
+              💡 <strong>Chế độ xem trước trực quan (Demo):</strong> Bạn đang xem dữ liệu minh họa. Hãy gửi lời mời kết bạn ở form bên dưới bằng username hoặc email của người ấy để cùng đồng hành học tập mỗi ngày!
             </span>
-            <a href="/login" className="px-3 py-1 bg-brand-500 text-white rounded-xl hover:bg-brand-600 transition-colors whitespace-nowrap">
-              Đăng nhập ngay
-            </a>
           </div>
         )}
       </div>
