@@ -197,12 +197,26 @@ export class TestService {
     }
 
     // TOEIC Scaled Score conversion (5-495 per section)
+    // Real ETS TOEIC scores are rounded to multiples of 5 ending in 0 or 5
+    const roundTo5 = (score: number) => Math.min(495, Math.max(5, Math.round(score / 5) * 5));
+
     const listeningPct = listeningTotal > 0 ? listeningCorrect / listeningTotal : 0;
     const readingPct = readingTotal > 0 ? readingCorrect / readingTotal : 0;
 
-    const listeningScaled = Math.round(5 + listeningPct * 490);
-    const readingScaled = Math.round(5 + readingPct * 490);
-    const totalScaled = listeningScaled + readingScaled; // 10..990
+    const listeningScaled = listeningTotal > 0 ? roundTo5(5 + listeningPct * 490) : 0;
+    const readingScaled = readingTotal > 0 ? roundTo5(5 + readingPct * 490) : 0;
+
+    let totalScaled: number;
+    if (listeningTotal > 0 && readingTotal > 0) {
+      totalScaled = listeningScaled + readingScaled; // 10..990
+    } else if (listeningTotal > 0) {
+      // Single-section listening test: scale to full 10-990 equivalent
+      totalScaled = listeningScaled * 2;
+    } else {
+      // Single-section reading test: scale to full 10-990 equivalent
+      totalScaled = readingScaled * 2;
+    }
+
     const percentage = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
     const xpEarned = 30 + Math.round(percentage / 3);
 
@@ -287,6 +301,12 @@ export class TestService {
         },
       });
     }
+
+    // Anti-duplication check: avoid duplicate cards if already recorded
+    const alreadyLogged = await this.prisma.vocabularyCard.findFirst({
+      where: { topicId: mistakeTopic.id, example: question },
+    });
+    if (alreadyLogged) return;
 
     const shortWord = question.slice(0, 32) + '...';
     await this.prisma.vocabularyCard.create({

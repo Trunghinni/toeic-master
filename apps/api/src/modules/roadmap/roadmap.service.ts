@@ -190,6 +190,58 @@ export class RoadmapService {
     };
   }
 
+  // ── Update Node Status (LOCKED -> AVAILABLE -> IN_PROGRESS -> COMPLETED) ──
+
+  async updateNodeStatus(userId: string, nodeId: string, status: string) {
+    const roadmap = await this.prisma.roadmap.findFirst({
+      where: { userId, isActive: true },
+    });
+    if (!roadmap) throw new NotFoundException('Active roadmap not found');
+
+    const node = await this.prisma.roadmapNode.findFirst({
+      where: { id: nodeId, roadmapId: roadmap.id },
+    });
+    if (!node) throw new NotFoundException('Roadmap node not found');
+
+    const updatedNode = await this.prisma.roadmapNode.update({
+      where: { id: nodeId },
+      data: { status: status as never },
+    });
+
+    let xpEarned = 0;
+    // When marking node COMPLETED
+    if (status === 'COMPLETED') {
+      xpEarned = node.xpReward || 15;
+      await this.prisma.userProfile.updateMany({
+        where: { userId },
+        data: { totalXp: { increment: xpEarned } },
+      });
+
+      // Automatically unlock the next locked node in the current week
+      const nextLockedNode = await this.prisma.roadmapNode.findFirst({
+        where: {
+          roadmapId: roadmap.id,
+          weekNumber: node.weekNumber,
+          status: 'LOCKED',
+        },
+        orderBy: [{ dayNumber: 'asc' }, { orderInDay: 'asc' }],
+      });
+
+      if (nextLockedNode) {
+        await this.prisma.roadmapNode.update({
+          where: { id: nextLockedNode.id },
+          data: { status: 'AVAILABLE' },
+        });
+      }
+    }
+
+    return {
+      success: true,
+      node: updatedNode,
+      xpEarned,
+    };
+  }
+
   // ── Private: Roadmap Calculation ─────────────────────────────
 
   /**

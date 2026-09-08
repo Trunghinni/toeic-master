@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Compass,
@@ -16,6 +17,7 @@ import {
   ChevronRight,
   Check,
   Loader2,
+  Play,
 } from 'lucide-react';
 import { roadmapApi, ApiResult } from '@/lib/api-client';
 import { useAuthStore } from '@/stores/auth.store';
@@ -64,12 +66,34 @@ const DEFAULT_TYPE_CONFIG: TypeConfigItem = {
 
 const TYPE_CONFIG: Record<string, TypeConfigItem> = {
   VOCABULARY: DEFAULT_TYPE_CONFIG,
+  VOCABULARY_TOPIC: DEFAULT_TYPE_CONFIG,
   GRAMMAR: {
     label: 'Ngữ pháp',
     icon: '✏️',
     bgClass: 'bg-indigo-50',
     textClass: 'text-indigo-600',
     borderClass: 'border-indigo-200',
+  },
+  GRAMMAR_TOPIC: {
+    label: 'Ngữ pháp',
+    icon: '✏️',
+    bgClass: 'bg-indigo-50',
+    textClass: 'text-indigo-600',
+    borderClass: 'border-indigo-200',
+  },
+  READING_SKILL: {
+    label: 'Đọc hiểu',
+    icon: '📖',
+    bgClass: 'bg-amber-50',
+    textClass: 'text-amber-700',
+    borderClass: 'border-amber-200',
+  },
+  LISTENING_SKILL: {
+    label: 'Nghe hiểu',
+    icon: '🎧',
+    bgClass: 'bg-teal-50',
+    textClass: 'text-teal-700',
+    borderClass: 'border-teal-200',
   },
   MINI_TEST: {
     label: 'Mini Test',
@@ -103,16 +127,50 @@ const TYPE_CONFIG: Record<string, TypeConfigItem> = {
 
 export default function RoadmapPage() {
   const { user } = useAuthStore();
+  const router = useRouter();
 
   const [roadmap, setRoadmap] = useState<RoadmapData | null>(null);
   const [selectedWeek, setSelectedWeek] = useState<number>(1);
   const [isLoading, setIsLoading] = useState(true);
+  const [isUpdatingNode, setIsUpdatingNode] = useState<string | null>(null);
 
   // Check-in modal state
   const [checkinWeek, setCheckinWeek] = useState<number | null>(null);
   const [checkinFeedback, setCheckinFeedback] = useState<'too_easy' | 'just_right' | 'too_hard'>('just_right');
   const [isCheckinLoading, setIsCheckinLoading] = useState(false);
   const [checkinSuccessMsg, setCheckinSuccessMsg] = useState<string | null>(null);
+
+  const handleStartNode = async (node: RoadmapNode) => {
+    setIsUpdatingNode(node.id);
+    if (node.status === 'AVAILABLE') {
+      await roadmapApi.updateNodeStatus(node.id, 'IN_PROGRESS');
+      await fetchRoadmap();
+    }
+    setIsUpdatingNode(null);
+
+    // Route dynamically according to node type
+    const typeUpper = (node.type || '').toUpperCase();
+    if (typeUpper.includes('VOCAB')) {
+      router.push('/vocabulary');
+    } else if (typeUpper.includes('GRAMMAR')) {
+      router.push('/grammar');
+    } else if (typeUpper.includes('TEST')) {
+      router.push('/tests');
+    } else if (typeUpper.includes('SPEAKING') || typeUpper.includes('WRITING') || typeUpper.includes('SKILL')) {
+      router.push('/skills');
+    } else {
+      router.push('/vocabulary');
+    }
+  };
+
+  const handleCompleteNode = async (node: RoadmapNode) => {
+    setIsUpdatingNode(node.id);
+    const res = await roadmapApi.updateNodeStatus(node.id, 'COMPLETED');
+    if (res.success) {
+      await fetchRoadmap();
+    }
+    setIsUpdatingNode(null);
+  };
 
   const fetchRoadmap = async () => {
     setIsLoading(true);
@@ -324,7 +382,9 @@ export default function RoadmapPage() {
                 const conf: TypeConfigItem = TYPE_CONFIG[node.type] ?? DEFAULT_TYPE_CONFIG;
                 const isLocked = node.status === 'LOCKED';
                 const isCompleted = node.status === 'COMPLETED';
-                const isAvailable = node.status === 'AVAILABLE' || node.status === 'IN_PROGRESS';
+                const isInProgress = node.status === 'IN_PROGRESS';
+                const isAvailable = node.status === 'AVAILABLE';
+                const isWorking = isUpdatingNode === node.id;
 
                 return (
                   <motion.div
@@ -336,6 +396,8 @@ export default function RoadmapPage() {
                     className={`glass rounded-3xl p-4 sm:p-5 border transition-all flex items-center justify-between gap-4 ${
                       isCompleted
                         ? 'border-emerald-200 bg-emerald-50/40'
+                        : isInProgress
+                        ? 'border-amber-300 bg-amber-50/40 shadow-xs ring-1 ring-amber-300/60'
                         : isAvailable
                         ? 'border-pink-300 bg-white/95 shadow-xs hover:border-rose-300'
                         : 'border-pink-100 bg-white/50 opacity-70'
@@ -348,6 +410,8 @@ export default function RoadmapPage() {
                         className={`w-11 h-11 rounded-2xl flex items-center justify-center text-xl flex-shrink-0 border ${
                           isCompleted
                             ? 'bg-emerald-100 border-emerald-300 text-emerald-600'
+                            : isInProgress
+                            ? 'bg-amber-100 border-amber-300 text-amber-600'
                             : isAvailable
                             ? `${conf.bgClass} ${conf.borderClass} ${conf.textClass}`
                             : 'bg-pink-50 border-pink-100 text-[#8B7E9C]'
@@ -355,6 +419,8 @@ export default function RoadmapPage() {
                       >
                         {isCompleted ? (
                           <CheckCircle2 className="w-6 h-6 text-emerald-500" />
+                        ) : isInProgress ? (
+                          <Play className="w-5 h-5 text-amber-600 fill-amber-500" />
                         ) : isLocked ? (
                           <Lock className="w-5 h-5 text-[#8B7E9C]" />
                         ) : (
@@ -369,6 +435,11 @@ export default function RoadmapPage() {
                           >
                             {conf.label}
                           </span>
+                          {isInProgress && (
+                            <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 text-amber-700 border border-amber-300">
+                              Đang học
+                            </span>
+                          )}
                           <span className="text-xs text-[#8B7E9C] font-semibold">
                             Ngày {node.dayNumber}
                           </span>
@@ -398,16 +469,36 @@ export default function RoadmapPage() {
                           <Check className="w-3.5 h-3.5" />
                           Đã xong
                         </span>
+                      ) : isInProgress ? (
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            disabled={isWorking}
+                            onClick={() => handleStartNode(node)}
+                            className="btn-primary text-xs px-3.5 py-2 shadow-xs flex items-center gap-1.5"
+                          >
+                            {isWorking ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Play className="w-3.5 h-3.5 fill-current" />}
+                            Tiếp tục
+                          </button>
+                          <button
+                            type="button"
+                            disabled={isWorking}
+                            onClick={() => handleCompleteNode(node)}
+                            title="Đánh dấu hoàn thành"
+                            className="px-2.5 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 hover:bg-emerald-100 text-xs font-bold transition-colors flex items-center gap-1"
+                          >
+                            <Check className="w-3.5 h-3.5" />
+                            Xong
+                          </button>
+                        </div>
                       ) : isAvailable ? (
                         <button
                           type="button"
-                          onClick={() =>
-                            alert(
-                              `Bắt đầu bài học: "${node.title}". Hãy cùng luyện tập nào!`
-                            )
-                          }
-                          className="btn-primary text-xs px-4 py-2 shadow-xs"
+                          disabled={isWorking}
+                          onClick={() => handleStartNode(node)}
+                          className="btn-primary text-xs px-4 py-2 shadow-xs flex items-center gap-1"
                         >
+                          {isWorking ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : null}
                           Học ngay
                           <ChevronRight className="w-3.5 h-3.5 ml-1" />
                         </button>

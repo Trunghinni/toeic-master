@@ -189,6 +189,12 @@ export const roadmapApi = {
       method: 'POST',
       body:   JSON.stringify({ weekNumber, feedback }),
     }),
+
+  updateNodeStatus: (nodeId: string, status: 'LOCKED' | 'AVAILABLE' | 'IN_PROGRESS' | 'COMPLETED') =>
+    apiRequest<unknown>(`/v1/roadmap/nodes/${nodeId}/status`, {
+      method: 'PATCH',
+      body:   JSON.stringify({ status }),
+    }),
 };
 
 // ── User endpoints ────────────────────────────────────────────────

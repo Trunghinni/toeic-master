@@ -64,6 +64,12 @@ export default function TestTakingPage() {
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const startTimeRef = useRef<number>(Date.now());
+  const answersRef = useRef<Record<string, string>>({});
+  const isSubmittingRef = useRef<boolean>(false);
+
+  useEffect(() => {
+    answersRef.current = answers;
+  }, [answers]);
 
   useEffect(() => {
     async function loadTest() {
@@ -84,19 +90,21 @@ export default function TestTakingPage() {
   }, [testId]);
 
   const handleFinalSubmit = useCallback(async () => {
-    if (isSubmitting || !test) return;
+    if (isSubmittingRef.current || !test) return;
+    isSubmittingRef.current = true;
     setIsSubmitting(true);
     setShowConfirmModal(false);
     if (timerRef.current) clearInterval(timerRef.current);
 
-    const timeSpentSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
-    const res = await testApi.submitAttempt(test.id, answers, timeSpentSeconds) as ApiResult<TestResultData>;
+    const timeSpentSeconds = Math.max(1, Math.round((Date.now() - startTimeRef.current) / 1000));
+    const res = await testApi.submitAttempt(test.id, answersRef.current, timeSpentSeconds) as ApiResult<TestResultData>;
 
     if (res.success && res.data) {
       setResult(res.data);
     }
     setIsSubmitting(false);
-  }, [isSubmitting, test, answers]);
+    isSubmittingRef.current = false;
+  }, [test]);
 
   useEffect(() => {
     if (isLoading || result) return;
@@ -174,8 +182,16 @@ export default function TestTakingPage() {
               {result.totalScaled} <span className="text-xl font-bold text-[#8B7E9C]">/ 990</span>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-4 pt-3 border-t border-pink-200/60 text-xs font-bold text-[#3F3355]">
-              <div>🎧 Listening: <span className="text-rose-500 font-extrabold">{result.listeningScaled}</span> / 495</div>
-              <div>📖 Reading: <span className="text-indigo-500 font-extrabold">{result.readingScaled}</span> / 495</div>
+              {result.listeningScaled > 0 ? (
+                <div>🎧 Listening: <span className="text-rose-500 font-extrabold">{result.listeningScaled}</span> / 495</div>
+              ) : (
+                <div className="text-[#8B7E9C] font-medium italic">🎧 Listening: Không có trong đề</div>
+              )}
+              {result.readingScaled > 0 ? (
+                <div>📖 Reading: <span className="text-indigo-500 font-extrabold">{result.readingScaled}</span> / 495</div>
+              ) : (
+                <div className="text-[#8B7E9C] font-medium italic">📖 Reading: Không có trong đề</div>
+              )}
             </div>
           </div>
 

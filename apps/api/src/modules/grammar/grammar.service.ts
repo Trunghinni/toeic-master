@@ -231,6 +231,12 @@ export class GrammarService {
       });
     }
 
+    // Anti-duplication check: avoid duplicate cards if already recorded
+    const alreadyLogged = await this.prisma.vocabularyCard.findFirst({
+      where: { topicId: mistakeTopic.id, example: question },
+    });
+    if (alreadyLogged) return;
+
     const shortWord = question.slice(0, 30) + '...';
     await this.prisma.vocabularyCard.create({
       data: {

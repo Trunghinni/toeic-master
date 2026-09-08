@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Query, HttpCode, HttpStatus, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Patch, Param, Body, Query, HttpCode, HttpStatus, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiQuery } from '@nestjs/swagger';
 import { IsString, IsNumber, IsOptional, IsDateString, IsEnum, Min, Max, IsIn } from 'class-validator';
 import { BandLevel } from '@toeic-master/shared-types';
@@ -40,6 +40,11 @@ export class MilestoneCheckinDto {
 
   @IsIn(['too_easy', 'just_right', 'too_hard'])
   feedback!: 'too_easy' | 'just_right' | 'too_hard';
+}
+
+export class UpdateNodeStatusDto {
+  @IsIn(['LOCKED', 'AVAILABLE', 'IN_PROGRESS', 'COMPLETED'])
+  status!: 'LOCKED' | 'AVAILABLE' | 'IN_PROGRESS' | 'COMPLETED';
 }
 
 @ApiTags('roadmap')
@@ -101,6 +106,18 @@ export class RoadmapController {
       dto.weekNumber,
       dto.feedback,
     );
+    return { success: true, data: result };
+  }
+
+  /** PATCH /api/v1/roadmap/nodes/:id/status — Update a roadmap node's status */
+  @Patch('nodes/:id/status')
+  @ApiOperation({ summary: 'Update roadmap node status (LOCKED -> AVAILABLE -> IN_PROGRESS -> COMPLETED)' })
+  async updateNodeStatus(
+    @CurrentUser() user: User,
+    @Param('id') nodeId: string,
+    @Body() dto: UpdateNodeStatusDto,
+  ) {
+    const result = await this.roadmapService.updateNodeStatus(user.id, nodeId, dto.status);
     return { success: true, data: result };
   }
 }
