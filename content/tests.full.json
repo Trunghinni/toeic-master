@@ -1,0 +1,2162 @@
+[
+  {
+    "id": "test_mini_01",
+    "title": "Mini-Test 01: Core Grammar & Incomplete Sentences (Part 5)",
+    "description": "Bài kiểm tra nhanh 20 câu trắc nghiệm ngữ pháp trọng điểm Part 5: thì động từ, thể bị động, từ loại và giới từ.",
+    "mode": "MINI_TEST",
+    "timeLimit": 15,
+    "targetBand": "BAND_2",
+    "questions": [
+      {
+        "part": "PART_5",
+        "questionNumber": 1,
+        "prompt": "Ms. Thornton ________ her business trip itinerary to the executive director yesterday afternoon.",
+        "options": [
+          {
+            "id": "A",
+            "text": "submits"
+          },
+          {
+            "id": "B",
+            "text": "submitted"
+          },
+          {
+            "id": "C",
+            "text": "submitting"
+          },
+          {
+            "id": "D",
+            "text": "has submitted"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Thời gian quá khứ xác định \"yesterday afternoon\" yêu cầu thì Quá khứ đơn (submitted)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 2,
+        "prompt": "All travel expense claims must be approved ________ the department supervisor prior to reimbursement.",
+        "options": [
+          {
+            "id": "A",
+            "text": "by"
+          },
+          {
+            "id": "B",
+            "text": "to"
+          },
+          {
+            "id": "C",
+            "text": "with"
+          },
+          {
+            "id": "D",
+            "text": "at"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cấu trúc bị động \"be approved by [agent]\" (được phê duyệt bởi người giám sát)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 3,
+        "prompt": "The new commercial software operates ________ more reliably than the previous version.",
+        "options": [
+          {
+            "id": "A",
+            "text": "much"
+          },
+          {
+            "id": "B",
+            "text": "very"
+          },
+          {
+            "id": "C",
+            "text": "too"
+          },
+          {
+            "id": "D",
+            "text": "such"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Trạng từ bổ nghĩa nhấn mạnh cho so sánh hơn \"more reliably\" là \"much\". \"Very\" và \"too\" không đi với so sánh hơn."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 4,
+        "prompt": "Applicants ________ to take the aptitude test must arrive twenty minutes before the session begins.",
+        "options": [
+          {
+            "id": "A",
+            "text": "require"
+          },
+          {
+            "id": "B",
+            "text": "required"
+          },
+          {
+            "id": "C",
+            "text": "requiring"
+          },
+          {
+            "id": "D",
+            "text": "requirement"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Rút gọn mệnh đề quan hệ dạng bị động: \"Applicants (who are) required to take...\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 5,
+        "prompt": "Please handle the delicate optical instruments ________ when packing them for overseas air freight.",
+        "options": [
+          {
+            "id": "A",
+            "text": "careful"
+          },
+          {
+            "id": "B",
+            "text": "carefully"
+          },
+          {
+            "id": "C",
+            "text": "carefulness"
+          },
+          {
+            "id": "D",
+            "text": "caring"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Bổ nghĩa cho động từ hành động \"handle\" cần một trạng từ thể cách: \"carefully\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 6,
+        "prompt": "Over the past six months, our logistics facility ________ more than eighty thousand freight packages.",
+        "options": [
+          {
+            "id": "A",
+            "text": "processes"
+          },
+          {
+            "id": "B",
+            "text": "is processing"
+          },
+          {
+            "id": "C",
+            "text": "has processed"
+          },
+          {
+            "id": "D",
+            "text": "processed"
+          }
+        ],
+        "correctOptionId": "C",
+        "explanation": "Dấu hiệu \"Over the past six months\" yêu cầu dùng thì Hiện tại hoàn thành: \"has processed\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 7,
+        "prompt": "The keynote speaker delivered an ________ presentation on artificial intelligence applications in logistics.",
+        "options": [
+          {
+            "id": "A",
+            "text": "impress"
+          },
+          {
+            "id": "B",
+            "text": "impression"
+          },
+          {
+            "id": "C",
+            "text": "impressive"
+          },
+          {
+            "id": "D",
+            "text": "impressively"
+          }
+        ],
+        "correctOptionId": "C",
+        "explanation": "Vị trí đứng trước danh từ \"presentation\" cần một tính từ bổ nghĩa: \"impressive\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 8,
+        "prompt": "Staff members are reminded to lock their desk drawers ________ leaving the premises in the evening.",
+        "options": [
+          {
+            "id": "A",
+            "text": "before"
+          },
+          {
+            "id": "B",
+            "text": "during"
+          },
+          {
+            "id": "C",
+            "text": "until"
+          },
+          {
+            "id": "D",
+            "text": "between"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Giới từ chỉ thời gian \"before + V-ing\" (trước khi rời khỏi cơ quan)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 9,
+        "prompt": "________ you encounter any technical difficulty while submitting your timesheet, contact the IT hotline.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Should"
+          },
+          {
+            "id": "B",
+            "text": "Were"
+          },
+          {
+            "id": "C",
+            "text": "Had"
+          },
+          {
+            "id": "D",
+            "text": "Unless"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Đảo ngữ câu điều kiện loại 1 với \"Should + S + V-bare\" (= If you encounter)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 10,
+        "prompt": "The management team expressed their sincere ________ for the employees’ hard work during the renovation.",
+        "options": [
+          {
+            "id": "A",
+            "text": "appreciate"
+          },
+          {
+            "id": "B",
+            "text": "appreciation"
+          },
+          {
+            "id": "C",
+            "text": "appreciative"
+          },
+          {
+            "id": "D",
+            "text": "appreciatively"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Sau tính từ \"sincere\" cần một danh từ: \"appreciation\" (sự trân trọng/cảm kích)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 11,
+        "prompt": "Customer surveys indicate that our regional showroom is ________ located near major subway connections.",
+        "options": [
+          {
+            "id": "A",
+            "text": "convenience"
+          },
+          {
+            "id": "B",
+            "text": "convenient"
+          },
+          {
+            "id": "C",
+            "text": "conveniently"
+          },
+          {
+            "id": "D",
+            "text": "convening"
+          }
+        ],
+        "correctOptionId": "C",
+        "explanation": "Cụm trạng từ bổ nghĩa cho phân từ \"conveniently located\" (tọa lạc ở vị trí thuận tiện)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 12,
+        "prompt": "Neither the department supervisor ________ the senior accountant was available to verify the invoice.",
+        "options": [
+          {
+            "id": "A",
+            "text": "or"
+          },
+          {
+            "id": "B",
+            "text": "nor"
+          },
+          {
+            "id": "C",
+            "text": "and"
+          },
+          {
+            "id": "D",
+            "text": "also"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Cặp liên từ tương quan cố định: \"Neither... nor...\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 13,
+        "prompt": "The board of directors is considering ________ an independent auditor to examine the financial records.",
+        "options": [
+          {
+            "id": "A",
+            "text": "hire"
+          },
+          {
+            "id": "B",
+            "text": "hiring"
+          },
+          {
+            "id": "C",
+            "text": "to hire"
+          },
+          {
+            "id": "D",
+            "text": "hired"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Động từ \"consider\" luôn đi kèm với danh động từ: \"consider hiring\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 14,
+        "prompt": "________ the weather was unseasonably cold, attendance at the outdoor product exhibition was exceptionally high.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Although"
+          },
+          {
+            "id": "B",
+            "text": "Despite"
+          },
+          {
+            "id": "C",
+            "text": "In spite of"
+          },
+          {
+            "id": "D",
+            "text": "Because of"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Phía sau là mệnh đề S + V (\"the weather was unseasonably cold\"), do đó phải dùng liên từ \"Although\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 15,
+        "prompt": "The manufacturing facility maintains strict ________ with international ISO environmental regulations.",
+        "options": [
+          {
+            "id": "A",
+            "text": "comply"
+          },
+          {
+            "id": "B",
+            "text": "compliance"
+          },
+          {
+            "id": "C",
+            "text": "compliant"
+          },
+          {
+            "id": "D",
+            "text": "compliantly"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Sau tính từ \"strict\" cần một danh từ: \"strict compliance with\" (sự tuân thủ nghiêm ngặt đối với)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 16,
+        "prompt": "Mr. Watanabe will be promoted to vice president ________ he achieves his annual sales targets.",
+        "options": [
+          {
+            "id": "A",
+            "text": "provided that"
+          },
+          {
+            "id": "B",
+            "text": "in order to"
+          },
+          {
+            "id": "C",
+            "text": "because of"
+          },
+          {
+            "id": "D",
+            "text": "due to"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"Provided that\" (= if / miễn là) là liên từ liên kết mệnh đề điều kiện."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 17,
+        "prompt": "The automated assembly line has operated with zero downtime ________ its installation in January.",
+        "options": [
+          {
+            "id": "A",
+            "text": "since"
+          },
+          {
+            "id": "B",
+            "text": "for"
+          },
+          {
+            "id": "C",
+            "text": "in"
+          },
+          {
+            "id": "D",
+            "text": "during"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Đi cùng thì Hiện tại hoàn thành \"has operated\", mốc thời gian \"its installation in January\" cần dùng giới từ \"since\" (kể từ khi)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 18,
+        "prompt": "Dr. Evelyn Reed is widely considered to be one of the most ________ economists in the region.",
+        "options": [
+          {
+            "id": "A",
+            "text": "influence"
+          },
+          {
+            "id": "B",
+            "text": "influential"
+          },
+          {
+            "id": "C",
+            "text": "influentially"
+          },
+          {
+            "id": "D",
+            "text": "influencing"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Cụm so sánh nhất \"the most [influential] economists\": cần một tính từ bổ nghĩa cho \"economists\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 19,
+        "prompt": "The company handbook outlines all safety protocols that employees are expected to ________.",
+        "options": [
+          {
+            "id": "A",
+            "text": "follow"
+          },
+          {
+            "id": "B",
+            "text": "follows"
+          },
+          {
+            "id": "C",
+            "text": "followed"
+          },
+          {
+            "id": "D",
+            "text": "following"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cấu trúc bị động \"be expected to + V-bare\": động từ nguyên mẫu là \"follow\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 20,
+        "prompt": "Seldom ________ our organization experienced such rapid quarter-over-quarter customer growth.",
+        "options": [
+          {
+            "id": "A",
+            "text": "has"
+          },
+          {
+            "id": "B",
+            "text": "have"
+          },
+          {
+            "id": "C",
+            "text": "is"
+          },
+          {
+            "id": "D",
+            "text": "was"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Đảo ngữ trạng từ phủ định: \"Seldom + has + our organization (chủ ngữ số ít) + experienced...\"."
+      }
+    ]
+  },
+  {
+    "id": "test_mini_02",
+    "title": "Mini-Test 02: Business Vocabulary & Collocations (Part 5)",
+    "description": "Bài kiểm tra 20 câu trắc nghiệm từ vựng thương mại chuyên sâu: đàm phán hợp đồng, thanh toán, nhân sự và quản lý kho vận.",
+    "mode": "MINI_TEST",
+    "timeLimit": 15,
+    "targetBand": "BAND_3",
+    "questions": [
+      {
+        "part": "PART_5",
+        "questionNumber": 1,
+        "prompt": "The chief executive distributed a detailed ________ outlining the topics to be discussed during tomorrow’s board meeting.",
+        "options": [
+          {
+            "id": "A",
+            "text": "agenda"
+          },
+          {
+            "id": "B",
+            "text": "fare"
+          },
+          {
+            "id": "C",
+            "text": "ticket"
+          },
+          {
+            "id": "D",
+            "text": "customs"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"agenda\" (chương trình nghị sự cuộc họp). Các từ còn lại không phù hợp ngữ cảnh công việc."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 2,
+        "prompt": "The accounting team will ________ travel expenses once all original receipts are submitted.",
+        "options": [
+          {
+            "id": "A",
+            "text": "reimburse"
+          },
+          {
+            "id": "B",
+            "text": "terminate"
+          },
+          {
+            "id": "C",
+            "text": "postpone"
+          },
+          {
+            "id": "D",
+            "text": "demote"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"reimburse\" (hoàn trả công tác phí)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 3,
+        "prompt": "Both corporations entered into a legally ________ agreement that prevents the sharing of proprietary technology.",
+        "options": [
+          {
+            "id": "A",
+            "text": "binding"
+          },
+          {
+            "id": "B",
+            "text": "tentative"
+          },
+          {
+            "id": "C",
+            "text": "clerical"
+          },
+          {
+            "id": "D",
+            "text": "temporary"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"legally binding agreement\" (thỏa thuận có tính ràng buộc pháp lý)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 4,
+        "prompt": "A substantial portion of annual operating ________ was allocated to updating cybersecurity infrastructure.",
+        "options": [
+          {
+            "id": "A",
+            "text": "revenue"
+          },
+          {
+            "id": "B",
+            "text": "expenditure"
+          },
+          {
+            "id": "C",
+            "text": "deficit"
+          },
+          {
+            "id": "D",
+            "text": "dividend"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "\"operating expenditure\" (chi phí hoạt động). Cụm \"allocated to\" chỉ việc phân bổ chi phí."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 5,
+        "prompt": "The updated warehouse management system is fully ________ with our current handheld barcode scanners.",
+        "options": [
+          {
+            "id": "A",
+            "text": "compatible"
+          },
+          {
+            "id": "B",
+            "text": "hesitant"
+          },
+          {
+            "id": "C",
+            "text": "lucrative"
+          },
+          {
+            "id": "D",
+            "text": "provisional"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"compatible with\" (tương thích với)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 6,
+        "prompt": "Employees are strongly encouraged to attend the free annual ________ health screenings offered at the company clinic.",
+        "options": [
+          {
+            "id": "A",
+            "text": "preventive"
+          },
+          {
+            "id": "B",
+            "text": "damaging"
+          },
+          {
+            "id": "C",
+            "text": "deficient"
+          },
+          {
+            "id": "D",
+            "text": "hazardous"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"preventive health screenings\" (khám sức khỏe phòng ngừa)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 7,
+        "prompt": "The furniture retail chain launched a nationwide ________ sale to liquidate surplus winter inventory.",
+        "options": [
+          {
+            "id": "A",
+            "text": "clearance"
+          },
+          {
+            "id": "B",
+            "text": "absence"
+          },
+          {
+            "id": "C",
+            "text": "vacancy"
+          },
+          {
+            "id": "D",
+            "text": "allowance"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"clearance sale\" (đợt xả kho thanh lý hàng tồn)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 8,
+        "prompt": "Technicians must ________ measuring devices each morning to ensure precision during component assembly.",
+        "options": [
+          {
+            "id": "A",
+            "text": "calibrate"
+          },
+          {
+            "id": "B",
+            "text": "cancel"
+          },
+          {
+            "id": "C",
+            "text": "compromise"
+          },
+          {
+            "id": "D",
+            "text": "resign"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"calibrate\" (hiệu chuẩn thiết bị đo lường để đảm bảo độ chính xác)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 9,
+        "prompt": "The human resources department announced an immediate ________ for a bilingual corporate communications officer.",
+        "options": [
+          {
+            "id": "A",
+            "text": "vacancy"
+          },
+          {
+            "id": "B",
+            "text": "itinerary"
+          },
+          {
+            "id": "C",
+            "text": "subsidy"
+          },
+          {
+            "id": "D",
+            "text": "collateral"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"vacancy\" (vị trí tuyển dụng còn trống)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 10,
+        "prompt": "The new luxury sedan has already earned an outstanding ________ for fuel economy and driver comfort.",
+        "options": [
+          {
+            "id": "A",
+            "text": "reputation"
+          },
+          {
+            "id": "B",
+            "text": "concession"
+          },
+          {
+            "id": "C",
+            "text": "malfunction"
+          },
+          {
+            "id": "D",
+            "text": "sanitation"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"reputation for\" (danh tiếng/uy tín về cái gì)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 11,
+        "prompt": "Our marketing team designed promotional flyers to ________ young urban professionals seeking eco-friendly transport.",
+        "options": [
+          {
+            "id": "A",
+            "text": "target"
+          },
+          {
+            "id": "B",
+            "text": "terminate"
+          },
+          {
+            "id": "C",
+            "text": "reconcile"
+          },
+          {
+            "id": "D",
+            "text": "overhaul"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"target\" (nhắm tới đối tượng khách hàng mục tiêu)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 12,
+        "prompt": "The vendor pledged to ________ the client against any financial losses stemming from third-party copyright claims.",
+        "options": [
+          {
+            "id": "A",
+            "text": "indemnify"
+          },
+          {
+            "id": "B",
+            "text": "calculate"
+          },
+          {
+            "id": "C",
+            "text": "commute"
+          },
+          {
+            "id": "D",
+            "text": "demote"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"indemnify someone against\" (bồi thường/bảo đảm cho ai khỏi thiệt hại)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 13,
+        "prompt": "Because of automated invoicing, the finance division reduced processing ________ from five days to four hours.",
+        "options": [
+          {
+            "id": "A",
+            "text": "lead time"
+          },
+          {
+            "id": "B",
+            "text": "curriculum"
+          },
+          {
+            "id": "C",
+            "text": "pension"
+          },
+          {
+            "id": "D",
+            "text": "stationery"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"lead time\" (thời gian từ lúc bắt đầu đến khi hoàn thành quy trình xử lý)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 14,
+        "prompt": "The airline provided stranded passengers with meal vouchers to compensate for the flight ________.",
+        "options": [
+          {
+            "id": "A",
+            "text": "inconvenience"
+          },
+          {
+            "id": "B",
+            "text": "appraisal"
+          },
+          {
+            "id": "C",
+            "text": "subsidy"
+          },
+          {
+            "id": "D",
+            "text": "warranty"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"compensate for the inconvenience\" (bồi thường cho sự bất tiện gây ra)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 15,
+        "prompt": "A registered patent ensures that our proprietary manufacturing technique remains legally ________ in international courts.",
+        "options": [
+          {
+            "id": "A",
+            "text": "enforceable"
+          },
+          {
+            "id": "B",
+            "text": "allergic"
+          },
+          {
+            "id": "C",
+            "text": "punctual"
+          },
+          {
+            "id": "D",
+            "text": "provisional"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"enforceable\" (có hiệu lực thi hành theo pháp luật)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 16,
+        "prompt": "The hospital completed a thorough ________ of its emergency backup power generators.",
+        "options": [
+          {
+            "id": "A",
+            "text": "overhaul"
+          },
+          {
+            "id": "B",
+            "text": "ballot"
+          },
+          {
+            "id": "C",
+            "text": "brochure"
+          },
+          {
+            "id": "D",
+            "text": "concession"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"overhaul\" (cuộc đại tu, kiểm tra bảo dưỡng toàn diện)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 17,
+        "prompt": "Frequent flyer club members enjoy ________ access to the premier airport executive lounge.",
+        "options": [
+          {
+            "id": "A",
+            "text": "complimentary"
+          },
+          {
+            "id": "B",
+            "text": "confidential"
+          },
+          {
+            "id": "C",
+            "text": "chronic"
+          },
+          {
+            "id": "D",
+            "text": "clerical"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"complimentary access\" (quyền ra vào miễn phí như một ưu đãi tặng kèm)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 18,
+        "prompt": "The logistics agency dispatched an ocean ________ of consumer electronics to the European distribution hub.",
+        "options": [
+          {
+            "id": "A",
+            "text": "consignment"
+          },
+          {
+            "id": "B",
+            "text": "settlement"
+          },
+          {
+            "id": "C",
+            "text": "prescription"
+          },
+          {
+            "id": "D",
+            "text": "turnover"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"consignment\" (lô hàng vận chuyển)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 19,
+        "prompt": "To protect customer identity, database administrators implemented end-to-end 256-bit ________.",
+        "options": [
+          {
+            "id": "A",
+            "text": "encryption"
+          },
+          {
+            "id": "B",
+            "text": "sanitation"
+          },
+          {
+            "id": "C",
+            "text": "negotiation"
+          },
+          {
+            "id": "D",
+            "text": "orientation"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"256-bit encryption\" (mã hóa dữ liệu 256-bit an toàn)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 20,
+        "prompt": "The newly appointed director plans to ________ routine office responsibilities to senior team coordinators.",
+        "options": [
+          {
+            "id": "A",
+            "text": "delegate"
+          },
+          {
+            "id": "B",
+            "text": "reconcile"
+          },
+          {
+            "id": "C",
+            "text": "rescind"
+          },
+          {
+            "id": "D",
+            "text": "demote"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"delegate responsibilities\" (ủy thác, giao phó trách nhiệm)."
+      }
+    ]
+  },
+  {
+    "id": "test_mini_03",
+    "title": "Mini-Test 03: Workplace Communications (Part 5 & Part 6)",
+    "description": "Bài kiểm tra 20 câu tích hợp: 16 câu Part 5 (Incomplete Sentences) và 4 câu Part 6 (Text Completion) hoàn thiện đoạn văn bản email công sở.",
+    "mode": "MINI_TEST",
+    "timeLimit": 15,
+    "targetBand": "BAND_3",
+    "questions": [
+      {
+        "part": "PART_5",
+        "questionNumber": 1,
+        "prompt": "The chief executive distributed a memo reminding employees to wear their identification badges ________ all times.",
+        "options": [
+          {
+            "id": "A",
+            "text": "at"
+          },
+          {
+            "id": "B",
+            "text": "in"
+          },
+          {
+            "id": "C",
+            "text": "on"
+          },
+          {
+            "id": "D",
+            "text": "to"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cụm thành ngữ giới từ cố định: \"at all times\" (luôn luôn, vào mọi thời điểm)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 2,
+        "prompt": "Before signing the commercial lease agreement, the tenant asked an attorney to examine the cancellation ________.",
+        "options": [
+          {
+            "id": "A",
+            "text": "clause"
+          },
+          {
+            "id": "B",
+            "text": "clinic"
+          },
+          {
+            "id": "C",
+            "text": "customs"
+          },
+          {
+            "id": "D",
+            "text": "commute"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"cancellation clause\" (điều khoản hủy bỏ hợp đồng)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 3,
+        "prompt": "The revised human resources guidelines will be ________ to all personnel via the corporate intranet.",
+        "options": [
+          {
+            "id": "A",
+            "text": "distributed"
+          },
+          {
+            "id": "B",
+            "text": "distribution"
+          },
+          {
+            "id": "C",
+            "text": "distributor"
+          },
+          {
+            "id": "D",
+            "text": "distributing"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Dạng bị động tương lai \"will be + V3/ed\": \"distributed\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 4,
+        "prompt": "Our branch manager decided to ________ the staff briefing until all regional representatives had arrived.",
+        "options": [
+          {
+            "id": "A",
+            "text": "postpone"
+          },
+          {
+            "id": "B",
+            "text": "indemnify"
+          },
+          {
+            "id": "C",
+            "text": "calibrate"
+          },
+          {
+            "id": "D",
+            "text": "reimburse"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"postpone the briefing\" (hoãn buổi thông báo lại)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 5,
+        "prompt": "Mr. Vance has ________ contributed to our company's international business development over the last decade.",
+        "options": [
+          {
+            "id": "A",
+            "text": "significantly"
+          },
+          {
+            "id": "B",
+            "text": "significant"
+          },
+          {
+            "id": "C",
+            "text": "significance"
+          },
+          {
+            "id": "D",
+            "text": "signify"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Vị trí giữa trợ động từ \"has\" và động từ \"contributed\" cần một trạng từ: \"significantly\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 6,
+        "prompt": "The conference organizers announced that free shuttle buses will run ________ the hotel and the convention center.",
+        "options": [
+          {
+            "id": "A",
+            "text": "between"
+          },
+          {
+            "id": "B",
+            "text": "among"
+          },
+          {
+            "id": "C",
+            "text": "during"
+          },
+          {
+            "id": "D",
+            "text": "against"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cấu trúc \"between X and Y\" (giữa hai địa điểm: khách sạn và trung tâm hội nghị)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 7,
+        "prompt": "Any staff member wishing to enroll in the leadership program must submit an ________ before October 31.",
+        "options": [
+          {
+            "id": "A",
+            "text": "application"
+          },
+          {
+            "id": "B",
+            "text": "applicant"
+          },
+          {
+            "id": "C",
+            "text": "applicable"
+          },
+          {
+            "id": "D",
+            "text": "apply"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Sau mạo từ \"an\" cần một danh từ chỉ sự vật/hồ sơ: \"application\" (đơn xin tham gia)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 8,
+        "prompt": "The engineering team completed the safety audit ________ than originally anticipated by management.",
+        "options": [
+          {
+            "id": "A",
+            "text": "quicker"
+          },
+          {
+            "id": "B",
+            "text": "more quickly"
+          },
+          {
+            "id": "C",
+            "text": "most quickly"
+          },
+          {
+            "id": "D",
+            "text": "quickness"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Bổ nghĩa cho động từ \"completed\" với cấu trúc so sánh hơn có \"than\" cần trạng từ so sánh hơn: \"more quickly\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 9,
+        "prompt": "The corporate legal team is drafting a ________ agreement pending regulatory review.",
+        "options": [
+          {
+            "id": "A",
+            "text": "provisional"
+          },
+          {
+            "id": "B",
+            "text": "punctual"
+          },
+          {
+            "id": "C",
+            "text": "clerical"
+          },
+          {
+            "id": "D",
+            "text": "chronic"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"provisional agreement\" (thỏa thuận tạm thời/lâm thời trong khi chờ phê duyệt)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 10,
+        "prompt": "The new employee expressed gratitude to her assigned ________ for providing invaluable onboarding guidance.",
+        "options": [
+          {
+            "id": "A",
+            "text": "mentor"
+          },
+          {
+            "id": "B",
+            "text": "inventory"
+          },
+          {
+            "id": "C",
+            "text": "voucher"
+          },
+          {
+            "id": "D",
+            "text": "downtime"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"mentor\" (người hướng dẫn/cố vấn kinh nghiệm)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 11,
+        "prompt": "Customers are advised to keep the original store receipt in case they need to request a ________.",
+        "options": [
+          {
+            "id": "A",
+            "text": "refund"
+          },
+          {
+            "id": "B",
+            "text": "transit"
+          },
+          {
+            "id": "C",
+            "text": "collateral"
+          },
+          {
+            "id": "D",
+            "text": "ballot"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"request a refund\" (yêu cầu hoàn tiền lại khi có biên lai gốc)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 12,
+        "prompt": "The marketing agency conducted an in-depth survey to assess brand ________ among younger consumers.",
+        "options": [
+          {
+            "id": "A",
+            "text": "loyalty"
+          },
+          {
+            "id": "B",
+            "text": "deficit"
+          },
+          {
+            "id": "C",
+            "text": "dividend"
+          },
+          {
+            "id": "D",
+            "text": "amenity"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"brand loyalty\" (lòng trung thành thương hiệu)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 13,
+        "prompt": "Senior associates must verify that all database tables are ________ backed up every midnight.",
+        "options": [
+          {
+            "id": "A",
+            "text": "automatically"
+          },
+          {
+            "id": "B",
+            "text": "automatic"
+          },
+          {
+            "id": "C",
+            "text": "automation"
+          },
+          {
+            "id": "D",
+            "text": "automating"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Trạng từ \"automatically\" bổ nghĩa cho dạng bị động \"backed up\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 14,
+        "prompt": "A sudden increase in international shipping ________ forced the firm to adjust its export pricing.",
+        "options": [
+          {
+            "id": "A",
+            "text": "rates"
+          },
+          {
+            "id": "B",
+            "text": "rated"
+          },
+          {
+            "id": "C",
+            "text": "rating"
+          },
+          {
+            "id": "D",
+            "text": "rate"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cụm danh từ \"shipping rates\" (cước phí vận chuyển hàng hóa)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 15,
+        "prompt": "Neither the financial director nor the department managers ________ in favor of shortening the training period.",
+        "options": [
+          {
+            "id": "A",
+            "text": "were"
+          },
+          {
+            "id": "B",
+            "text": "was"
+          },
+          {
+            "id": "C",
+            "text": "is"
+          },
+          {
+            "id": "D",
+            "text": "being"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Trong cấu trúc \"Neither A nor B\", động từ chia theo danh từ gần nhất \"the department managers\" (số nhiều trong quá khứ -> were)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 16,
+        "prompt": "Ms. Gomez was commended by the board for her ________ management of the regional branch relocation.",
+        "options": [
+          {
+            "id": "A",
+            "text": "exceptional"
+          },
+          {
+            "id": "B",
+            "text": "exceptionally"
+          },
+          {
+            "id": "C",
+            "text": "exception"
+          },
+          {
+            "id": "D",
+            "text": "except"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Trước danh từ \"management\" cần một tính từ bổ nghĩa: \"exceptional\" (xuất sắc)."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 17,
+        "passageText": "MEMORANDUM\nTo: All Headquarters Staff\nFrom: Corporate Human Resources Division\nDate: November 4, 2026\nSubject: Annual Workplace Wellness Initiatives\n\nWe are pleased to announce the schedule for our upcoming Annual Wellness Week, which will take place from November 16 to November 20. This year, the company has partnered with certified health practitioners to provide free on-site biometric screenings.\n\nAll full-time and contract personnel are strongly encouraged to participate in these [17] ________ health assessments. Regular checkups play a crucial role in detecting potential issues early.\n\n[18] ________. In addition, the cafeteria will feature a revised healthy menu prepared in consultation with nutritionists.\n\nAppointments for health screenings can be scheduled online via the employee portal starting this Thursday. Please note that slots are limited and will be filled on a [19] ________ basis.\n\nShould you have any questions regarding the schedule or eligible services, do not hesitate [20] ________ the HR wellness coordinator at extension 408.",
+        "prompt": "Choose the best option to complete blank [17]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "preventive"
+          },
+          {
+            "id": "B",
+            "text": "hazardous"
+          },
+          {
+            "id": "C",
+            "text": "damaging"
+          },
+          {
+            "id": "D",
+            "text": "deficient"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"preventive health assessments\" (các cuộc đánh giá sức khỏe phòng ngừa). Phù hợp với ngữ cảnh khám sức khỏe định kỳ."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 18,
+        "prompt": "Choose the best sentence to insert into blank [18]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Screening results will be kept strictly confidential and shared only with each individual."
+          },
+          {
+            "id": "B",
+            "text": "The parking lot will be closed for repaving throughout the entire weekend."
+          },
+          {
+            "id": "C",
+            "text": "All overseas flights require advance booking through the designated travel agency."
+          },
+          {
+            "id": "D",
+            "text": "Factory production was temporarily suspended due to routine machine maintenance."
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Câu này bổ sung thông tin trấn an về tính bảo mật của kết quả khám sức khỏe (confidentiality), hoàn toàn logic với đoạn văn."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 19,
+        "prompt": "Choose the best option to complete blank [19]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "first-come, first-served"
+          },
+          {
+            "id": "B",
+            "text": "null and void"
+          },
+          {
+            "id": "C",
+            "text": "out of date"
+          },
+          {
+            "id": "D",
+            "text": "point of view"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Thành ngữ công sở cố định: \"on a first-come, first-served basis\" (theo thứ tự ai đăng ký trước được phục vụ trước)."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 20,
+        "prompt": "Choose the best option to complete blank [20]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "to contact"
+          },
+          {
+            "id": "B",
+            "text": "contacting"
+          },
+          {
+            "id": "C",
+            "text": "contact"
+          },
+          {
+            "id": "D",
+            "text": "contacted"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cấu trúc cố định \"hesitate to do something\": \"do not hesitate to contact\"."
+      }
+    ]
+  },
+  {
+    "id": "test_showcase_full",
+    "title": "ETS Showcase Test: Full Parts 1 to 7 Diagnostic",
+    "description": "Bộ đề thi mẫu hoàn chỉnh kiểm thử toàn diện cả 7 Parts (Part 1 Ảnh, Part 2 Hỏi-Đáp, Part 3 Hội thoại, Part 4 Bài nói, Part 5 Điền câu, Part 6 Hoàn thành văn bản, Part 7 Đọc hiểu).",
+    "mode": "FULL_TEST",
+    "timeLimit": 30,
+    "targetBand": "BAND_3",
+    "questions": [
+      {
+        "part": "PART_1",
+        "questionNumber": 1,
+        "imageUrl": "/images/test-samples/part1_office_meeting.webp",
+        "prompt": "Look at the photograph and choose the statement that best describes what you see in the picture:\n\n(A) A woman is typing on a desktop computer.\n(B) Several colleagues are seated around a conference table.\n(C) A presentation screen is being dismantled.\n(D) Papers are scattered across the carpeted floor.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A woman is typing on a desktop computer."
+          },
+          {
+            "id": "B",
+            "text": "Several colleagues are seated around a conference table."
+          },
+          {
+            "id": "C",
+            "text": "A presentation screen is being dismantled."
+          },
+          {
+            "id": "D",
+            "text": "Papers are scattered across the carpeted floor."
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Đáp án (B) mô tả chính xác nhất bức ảnh chụp cuộc họp bàn tròn nơi các đồng nghiệp đang ngồi thảo luận."
+      },
+      {
+        "part": "PART_1",
+        "questionNumber": 2,
+        "imageUrl": "/images/test-samples/part1_warehouse.webp",
+        "prompt": "Look at the photograph and choose the statement that best describes what you see in the picture:\n\n(A) A forklift is transporting stacked cardboard cartons.\n(B) The warehouse shelves are completely empty.\n(C) Workers are sweeping the loading dock outside.\n(D) Delivery vans are parked along the highway.",
+        "options": [
+          {
+            "id": "A",
+            "text": "A forklift is transporting stacked cardboard cartons."
+          },
+          {
+            "id": "B",
+            "text": "The warehouse shelves are completely empty."
+          },
+          {
+            "id": "C",
+            "text": "Workers are sweeping the loading dock outside."
+          },
+          {
+            "id": "D",
+            "text": "Delivery vans are parked along the highway."
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Đáp án (A) miêu tả hành động chiếc xe nâng (forklift) đang di chuyển các kiện hàng trong kho hàng."
+      },
+      {
+        "part": "PART_2",
+        "questionNumber": 3,
+        "prompt": "Where did you leave the client’s signed contract?\n\n(A) In the blue folder on Mr. Tanaka’s desk.\n(B) Yes, the terms were very reasonable.\n(C) About three days ago.",
+        "options": [
+          {
+            "id": "A",
+            "text": "In the blue folder on Mr. Tanaka’s desk."
+          },
+          {
+            "id": "B",
+            "text": "Yes, the terms were very reasonable."
+          },
+          {
+            "id": "C",
+            "text": "About three days ago."
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Câu hỏi bắt đầu bằng \"Where\" (ở đâu), đáp án chỉ nơi chốn chính xác là (A) \"In the blue folder on Mr. Tanaka’s desk\"."
+      },
+      {
+        "part": "PART_2",
+        "questionNumber": 4,
+        "prompt": "Who is responsible for organizing this Friday’s regional sales seminar?\n\n(A) At the Grand Plaza Hotel.\n(B) Ms. Patterson from marketing is handling it.\n(C) Yes, it begins at nine sharp.",
+        "options": [
+          {
+            "id": "A",
+            "text": "At the Grand Plaza Hotel."
+          },
+          {
+            "id": "B",
+            "text": "Ms. Patterson from marketing is handling it."
+          },
+          {
+            "id": "C",
+            "text": "Yes, it begins at nine sharp."
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Câu hỏi bắt đầu bằng \"Who\" (ai chịu trách nhiệm), đáp án chỉ người là (B) \"Ms. Patterson from marketing is handling it\"."
+      },
+      {
+        "part": "PART_2",
+        "questionNumber": 5,
+        "prompt": "When is the revised annual budget expected to be approved by the board?\n\n(A) By late next Wednesday afternoon.\n(B) We exceeded our sales revenue targets.\n(C) For the accounting department.",
+        "options": [
+          {
+            "id": "A",
+            "text": "By late next Wednesday afternoon."
+          },
+          {
+            "id": "B",
+            "text": "We exceeded our sales revenue targets."
+          },
+          {
+            "id": "C",
+            "text": "For the accounting department."
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Câu hỏi bắt đầu bằng \"When\" (khi nào), đáp án chỉ thời gian là (A) \"By late next Wednesday afternoon\"."
+      },
+      {
+        "part": "PART_3",
+        "questionNumber": 6,
+        "passageText": "Questions 6 through 8 refer to the following conversation:\n\nMan: Good morning, Brenda. Have you had a chance to review the quotation we received from Apex Office Supplies?\nWoman: Yes, Jack, I looked over it this morning. Their bulk discount for printer paper and ink cartridges is fifteen percent lower than what our current vendor charges.\nMan: That sounds like a significant cost saving. But can they guarantee same-day delivery if we place orders before noon?\nWoman: Their sales representative confirmed they maintain a local warehouse in the industrial park, so same-day dispatch won't be an issue. I'll prepare the vendor switch proposal for the director right away.",
+        "prompt": "What are the speakers mainly discussing?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Purchasing office supplies from a new vendor"
+          },
+          {
+            "id": "B",
+            "text": "Upgrading computer monitors in the accounting division"
+          },
+          {
+            "id": "C",
+            "text": "Organizing an annual corporate anniversary celebration"
+          },
+          {
+            "id": "D",
+            "text": "Hiring a temporary administrative assistant"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Hai người đang thảo luận về bảng báo giá và chiết khấu từ nhà cung cấp văn phòng phẩm mới (Apex Office Supplies)."
+      },
+      {
+        "part": "PART_3",
+        "questionNumber": 7,
+        "prompt": "What advantage does Apex Office Supplies offer according to the woman?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Free international courier delivery"
+          },
+          {
+            "id": "B",
+            "text": "A fifteen percent lower bulk price"
+          },
+          {
+            "id": "C",
+            "text": "A five-year equipment warranty"
+          },
+          {
+            "id": "D",
+            "text": "Customized stationery printing"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Người phụ nữ nói rõ: \"Their bulk discount for printer paper and ink cartridges is fifteen percent lower\"."
+      },
+      {
+        "part": "PART_3",
+        "questionNumber": 8,
+        "prompt": "What will the woman probably do next?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cancel the company’s internet subscription"
+          },
+          {
+            "id": "B",
+            "text": "Prepare a vendor switch proposal for the director"
+          },
+          {
+            "id": "C",
+            "text": "Call the maintenance department to fix the printer"
+          },
+          {
+            "id": "D",
+            "text": "Ship a package to the European branch"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Câu cuối cùng của người phụ nữ: \"I'll prepare the vendor switch proposal for the director right away\"."
+      },
+      {
+        "part": "PART_4",
+        "questionNumber": 9,
+        "passageText": "Questions 9 through 11 refer to the following telephone voicemail message:\n\n\"Hello, this is Marcus Bradley from Bradley Commercial Real Estate calling for Ms. Evelyn Davis. I am calling to update you regarding the lease agreement for the second-floor office suite on Riverside Avenue. The property owner has reviewed your proposed move-in date and agreed to waive the first month's parking fee as an incentive. However, they requested an updated copy of your corporation's audited financial statement before finalizing the five-year lease. Please email that document to my office by 4:00 PM tomorrow so we can draft the final contract for your signature. You can reach me at 555-0194 if you have any questions. Thank you.\"",
+        "prompt": "What is the purpose of the phone call?",
+        "options": [
+          {
+            "id": "A",
+            "text": "To update the listener regarding a commercial office lease"
+          },
+          {
+            "id": "B",
+            "text": "To announce the cancellation of a property viewing"
+          },
+          {
+            "id": "C",
+            "text": "To complain about late maintenance work in a building"
+          },
+          {
+            "id": "D",
+            "text": "To invite attendees to an architectural seminar"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Người gọi mở đầu: \"I am calling to update you regarding the lease agreement for the second-floor office suite\"."
+      },
+      {
+        "part": "PART_4",
+        "questionNumber": 10,
+        "prompt": "What concession has the property owner agreed to offer?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A ten percent reduction on the purchase price"
+          },
+          {
+            "id": "B",
+            "text": "Waiving the first month's parking fee"
+          },
+          {
+            "id": "C",
+            "text": "Free high-speed fiber internet for one year"
+          },
+          {
+            "id": "D",
+            "text": "Customized executive furniture installation"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Người gọi nêu rõ: \"agreed to waive the first month's parking fee as an incentive\"."
+      },
+      {
+        "part": "PART_4",
+        "questionNumber": 11,
+        "prompt": "What does the speaker ask Ms. Davis to email by tomorrow afternoon?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Her driver’s license number"
+          },
+          {
+            "id": "B",
+            "text": "An audited corporate financial statement"
+          },
+          {
+            "id": "C",
+            "text": "A letter of recommendation from her bank"
+          },
+          {
+            "id": "D",
+            "text": "A photograph of her previous office"
+          }
+        ],
+        "correctOptionId": "B",
+        "explanation": "Người nói yêu cầu: \"requested an updated copy of your corporation's audited financial statement... Please email that document to my office by 4:00 PM tomorrow\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 12,
+        "prompt": "All employees participating in the regional conference must submit their registration forms ________ October 20.",
+        "options": [
+          {
+            "id": "A",
+            "text": "by"
+          },
+          {
+            "id": "B",
+            "text": "to"
+          },
+          {
+            "id": "C",
+            "text": "in"
+          },
+          {
+            "id": "D",
+            "text": "on"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Hạn chót dứt điểm nộp biểu mẫu: \"by October 20\" (trước hoặc muộn nhất vào ngày 20 tháng 10)."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 13,
+        "prompt": "The newly introduced software operates ________ more smoothly than the previous version.",
+        "options": [
+          {
+            "id": "A",
+            "text": "substantially"
+          },
+          {
+            "id": "B",
+            "text": "substantial"
+          },
+          {
+            "id": "C",
+            "text": "substance"
+          },
+          {
+            "id": "D",
+            "text": "substantiate"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Trạng từ \"substantially\" bổ nghĩa nhấn mạnh cho tính từ/trạng từ so sánh hơn \"more smoothly\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 14,
+        "prompt": "Ms. Vance was commended by the board for her ________ management of the factory expansion project.",
+        "options": [
+          {
+            "id": "A",
+            "text": "exceptional"
+          },
+          {
+            "id": "B",
+            "text": "exceptionally"
+          },
+          {
+            "id": "C",
+            "text": "exception"
+          },
+          {
+            "id": "D",
+            "text": "excepting"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Trước danh từ \"management\" cần một tính từ bổ nghĩa: \"exceptional\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 15,
+        "prompt": "The manufacturing plant has operated with zero safety incidents ________ it reopened following renovations.",
+        "options": [
+          {
+            "id": "A",
+            "text": "since"
+          },
+          {
+            "id": "B",
+            "text": "during"
+          },
+          {
+            "id": "C",
+            "text": "for"
+          },
+          {
+            "id": "D",
+            "text": "while"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Mệnh đề thì Hiện tại hoàn thành (\"has operated\") đi với \"since + mệnh đề quá khứ đơn\" (\"since it reopened\")."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 16,
+        "prompt": "Neither the accounting manager ________ the chief financial officer approved the proposed budget increase.",
+        "options": [
+          {
+            "id": "A",
+            "text": "nor"
+          },
+          {
+            "id": "B",
+            "text": "or"
+          },
+          {
+            "id": "C",
+            "text": "and"
+          },
+          {
+            "id": "D",
+            "text": "also"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cấu trúc tương quan \"Neither... nor...\"."
+      },
+      {
+        "part": "PART_5",
+        "questionNumber": 17,
+        "prompt": "Should you ________ any problems with the wireless network, contact technical support immediately.",
+        "options": [
+          {
+            "id": "A",
+            "text": "experience"
+          },
+          {
+            "id": "B",
+            "text": "experienced"
+          },
+          {
+            "id": "C",
+            "text": "experiencing"
+          },
+          {
+            "id": "D",
+            "text": "to experience"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Đảo ngữ câu điều kiện loại 1 với \"Should + S + V-bare\": động từ nguyên mẫu là \"experience\"."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 18,
+        "passageText": "EMAIL NOTICE\nTo: All Regional Sales Representatives\nFrom: Marcus Hayes, Director of Global Distribution\nDate: August 12, 2026\nSubject: Implementation of New Client Relationship Portal\n\nDear Team,\n\nStarting Monday, August 17, our company will officially migrate to the Nexus-360 client relationship management platform. This state-of-the-art system has been designed to [18] ________ administrative lead times and facilitate seamless communication between field reps and headquarters.\n\nAll client records, quotation drafts, and contract histories [19] ________ transferred to the new cloud database over the weekend.\n\n[20] ________.\n\nShould you encounter any difficulty accessing client accounts on Monday morning, please contact the IT support desk [21] ________ extension 204.\n\nBest regards,\nMarcus Hayes",
+        "prompt": "Choose the best option to complete blank [18]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "reduce"
+          },
+          {
+            "id": "B",
+            "text": "prolong"
+          },
+          {
+            "id": "C",
+            "text": "damage"
+          },
+          {
+            "id": "D",
+            "text": "hesitate"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "\"reduce administrative lead times\" (cắt giảm thời gian xử lý thủ tục hành chính)."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 19,
+        "prompt": "Choose the best option to complete blank [19]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "will be"
+          },
+          {
+            "id": "B",
+            "text": "was"
+          },
+          {
+            "id": "C",
+            "text": "is"
+          },
+          {
+            "id": "D",
+            "text": "having been"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Hành động chuyển đổi dữ liệu diễn ra vào cuối tuần tới: thì tương lai bị động \"will be transferred\"."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 20,
+        "prompt": "Choose the best sentence to insert into blank [20]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A mandatory sixty-minute training webinar will be hosted this Friday at 10:00 AM."
+          },
+          {
+            "id": "B",
+            "text": "Our annual holiday celebration has been rescheduled for next January."
+          },
+          {
+            "id": "C",
+            "text": "Parking lot maintenance will restrict vehicle access during the lunch hour."
+          },
+          {
+            "id": "D",
+            "text": "Overseas business travel expenses must be submitted within thirty days."
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Câu nói về buổi hội thảo hướng dẫn sử dụng phần mềm mới (training webinar) kết nối tự nhiên và chặt chẽ nhất với thông báo triển khai hệ thống."
+      },
+      {
+        "part": "PART_6",
+        "questionNumber": 21,
+        "prompt": "Choose the best option to complete blank [21]:",
+        "options": [
+          {
+            "id": "A",
+            "text": "at"
+          },
+          {
+            "id": "B",
+            "text": "in"
+          },
+          {
+            "id": "C",
+            "text": "with"
+          },
+          {
+            "id": "D",
+            "text": "on"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Cụm từ chỉ số máy nhánh nội bộ: \"at extension [number]\"."
+      },
+      {
+        "part": "PART_7",
+        "questionNumber": 22,
+        "passageText": "READING PASSAGE: BUSINESS MEMORANDUM & PRESS RELEASE\n\nKIMURA ADVANCED LOGISTICS\nINTERNAL MEMORANDUM\n\nTo: Executive Leadership Team\nFrom: Kenjiro Sato, Chief Operating Officer\nDate: October 14, 2026\nSubject: Opening of New Automated Distribution Center in Da Nang\n\nI am delighted to report that our new automated distribution center in the Hoa Khanh Industrial Zone in Da Nang is scheduled to commence commercial operations on November 1, two weeks ahead of our initial timetable.\n\nThe 45,000-square-meter facility represents a $35 million strategic investment. It is equipped with advanced robotic sorting conveyors and AI-powered optical barcode scanners capable of handling up to 50,000 consignments per day. This expansion will allow us to offer guaranteed next-day delivery across central Vietnam, while reducing our regional carbon emissions by twenty percent through rooftop solar panel arrays.\n\nA formal ribbon-cutting ceremony and facility tour will be held on Thursday, November 5, from 10:00 AM to 1:00 PM. High-ranking representatives from the Ministry of Industry and Trade and several key commercial clients have already confirmed their attendance.\n\nDepartment heads wishing to send representatives to the opening ceremony must submit the names of designated attendees to the corporate communications office by October 24 so that security badges and transportation vouchers can be issued.",
+        "prompt": "What is the main topic of the memorandum?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The inauguration of a new automated logistics facility in Da Nang"
+          },
+          {
+            "id": "B",
+            "text": "An increase in freight shipping tariffs across Southeast Asia"
+          },
+          {
+            "id": "C",
+            "text": "The dismissal of a regional warehouse contractor"
+          },
+          {
+            "id": "D",
+            "text": "A merger between two commercial real estate firms"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Bản ghi nhớ thông báo về việc mở và đưa vào vận hành trung tâm phân phối tự động mới tại Đà Nẵng."
+      },
+      {
+        "part": "PART_7",
+        "questionNumber": 23,
+        "prompt": "According to the memorandum, what is significant about the start date?",
+        "options": [
+          {
+            "id": "A",
+            "text": "It occurs two weeks ahead of schedule."
+          },
+          {
+            "id": "B",
+            "text": "It has been delayed until next spring."
+          },
+          {
+            "id": "C",
+            "text": "It coincides with the company’s fiftieth anniversary."
+          },
+          {
+            "id": "D",
+            "text": "It requires approval from international environmental regulators."
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Văn bản nêu rõ: \"scheduled to commence commercial operations on November 1, two weeks ahead of our initial timetable\"."
+      },
+      {
+        "part": "PART_7",
+        "questionNumber": 24,
+        "prompt": "What environmental feature of the facility is highlighted?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rooftop solar panel arrays"
+          },
+          {
+            "id": "B",
+            "text": "An on-site geothermal heating system"
+          },
+          {
+            "id": "C",
+            "text": "A fleet of hydrogen-powered transport ships"
+          },
+          {
+            "id": "D",
+            "text": "Recycled rainwater collection tanks"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Đoạn văn ghi: \"reducing our regional carbon emissions by twenty percent through rooftop solar panel arrays\"."
+      },
+      {
+        "part": "PART_7",
+        "questionNumber": 25,
+        "prompt": "What must department heads do by October 24 if they want staff to attend the ceremony?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Submit designated attendees' names to corporate communications"
+          },
+          {
+            "id": "B",
+            "text": "Book their own hotel accommodations in Da Nang"
+          },
+          {
+            "id": "C",
+            "text": "Pay an admission fee for security clearance"
+          },
+          {
+            "id": "D",
+            "text": "Complete an online safety inspection training course"
+          }
+        ],
+        "correctOptionId": "A",
+        "explanation": "Câu cuối: \"must submit the names of designated attendees to the corporate communications office by October 24\"."
+      }
+    ]
+  }
+]

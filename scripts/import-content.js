@@ -409,22 +409,26 @@ async function main() {
   console.log('🌸 TOEIC MASTER — CONTENT IMPORT PIPELINE');
   console.log('═══════════════════════════════════════════════════════════════');
 
+  const defaultVocab = fs.existsSync('content/vocabulary.full.json') ? 'content/vocabulary.full.json' : 'content/samples/vocabulary.sample.json';
+  const defaultGrammar = fs.existsSync('content/grammar.full.json') ? 'content/grammar.full.json' : 'content/samples/grammar.sample.json';
+  const defaultTests = fs.existsSync('content/tests.full.json') ? 'content/tests.full.json' : 'content/samples/questions.sample.json';
+
   try {
     if (options.all) {
-      await importVocabulary(options.file || 'content/samples/vocabulary.sample.json');
-      await importGrammar(options.file || 'content/samples/grammar.sample.json');
-      await importQuestions(options.file || 'content/samples/questions.sample.json');
+      await importVocabulary(options.file || defaultVocab);
+      await importGrammar(options.file || defaultGrammar);
+      await importQuestions(options.file || defaultTests);
     } else if (options.type === 'vocab' || options.type === 'vocabulary') {
-      await importVocabulary(options.file || 'content/samples/vocabulary.sample.json');
+      await importVocabulary(options.file || defaultVocab);
     } else if (options.type === 'grammar') {
-      await importGrammar(options.file || 'content/samples/grammar.sample.json');
+      await importGrammar(options.file || defaultGrammar);
     } else if (options.type === 'questions' || options.type === 'tests') {
-      await importQuestions(options.file || 'content/samples/questions.sample.json');
+      await importQuestions(options.file || defaultTests);
     } else {
       console.log('💡 Hướng dẫn sử dụng:');
-      console.log('  node scripts/import-content.js --type=vocab --file=path/to/vocabulary.json');
-      console.log('  node scripts/import-content.js --type=grammar --file=path/to/grammar.json');
-      console.log('  node scripts/import-content.js --type=questions --file=path/to/questions.json');
+      console.log('  node scripts/import-content.js --type=vocab [--file=path/to/vocabulary.json]');
+      console.log('  node scripts/import-content.js --type=grammar [--file=path/to/grammar.json]');
+      console.log('  node scripts/import-content.js --type=questions [--file=path/to/questions.json]');
       console.log('  node scripts/import-content.js --all');
     }
     console.log('\n✨ Tất cả dữ liệu đã được xử lý xong an toàn.');

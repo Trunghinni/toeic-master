@@ -1,0 +1,916 @@
+[
+  {
+    "id": "grammar_verb_tenses",
+    "title": "Present and Past Verb Tenses in Business",
+    "description": "Thì hiện tại và quá khứ trong ngữ cảnh công việc: phân biệt thì hiện tại hoàn thành, quá khứ đơn và hiện tại tiếp diễn.",
+    "targetBand": "BAND_2",
+    "orderIndex": 1,
+    "rule": "# Present and Past Verb Tenses in Business English\n\n## 1. Present Simple vs. Present Continuous\n- **Hiện tại đơn (Present Simple)**: Dùng cho thói quen hàng ngày, lịch trình định sẵn, sự thật khách quan hoặc chính sách công ty.\n  - *Dấu hiệu*: `always`, `regularly`, `every month`, `annually`, `as a rule`.\n  - *Ví dụ*: The accounting department **reviews** expense reports every Friday.\n- **Hiện tại tiếp diễn (Present Continuous)**: Dùng cho hành động đang diễn ra tại thời điểm nói hoặc xu hướng tạm thời trong kỳ hiện tại.\n  - *Dấu hiệu*: `currently`, `at present`, `now`, `this quarter`.\n  - *Ví dụ*: We **are currently renovating** our regional showroom.\n\n## 2. Past Simple vs. Present Perfect\n- **Quá khứ đơn (Past Simple)**: Diễn tả hành động đã hoàn tất tại một thời điểm xác định trong quá khứ.\n  - *Dấu hiệu*: `yesterday`, `last year`, `in 2023`, `two days ago`.\n  - *Ví dụ*: The firm **opened** its first international subsidiary in 2021.\n- **Hiện tại hoàn thành (Present Perfect)**: Diễn tả hành động bắt đầu trong quá khứ và vẫn tiếp diễn, hoặc kết quả còn ảnh hưởng tới hiện tại.\n  - *Dấu hiệu*: `since`, `for`, `already`, `recently`, `lately`, `over the past three years`.\n  - *Ví dụ*: Mr. Henderson **has served** as CEO since 2018.",
+    "formula": "S + have/has + V3/ed + since [point of time] | S + V2/ed + [specific past time]",
+    "examples": [
+      {
+        "sentence": "Ms. Alvarez has worked at this marketing agency for over eight years.",
+        "translation": "Bà Alvarez đã làm việc tại công ty quảng cáo này hơn tám năm.",
+        "highlight": "has worked"
+      },
+      {
+        "sentence": "The board approved the annual budget at yesterday’s special meeting.",
+        "translation": "Hội đồng quản trị đã thông qua ngân sách thường niên tại cuộc họp đặc biệt ngày hôm qua.",
+        "highlight": "approved"
+      },
+      {
+        "sentence": "Our IT department is currently upgrading the primary database servers.",
+        "translation": "Phòng CNTT của chúng tôi hiện đang nâng cấp các máy chủ cơ sở dữ liệu chính.",
+        "highlight": "is currently upgrading"
+      }
+    ],
+    "tips": "Trong Part 5, khi thấy cụm từ \"over the past + [khoảng thời gian]\" (e.g. over the past decade, over the last few months), hãy luôn chọn thì Hiện tại hoàn thành (Present Perfect).",
+    "commonErrors": [
+      {
+        "wrong": "He has visited our office yesterday.",
+        "correct": "He visited our office yesterday.",
+        "explanation": "Yesterday là thời điểm quá khứ xác định, phải chia thì Quá khứ đơn (Past Simple), không dùng Hiện tại hoàn thành."
+      },
+      {
+        "wrong": "The committee is meeting every Monday morning.",
+        "correct": "The committee meets every Monday morning.",
+        "explanation": "Thói quen lặp lại theo lịch trình cố định (every Monday) phải dùng thì Hiện tại đơn."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Over the past three years, our customer service division ________ more than one million caller inquiries.",
+        "options": [
+          "handles",
+          "handled",
+          "has handled",
+          "is handling"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cụm từ \"Over the past three years\" là dấu hiệu kinh điển của thì Hiện tại hoàn thành (Present Perfect), biểu thị hành động kéo dài liên tục đến hiện tại.",
+        "difficulty": 2
+      },
+      {
+        "question": "Mr. Tanaka ________ the signed purchase agreement to the vendor yesterday afternoon.",
+        "options": [
+          "returns",
+          "returned",
+          "has returned",
+          "is returning"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Mốc thời gian xác định trong quá khứ \"yesterday afternoon\" yêu cầu dùng thì Quá khứ đơn (returned).",
+        "difficulty": 1
+      },
+      {
+        "question": "At present, the engineering team ________ the structural integrity of the bridge prototype.",
+        "options": [
+          "tests",
+          "is testing",
+          "tested",
+          "has tested"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Trạng từ \"At present\" (hiện tại) chỉ hành động đang diễn ra tại thời điểm nói, cần dùng Hiện tại tiếp diễn (is testing).",
+        "difficulty": 2
+      },
+      {
+        "question": "The executive committee ________ once a month to review departmental expenditure reports.",
+        "options": [
+          "meets",
+          "is meeting",
+          "has met",
+          "will have met"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cụm từ \"once a month\" chỉ tần suất thói quen định kỳ, cần dùng thì Hiện tại đơn (meets).",
+        "difficulty": 1
+      },
+      {
+        "question": "Since she joined the firm in 2022, Director Vance ________ three major restructuring initiatives.",
+        "options": [
+          "oversees",
+          "oversaw",
+          "has overseen",
+          "is overseeing"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Mệnh đề bắt đầu bằng \"Since + mốc quá khứ\" (Since she joined...), mệnh đề chính phải chia ở thì Hiện tại hoàn thành (has overseen).",
+        "difficulty": 3
+      }
+    ]
+  },
+  {
+    "id": "grammar_passive_voice",
+    "title": "Passive Voice in Corporate Documents & Notices",
+    "description": "Thể bị động trong thông báo, báo cáo tài chính và email hành chính công ty.",
+    "targetBand": "BAND_3",
+    "orderIndex": 2,
+    "rule": "# Passive Voice in TOEIC Business English\n\n## 1. Cấu trúc cơ bản\n- **Thể bị động**: `S + be + Past Participle (V3/ed) (+ by Object)`\n- Trong môi trường văn phòng TOEIC, thể bị động được ưa chuộng khi:\n  1. Người thực hiện hành động không quan trọng bằng đối tượng bị tác động.\n  2. Muốn nhấn mạnh tính khách quan, trang trọng của quy định hoặc thông báo.\n  3. Hành động đã diễn ra nhưng không muốn chỉ trích đích danh cá nhân.\n\n## 2. Các dạng bị động thường gặp trong TOEIC\n- **Bị động với Modal Verbs**: `Modal (must / should / can / will) + be + V3/ed`\n  - *Ví dụ*: All travel receipts **must be submitted** within 10 days.\n- **Bị động ở thì Hoàn thành**: `have / has / had + been + V3/ed`\n  - *Ví dụ*: The merger **has been approved** by regulatory authorities.\n- **Bị động ở thì Tiếp diễn**: `am / is / are / was / were + being + V3/ed`\n  - *Ví dụ*: The headquarters lobby **is being repainted** this weekend.",
+    "formula": "S + be (chia theo thì) + V3/ed (+ by Agent)",
+    "examples": [
+      {
+        "sentence": "All confidential documents must be shredded before disposal.",
+        "translation": "Tất cả các tài liệu bảo mật phải được cắt vụn trước khi tiêu hủy.",
+        "highlight": "must be shredded"
+      },
+      {
+        "sentence": "The annual trade banquet was hosted by the Chamber of Commerce.",
+        "translation": "Bữa tiệc thương mại thường niên đã được chủ trì bởi Phòng Thương mại.",
+        "highlight": "was hosted"
+      },
+      {
+        "sentence": "A new cybersecurity policy has been implemented across all branches.",
+        "translation": "Một chính sách an ninh mạng mới đã được áp dụng trên tất cả các chi nhánh.",
+        "highlight": "has been implemented"
+      }
+    ],
+    "tips": "Để nhận biết câu chủ động hay bị động trong Part 5: Nếu sau chỗ trống KHÔNG có tân ngữ (Direct Object) mà có giới từ (by, for, to, at) hoặc trạng từ, khả năng rất cao là chọn dạng Bị động (be + V3/ed).",
+    "commonErrors": [
+      {
+        "wrong": "The shipment was arrived on time.",
+        "correct": "The shipment arrived on time.",
+        "explanation": "Các nội động từ (Intransitive verbs) như arrive, happen, occur, remain KHÔNG bao giờ chia ở thể bị động."
+      },
+      {
+        "wrong": "The proposal will review by the management tomorrow.",
+        "correct": "The proposal will be reviewed by the management tomorrow.",
+        "explanation": "Dạng bị động với tương lai đơn phải có \"be\": will + be + V3/ed."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "All employees who wish to attend the leadership seminar ________ to register by Friday afternoon.",
+        "options": [
+          "require",
+          "are requiring",
+          "are required",
+          "have required"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Chủ ngữ \"All employees\" là đối tượng được/bị yêu cầu (không tự yêu cầu ai khác), phía sau là \"to register\", nên phải dùng bị động \"are required\".",
+        "difficulty": 2
+      },
+      {
+        "question": "The updated safety manual ________ to all floor managers early next week.",
+        "options": [
+          "will distribute",
+          "will be distributed",
+          "is distributing",
+          "distributes"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Chủ ngữ \"The updated safety manual\" là vật bị phân phát, kết hợp với thời gian tương lai \"next week\", đáp án đúng là \"will be distributed\".",
+        "difficulty": 2
+      },
+      {
+        "question": "The keynote address ________ by Dr. Evelyn Reed at the opening of yesterday’s symposium.",
+        "options": [
+          "delivered",
+          "was delivered",
+          "has delivered",
+          "is delivering"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cụm \"by Dr. Evelyn Reed\" và mốc thời gian \"yesterday\" chỉ rõ thể bị động thì Quá khứ đơn: \"was delivered\".",
+        "difficulty": 2
+      },
+      {
+        "question": "A complete inventory of storage supplies ________ twice each calendar year.",
+        "options": [
+          "conducts",
+          "is conducted",
+          "is conducting",
+          "has conducted"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Việc kiểm kê (inventory) không thể tự thực hiện mà \"được tiến hành\" định kỳ: \"is conducted\".",
+        "difficulty": 2
+      }
+    ]
+  },
+  {
+    "id": "grammar_relative_clauses",
+    "title": "Relative Clauses & Reduced Clauses",
+    "description": "Mệnh đề quan hệ xác định/không xác định và kỹ thuật rút gọn mệnh đề quan hệ dạng V-ing/V-ed.",
+    "targetBand": "BAND_3",
+    "orderIndex": 3,
+    "rule": "# Relative Clauses and Reduced Clauses in TOEIC\n\n## 1. Đại từ quan hệ (Relative Pronouns)\n- **Who**: Thay cho danh từ chỉ người làm chủ ngữ.\n  - *Ví dụ*: The consultant **who drafted the blueprint** is here.\n- **Whom**: Thay cho danh từ chỉ người làm tân ngữ (sau giới từ bắt buộc dùng whom).\n  - *Ví dụ*: The executive **to whom you spoke** will reply soon.\n- **Which**: Thay cho danh từ chỉ sự vật/hiện tượng.\n  - *Ví dụ*: The software **which was installed yesterday** is fast.\n- **That**: Thay thế cho cả người lẫn vật trong mệnh đề xác định (không đứng sau dấu phẩy hay giới từ).\n- **Whose**: Chỉ quan hệ sở hữu cho cả người và vật (`N + whose + N`).\n  - *Ví dụ*: Candidates **whose applications were approved** will be contacted.\n\n## 2. Rút gọn Mệnh đề quan hệ (Reduced Relative Clauses)\nĐây là cấu trúc xuất hiện liên tục trong Part 5 & 6:\n- **Chủ động**: Rút gọn thành `V-ing`\n  - *Gốc*: The engineer who oversees the plant -> *Rút gọn*: The engineer **overseeing** the plant.\n- **Bị động**: Rút gọn thành `V-ed / V3`\n  - *Gốc*: The items that were ordered yesterday -> *Rút gọn*: The items **ordered** yesterday.",
+    "formula": "N (người/vật) + [V-ing (chủ động) / V3-ed (bị động)] + Complement",
+    "examples": [
+      {
+        "sentence": "Anyone wishing to renew their parking permit must submit an online request.",
+        "translation": "Bất kỳ ai muốn gia hạn giấy phép đỗ xe của mình đều phải nộp yêu cầu trực tuyến.",
+        "highlight": "wishing to renew"
+      },
+      {
+        "sentence": "Products manufactured at our Da Nang facility meet strict ISO 9001 standards.",
+        "translation": "Các sản phẩm được sản xuất tại cơ sở Đà Nẵng của chúng tôi đáp ứng các tiêu chuẩn ISO 9001 nghiêm ngặt.",
+        "highlight": "manufactured at our Da Nang facility"
+      },
+      {
+        "sentence": "The technician whose team solved the network outage was commended by the board.",
+        "translation": "Kỹ thuật viên mà đội ngũ của anh ấy đã khắc phục sự cố ngừng mạng đã được hội đồng quản trị biểu dương.",
+        "highlight": "whose team solved"
+      }
+    ],
+    "tips": "Trong câu có sẵn động từ chính vị ngữ rồi, nếu trước danh từ có chỗ trống hoặc sau danh từ cần bổ nghĩa mà không có đại từ quan hệ (who/which/that), hãy nghĩ ngay đến rút gọn mệnh đề quan hệ: V-ing nếu mang nghĩa chủ động, V3/ed nếu mang nghĩa bị động.",
+    "commonErrors": [
+      {
+        "wrong": "The manager who I spoke yesterday is away.",
+        "correct": "The manager to whom I spoke yesterday is away. (hoặc: who I spoke to)",
+        "explanation": "Động từ \"speak\" đi với giới từ \"to\", khi đưa lên đầu mệnh đề quan hệ phải dùng \"to whom\"."
+      },
+      {
+        "wrong": "Employees want to participate should sign up today.",
+        "correct": "Employees wanting to participate should sign up today.",
+        "explanation": "Câu đã có động từ chính \"should sign up\", phần bổ nghĩa cho \"Employees\" phải rút gọn thành \"wanting\" (chủ động)."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Applicants ________ to apply for the overseas transfer program must hold at least three years of tenure.",
+        "options": [
+          "wish",
+          "wished",
+          "wishing",
+          "are wishing"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Câu đã có động từ chính là \"must hold\". Vị trí chỗ trống cần rút gọn mệnh đề quan hệ chủ động (who wish -> wishing).",
+        "difficulty": 3
+      },
+      {
+        "question": "Any equipment ________ during shipment will be repaired or replaced free of charge.",
+        "options": [
+          "damaging",
+          "damaged",
+          "damages",
+          "is damaged"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Câu có động từ chính là \"will be repaired\". Chỗ trống bổ nghĩa bị động cho \"Any equipment\" (thiết bị bị hư hỏng trong quá trình vận chuyển), rút gọn thành \"damaged\" (which was damaged).",
+        "difficulty": 2
+      },
+      {
+        "question": "The marketing specialist ________ presentation impressed the client has been promoted.",
+        "options": [
+          "who",
+          "whom",
+          "whose",
+          "which"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Phía sau chỗ trống là danh từ \"presentation\" thuộc quyền sở hữu của chuyên gia tiếp thị (\"whose presentation\" = bài thuyết trình của người đó).",
+        "difficulty": 3
+      },
+      {
+        "question": "The historic factory building, ________ was constructed in 1952, has been converted into modern loft offices.",
+        "options": [
+          "that",
+          "which",
+          "what",
+          "who"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Mệnh đề quan hệ không xác định có dấu phẩy (,) bổ nghĩa cho vật (building) bắt buộc dùng \"which\", không được dùng \"that\".",
+        "difficulty": 2
+      }
+    ]
+  },
+  {
+    "id": "grammar_prepositions",
+    "title": "Prepositions of Time, Place & Common Collocations",
+    "description": "Giới từ chỉ thời gian, nơi chốn và các cụm giới từ cố định thường gặp trong hợp đồng kinh tế và email trao đổi.",
+    "targetBand": "BAND_2",
+    "orderIndex": 4,
+    "rule": "# Prepositions of Time, Place, and Collocations in TOEIC\n\n## 1. Giới từ chỉ Thời gian\n- **In**: Dùng cho tháng, năm, mùa, thế kỷ, buổi trong ngày (`in May`, `in 2026`, `in the morning`).\n- **On**: Dùng cho ngày cụ thể trong tuần, ngày tháng kết hợp, ngày lễ (`on Monday`, `on October 15th`).\n- **At**: Dùng cho giờ cụ thể, thời điểm ngắn (`at 9:00 AM`, `at noon`, `at midnight`).\n- **By vs. Until**:\n  - `By`: Hoàn thành trước hoặc muộn nhất là thời điểm đó (hành động dứt điểm). Ví dụ: Submit the report **by 5 PM**.\n  - `Until`: Duy trì liên tục cho đến thời điểm đó. Ví dụ: The showroom remains open **until 9 PM**.\n- **Within**: Trong vòng một khoảng thời gian (`within 5 business days`).\n\n## 2. Giới từ chỉ Nơi chốn\n- **At**: Tại một địa điểm cụ thể, sự kiện (`at the conference`, `at the airport`).\n- **In**: Bên trong không gian kín, thành phố, quốc gia (`in Tokyo`, `in the meeting room`).\n- **On**: Trên bề mặt, tầng của tòa nhà (`on the 4th floor`, `on the website`).\n\n## 3. Cụm giới từ cố định (Prepositional Collocations)\n- `in compliance with` (tuân thủ theo)\n- `regardless of` (bất kể, bất chấp)\n- `prior to` (trước khi = before)\n- `in response to` (để phản hồi lại)\n- `on behalf of` (thay mặt cho)",
+    "formula": "Preposition + Noun / Noun Phrase / V-ing",
+    "examples": [
+      {
+        "sentence": "Prior to boarding the aircraft, passengers must display their valid passports.",
+        "translation": "Trước khi lên máy bay, hành khách phải xuất trình hộ chiếu hợp lệ.",
+        "highlight": "Prior to boarding"
+      },
+      {
+        "sentence": "The contract was drafted in compliance with local commercial regulations.",
+        "translation": "Hợp đồng được soạn thảo tuân thủ các quy định thương mại địa phương.",
+        "highlight": "in compliance with"
+      },
+      {
+        "sentence": "Please ensure your project deliverables are submitted by Friday afternoon.",
+        "translation": "Vui lòng đảm bảo các sản phẩm dự án của bạn được nộp muộn nhất trước chiều thứ Sáu.",
+        "highlight": "by Friday afternoon"
+      }
+    ],
+    "tips": "Chú ý sự khác biệt giữa \"During + Danh từ\" (During the seminar) và \"While + Mệnh đề\" (While we were attending the seminar). Cả hai đều mang nghĩa \"trong khi\" nhưng cấu trúc ngữ pháp hoàn toàn khác nhau.",
+    "commonErrors": [
+      {
+        "wrong": "Submit your tax return until April 15.",
+        "correct": "Submit your tax return by April 15.",
+        "explanation": "Hành động nộp hồ sơ thuế là hành động dứt điểm, phải dùng \"by\" (trước hoặc tại hạn chót), không dùng \"until\"."
+      },
+      {
+        "wrong": "He completed the audit during two weeks.",
+        "correct": "He completed the audit in two weeks (hoặc: within two weeks).",
+        "explanation": "\"During\" chỉ một sự kiện hoặc khoảng thời gian định danh (during the summer, during the meeting), không đi trực tiếp với số đếm đo lường thời gian."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "All travel expense claims must be submitted ________ thirty days of returning from the business trip.",
+        "options": [
+          "within",
+          "between",
+          "during",
+          "among"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc \"within + khoảng thời gian\" (trong vòng 30 ngày) là lựa chọn chính xác duy nhất.",
+        "difficulty": 1
+      },
+      {
+        "question": "The CEO delivered a brief speech ________ behalf of the entire executive leadership committee.",
+        "options": [
+          "at",
+          "on",
+          "in",
+          "to"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cụm thành ngữ cố định \"on behalf of someone\" mang nghĩa \"thay mặt cho ai đó\".",
+        "difficulty": 1
+      },
+      {
+        "question": "The warranty remains valid ________ the client adheres to the authorized maintenance schedule.",
+        "options": [
+          "provided that",
+          "prior to",
+          "in addition",
+          "regardless"
+        ],
+        "correctAnswer": "A",
+        "explanation": "\"Provided that\" (= if / với điều kiện là) là liên từ liên kết mệnh đề điều kiện, các phương án còn lại là giới từ/trạng từ không đi cùng mệnh đề S+V.",
+        "difficulty": 3
+      },
+      {
+        "question": "The customer service telephone hotline is staffed ________ 8:00 AM to 6:00 PM every weekday.",
+        "options": [
+          "at",
+          "from",
+          "between",
+          "since"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cặp liên từ chỉ khoảng thời gian: \"from... to...\" (từ 8:00 sáng đến 6:00 chiều).",
+        "difficulty": 1
+      }
+    ]
+  },
+  {
+    "id": "grammar_comparisons",
+    "title": "Comparative, Superlative & Degree Modifiers",
+    "description": "Cấu trúc so sánh hơn, so sánh nhất, so sánh bằng và các trạng từ nhấn mạnh mức độ (much, significantly, far).",
+    "targetBand": "BAND_3",
+    "orderIndex": 5,
+    "rule": "# Comparisons and Degree Modifiers in TOEIC\n\n## 1. So sánh bằng (Equative Comparison)\n- Cấu trúc: `as + adj / adv + as`\n- *Ví dụ*: The new laser printer operates **as quietly as** the previous model.\n\n## 2. So sánh hơn (Comparative)\n- Tính từ/trạng từ ngắn (1 âm tiết): `adj/adv-er + than` (`faster than`, `cheaper than`).\n- Tính từ/trạng từ dài (2 âm tiết trở lên): `more + adj/adv + than` (`more efficient than`).\n- **Trạng từ nhấn mạnh so sánh hơn**:\n  - `much`, `far`, `significantly`, `substantially`, `considerably`, `a lot`.\n  - **Lưu ý cực quan trọng**: KHÔNG dùng `very`, `more`, `quite` trước dạng so sánh hơn!\n\n## 3. So sánh nhất (Superlative)\n- Cấu trúc: `the + adj-est / the most + adj`\n- *Ví dụ*: This branch recorded **the most impressive** quarterly growth in the company's history.\n- Cụm từ đi kèm: `among`, `of all`, `ever`, `in the world`.\n\n## 4. So sánh kép (Double Comparative)\n- Cấu trúc: `The + comparative..., the + comparative...` (Càng... thì càng...)\n- *Ví dụ*: **The sooner** we finalize the vendor agreement, **the faster** production can begin.",
+    "formula": "much/significantly/far + comparative (adj-er / more adj) + than",
+    "examples": [
+      {
+        "sentence": "The new electric SUV is significantly more energy-efficient than its gasoline predecessor.",
+        "translation": "Mẫu xe SUV điện mới tiết kiệm năng lượng hơn đáng kể so với mẫu xe chạy bằng xăng trước đó.",
+        "highlight": "significantly more energy-efficient than"
+      },
+      {
+        "sentence": "Among all applicants interviewed, Ms. Park possessed the most extensive leadership credentials.",
+        "translation": "Trong số tất cả các ứng viên được phỏng vấn, bà Park sở hữu các chứng chỉ lãnh đạo toàn diện nhất.",
+        "highlight": "the most extensive"
+      },
+      {
+        "sentence": "The earlier we ship the export consignment, the lower the port storage fees will be.",
+        "translation": "Chúng ta gửi lô hàng xuất khẩu càng sớm thì phí lưu kho tại cảng sẽ càng thấp.",
+        "highlight": "The earlier..., the lower..."
+      }
+    ],
+    "tips": "Nếu phía sau có \"than\", hãy tìm tính từ/trạng từ so sánh hơn (er/more). Nếu phía trước có \"the\" và phía sau có phạm vi (of all, in the firm), hãy tìm so sánh nhất (est/most). Nhớ rằng \"significantly/much\" bổ nghĩa cho so sánh hơn, không dùng \"very\".",
+    "commonErrors": [
+      {
+        "wrong": "The new engine is very faster than the old one.",
+        "correct": "The new engine is much faster than the old one.",
+        "explanation": "Không dùng \"very\" trước tính từ so sánh hơn, phải dùng \"much/significantly/substantially\"."
+      },
+      {
+        "wrong": "He is the more experienced technician in our department.",
+        "correct": "He is the most experienced technician in our department.",
+        "explanation": "Khi so sánh trong một tập thể có nhiều người (\"in our department\"), phải dùng so sánh nhất (\"the most experienced\")."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "The updated accounting software processes payroll records ________ faster than the legacy platform.",
+        "options": [
+          "very",
+          "much",
+          "more",
+          "too"
+        ],
+        "correctAnswer": "B",
+        "explanation": "\"Faster\" là tính từ so sánh hơn, trạng từ bổ nghĩa cho so sánh hơn phải là \"much\" (hoặc significantly/far). \"Very\" và \"too\" không đi cùng so sánh hơn.",
+        "difficulty": 2
+      },
+      {
+        "question": "Of the three logistics contractors evaluated, Global Freight presented ________ cost-effective proposal.",
+        "options": [
+          "more",
+          "most",
+          "the most",
+          "as much"
+        ],
+        "correctAnswer": "C",
+        "explanation": "So sánh giữa 3 đối tượng (\"Of the three...\") đòi hỏi dùng so sánh nhất có mạo từ \"the\": \"the most cost-effective\".",
+        "difficulty": 2
+      },
+      {
+        "question": "The seminar room was not nearly as ________ as the event organizers had anticipated.",
+        "options": [
+          "spacious",
+          "spaciousness",
+          "more spacious",
+          "most spacious"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc so sánh bằng \"as + adj + as\" yêu cầu tính từ nguyên mẫu: \"spacious\".",
+        "difficulty": 1
+      },
+      {
+        "question": "Quarterly revenues rose ________ higher than financial analysts had initially estimated.",
+        "options": [
+          "great",
+          "substantially",
+          "substance",
+          "substantial"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cần một trạng từ (substantially) để bổ nghĩa cho tính từ so sánh hơn \"higher\".",
+        "difficulty": 3
+      }
+    ]
+  },
+  {
+    "id": "grammar_conditionals_inversion",
+    "title": "Conditionals & Hypothetical Situations",
+    "description": "Câu điều kiện loại 1, 2, 3 và thể đảo ngữ rút gọn If (Should, Were, Had) trong văn phong thương mại.",
+    "targetBand": "BAND_4",
+    "orderIndex": 6,
+    "rule": "# Conditionals and Inversion in TOEIC Business English\n\n## 1. Ba loại câu điều kiện cơ bản\n- **Loại 1 (Có thật ở hiện tại/tương lai)**:\n  - Cấu trúc: `If + S + V(s/es), S + will / can / must + V-bare`\n  - *Ví dụ*: If the client **approves** the quote, we **will sign** the contract tomorrow.\n- **Loại 2 (Giả định trái với hiện tại)**:\n  - Cấu trúc: `If + S + V2/ed (were), S + would / could + V-bare`\n  - *Ví dụ*: If we **had** more capital, we **would expand** into the European market.\n- **Loại 3 (Giả định trái với quá khứ)**:\n  - Cấu trúc: `If + S + had + V3/ed, S + would / could + have + V3/ed`\n  - *Ví dụ*: If you **had alerted** us earlier, we **could have mitigated** the shipment delay.\n\n## 2. Đảo ngữ câu điều kiện (Inversion) - CỰC KỲ PHỔ BIẾN TRONG TOEIC\nKhi bỏ \"If\", các trợ động từ được đảo lên đầu câu:\n- **Đảo ngữ Loại 1**: `Should + S + V-bare, S + will + V-bare`\n  - *Gốc*: If you have any inquiries... -> *Đảo ngữ*: **Should you have** any inquiries, please contact our helpdesk.\n- **Đảo ngữ Loại 2**: `Were + S + to-V (hoặc Were + S + Adj), S + would + V-bare`\n  - *Gốc*: If the board were to decide... -> *Đảo ngữ*: **Were the board to decide**...\n- **Đảo ngữ Loại 3**: `Had + S + V3/ed, S + would have + V3/ed`\n  - *Gốc*: If we had known... -> *Đảo ngữ*: **Had we known** about the tariff increase, we would have adjusted our pricing.",
+    "formula": "Should + S + V-bare... | Had + S + V3/ed, S + would have + V3/ed",
+    "examples": [
+      {
+        "sentence": "Should you require any additional financial documentation, please do not hesitate to contact our office.",
+        "translation": "Nếu quý khách cần bất kỳ tài liệu tài chính bổ sung nào, xin vui lòng đừng ngần ngại liên hệ văn phòng chúng tôi.",
+        "highlight": "Should you require"
+      },
+      {
+        "sentence": "Had the marketing campaign launched two weeks earlier, holiday sales figures would have been higher.",
+        "translation": "Giá như chiến dịch quảng cáo được tung ra sớm hai tuần thì số liệu doanh số mùa lễ đã cao hơn.",
+        "highlight": "Had the marketing campaign launched"
+      },
+      {
+        "sentence": "If the supplier delivers the components on schedule, assembly will finish ahead of the deadline.",
+        "translation": "Nếu nhà cung cấp giao các linh kiện đúng lịch trình, việc lắp ráp sẽ kết thúc trước thời hạn.",
+        "highlight": "If the supplier delivers"
+      }
+    ],
+    "tips": "Trong Part 5, nếu thấy đầu câu có \"Should\" hoặc \"Had\" đứng trước chủ ngữ mà cuối câu lại là dấu chấm (.) chứ không phải dấu hỏi (?), đó 100% là câu ĐẢO NGỮ điều kiện!",
+    "commonErrors": [
+      {
+        "wrong": "Should you to require assistance, call extension 402.",
+        "correct": "Should you require assistance, call extension 402.",
+        "explanation": "Sau trợ động từ \"Should\", động từ phải ở dạng nguyên mẫu không \"to\" (V-bare): \"require\"."
+      },
+      {
+        "wrong": "If we would have signed earlier, we would have saved money.",
+        "correct": "If we had signed earlier, we would have saved money.",
+        "explanation": "Trong mệnh đề If của câu điều kiện loại 3, tuyệt đối KHÔNG dùng \"would have\", phải dùng \"had + V3/ed\"."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "________ you experience any difficulties logging into the corporate portal, please notify technical support immediately.",
+        "options": [
+          "Unless",
+          "Should",
+          "Whether",
+          "Although"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đảo ngữ câu điều kiện loại 1 với \"Should\" đứng đầu câu: \"Should you experience...\" (= If you experience...).",
+        "difficulty": 3
+      },
+      {
+        "question": "Had the maintenance team ________ the ventilation filters on time, the equipment shutdown could have been avoided.",
+        "options": [
+          "inspect",
+          "inspected",
+          "inspecting",
+          "inspection"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đảo ngữ câu điều kiện loại 3: \"Had + S + V3/ed\". Động từ đúng phải là \"inspected\".",
+        "difficulty": 3
+      },
+      {
+        "question": "If the city council ________ our construction permit, work on the new facility will begin next month.",
+        "options": [
+          "approves",
+          "approved",
+          "had approved",
+          "approving"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Câu điều kiện loại 1 với vế chính là \"will begin\", mệnh đề If phải chia ở thì Hiện tại đơn: \"approves\".",
+        "difficulty": 2
+      },
+      {
+        "question": "________ the weather conditions deteriorate further, tonight’s outdoor promotional event will be postponed.",
+        "options": [
+          "Were",
+          "Should",
+          "Had",
+          "Would"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Vế chính dùng tương lai đơn \"will be postponed\", đây là điều kiện loại 1 đảo ngữ với \"Should + S + V-bare\".",
+        "difficulty": 3
+      }
+    ]
+  },
+  {
+    "id": "grammar_gerunds_infinitives",
+    "title": "Gerunds, Infinitives & Causative Verbs",
+    "description": "Quy tắc dùng V-ing và To-V sau các động từ thương mại phổ biến, giới từ, và cấu trúc nhờ bảo (make, let, have, get).",
+    "targetBand": "BAND_3",
+    "orderIndex": 7,
+    "rule": "# Gerunds and Infinitives in Business Context\n\n## 1. Động từ theo sau bởi Danh động từ (V-ing)\n- Các động từ kinh doanh thường đi với V-ing:\n  - `consider` (cân nhắc)\n  - `postpone / delay` (hoãn lại)\n  - `suggest / recommend` (gợi ý, đề xuất)\n  - `avoid` (tránh)\n  - `mind` (phiền)\n  - `enjoy / finish` (hoàn thành)\n- **Các cụm từ cố định đi với V-ing**:\n  - `look forward to + V-ing` (rất mong đợi)\n  - `be committed to + V-ing` (cam kết làm gì)\n  - `be dedicated to + V-ing` (tận tụy làm gì)\n  - `in addition to + V-ing` (ngoài việc)\n  - `be responsible for + V-ing` (chịu trách nhiệm cho)\n\n## 2. Động từ theo sau bởi Động từ nguyên mẫu có To (To-V)\n- Các động từ thường đi với To-V:\n  - `agree` (đồng ý)\n  - `decide` (quyết định)\n  - `hesitate` (do dự: `do not hesitate to contact`)\n  - `plan / intend` (lên kế hoạch)\n  - `manage` (xoay xở để)\n  - `fail` (thất bại, không làm được)\n  - `refuse` (từ chối)\n  - `aim / strive` (cố gắng nỗ lực)\n- Cấu trúc: `V + Object + To-V` (`encourage / remind / allow / permit / invite someone to do something`).\n\n## 3. Thể nhờ bảo (Causative Verbs)\n- `Have someone DO something` (nhờ ai làm gì - V-bare)\n- `Have something DONE` (nhờ vật gì được làm - V3/ed)\n- `Get someone TO DO something` (thuyết phục ai làm gì - To-V)\n- `Get something DONE` (nhờ vật gì được làm - V3/ed)",
+    "formula": "look forward to + V-ing | encourage + O + to-V | have + O(vật) + V3/ed",
+    "examples": [
+      {
+        "sentence": "We look forward to welcoming your trade delegation to our corporate headquarters next Tuesday.",
+        "translation": "Chúng tôi rất mong được đón tiếp đoàn đại biểu thương mại của quý vị tới trụ sở công ty chúng tôi vào thứ Ba tới.",
+        "highlight": "look forward to welcoming"
+      },
+      {
+        "sentence": "Management decided to postpone the international product rollout until the third quarter.",
+        "translation": "Ban quản lý đã quyết định hoãn việc ra mắt sản phẩm quốc tế cho đến quý ba.",
+        "highlight": "decided to postpone"
+      },
+      {
+        "sentence": "The human resources director encouraged all branch supervisors to attend the compliance workshop.",
+        "translation": "Giám đốc nhân sự đã khuyến khích tất cả các giám sát viên chi nhánh tham dự hội thảo tuân thủ.",
+        "highlight": "encouraged all branch supervisors to attend"
+      }
+    ],
+    "tips": "Cực kỳ cẩn thận với giới từ \"to\" trong các cụm như \"look forward to\", \"be committed to\", \"object to\", \"prior to\". Chữ \"to\" ở đây là GIỚI TỪ, nên từ theo sau bắt buộc phải là V-ing hoặc Danh từ, không bao giờ dùng V-bare!",
+    "commonErrors": [
+      {
+        "wrong": "We look forward to hear from you soon.",
+        "correct": "We look forward to hearing from you soon.",
+        "explanation": "Cụm \"look forward to\" đi với V-ing (\"hearing\"), không dùng động từ nguyên thể."
+      },
+      {
+        "wrong": "The supervisor reminded him submit the expense report.",
+        "correct": "The supervisor reminded him to submit the expense report.",
+        "explanation": "Cấu trúc \"remind someone + To-V\": cần có giới từ \"to\"."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Our legal department is fully committed to ________ all proprietary software patents.",
+        "options": [
+          "protect",
+          "protects",
+          "protecting",
+          "protection"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cụm từ \"be committed to + V-ing\" (cam kết làm gì đó). Ở đây \"to\" là giới từ nên theo sau là V-ing (protecting).",
+        "difficulty": 2
+      },
+      {
+        "question": "The executive committee considered ________ the outdated factory facility to lower operating costs.",
+        "options": [
+          "sell",
+          "selling",
+          "to sell",
+          "sold"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Động từ \"consider\" đòi hỏi theo sau là một Danh động từ (V-ing): \"selling\".",
+        "difficulty": 2
+      },
+      {
+        "question": "Do not hesitate ________ our helpdesk team should you require assistance with your account.",
+        "options": [
+          "contact",
+          "contacting",
+          "to contact",
+          "contacted"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cụm từ quen thuộc trong thư tín thương mại: \"hesitate + To-V\" -> \"hesitate to contact\".",
+        "difficulty": 1
+      },
+      {
+        "question": "The operations manager will have the cooling system ________ by certified technicians this afternoon.",
+        "options": [
+          "inspect",
+          "inspected",
+          "inspecting",
+          "to inspect"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Thể nhờ bảo bị động: \"have + Object (the cooling system - vật) + V3/ed (inspected)\".",
+        "difficulty": 3
+      }
+    ]
+  },
+  {
+    "id": "grammar_parts_of_speech",
+    "title": "Parts of Speech & Word Suffix Patterns",
+    "description": "Quy tắc vàng phân biệt danh từ, tính từ, trạng từ, động từ qua vị trí ngữ pháp và các hậu tố (suffixes) điển hình.",
+    "targetBand": "BAND_2",
+    "orderIndex": 8,
+    "rule": "# Parts of Speech and Suffix Patterns in TOEIC\n\nPart 5 có khoảng 8-12 câu thuần túy kiểm tra việc chọn đúng **Từ loại** (Parts of Speech). Chỉ cần nắm vững vị trí là làm được trong 10 giây:\n\n## 1. Vị trí của Danh từ (Noun)\n- Làm chủ ngữ (đầu câu) hoặc tân ngữ (sau ngoại động từ).\n- Sau mạo từ (`a, an, the`), từ chỉ định (`this, that, these, those`), tính từ sở hữu (`my, your, our, their, its`).\n- Sau giới từ (`in, on, at, for, with`).\n- Sau tính từ (`Adj + Noun`).\n- *Hậu tố Danh từ*: `-tion, -sion, -ment, -ance, -ence, -ity, -ness, -er, -or, -ant`.\n\n## 2. Vị trí của Tính từ (Adjective)\n- Đứng trước danh từ để bổ nghĩa (`Adj + Noun`).\n- Đứng sau động từ liên kết (Linking verbs: `be, seem, appear, remain, become, look`).\n- Cấu trúc: `make / keep / find + Object + Adj`.\n- *Hậu tố Tính từ*: `-ful, -less, -ive, -able, -ible, -al, -ous, -ic, -ent, -ant`.\n\n## 3. Vị trí của Trạng từ (Adverb)\n- Bổ nghĩa cho động từ: đứng trước hoặc sau động từ chính.\n- Bổ nghĩa cho tính từ: đứng ngay trước tính từ (`Adv + Adj + Noun`).\n- Bổ nghĩa cho cả câu: đứng đầu câu trước dấu phẩy (`Adv, S + V + O`).\n- Đứng giữa trợ động từ và động từ chính vị ngữ (`have + Adv + V3/ed` hoặc `be + Adv + V3/ed`).\n- *Hậu tố Trạng từ*: thường là `Tính từ + ly` (`quick -> quickly`, `frequent -> frequently`).",
+    "formula": "Article / Possessive + (Adv) + (Adj) + NOUN | be + (Adv) + V3/ed",
+    "examples": [
+      {
+        "sentence": "The technician successfully restored all network services ahead of schedule.",
+        "translation": "Kỹ thuật viên đã khôi phục thành công mọi dịch vụ mạng trước thời hạn.",
+        "highlight": "successfully restored"
+      },
+      {
+        "sentence": "The regional director emphasized the importance of regular workplace safety inspections.",
+        "translation": "Giám đốc khu vực nhấn mạnh tầm quan trọng của việc kiểm tra an toàn nơi làm việc định kỳ.",
+        "highlight": "the importance of"
+      },
+      {
+        "sentence": "All attendees found the presentation on cloud migration exceptionally informative.",
+        "translation": "Tất cả người tham dự đều thấy bài thuyết trình về chuyển đổi đám mây đặc biệt hữu ích.",
+        "highlight": "exceptionally informative"
+      }
+    ],
+    "tips": "Công thức thần thánh: [Trợ động từ] + _______ + [Động từ chính] -> Chỗ trống 99% điền TRẠNG TỪ (-ly). Ví dụ: has [recently] announced, was [carefully] reviewed.",
+    "commonErrors": [
+      {
+        "wrong": "Please handle the prototype careful.",
+        "correct": "Please handle the prototype carefully.",
+        "explanation": "Bổ nghĩa cho động từ hành động \"handle\" phải là trạng từ \"carefully\", không dùng tính từ \"careful\"."
+      },
+      {
+        "wrong": "The report was complete accurate.",
+        "correct": "The report was completely accurate.",
+        "explanation": "Bổ nghĩa cho tính từ \"accurate\" phải là trạng từ \"completely\"."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "The committee members reviewed the financial proposals ________ before casting their final votes.",
+        "options": [
+          "careful",
+          "carefulness",
+          "carefully",
+          "caring"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cần một trạng từ (carefully) để bổ nghĩa cho hành động ngoại động từ \"reviewed the financial proposals\".",
+        "difficulty": 1
+      },
+      {
+        "question": "Maintaining strict customer data ________ is the top priority for our cybersecurity division.",
+        "options": [
+          "confidential",
+          "confidentiality",
+          "confidentially",
+          "confide"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Vị trí sau cụm từ bổ nghĩa \"customer data\" cần một danh từ để tạo thành cụm danh từ làm tân ngữ cho \"Maintaining\": \"data confidentiality\" (tính bảo mật dữ liệu).",
+        "difficulty": 2
+      },
+      {
+        "question": "The renovated headquarters cafeteria offers a wide ________ of nutritious lunch options.",
+        "options": [
+          "vary",
+          "variety",
+          "various",
+          "variously"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cụm danh từ định lượng phổ biến: \"a wide variety of + N\" (sự đa dạng phong phú của cái gì).",
+        "difficulty": 1
+      },
+      {
+        "question": "Dr. Evelyn Martinez is ________ regarded as one of the country’s leading supply chain researchers.",
+        "options": [
+          "high",
+          "higher",
+          "highest",
+          "highly"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Vị trí đứng giữa \"is\" và quá khứ phân từ \"regarded\" cần một trạng từ chỉ mức độ: \"highly regarded\" (được đánh giá cao).",
+        "difficulty": 2
+      },
+      {
+        "question": "Customer reviews indicate that the newly released tablet is both lightweight and ________.",
+        "options": [
+          "durable",
+          "durability",
+          "durably",
+          "duration"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cấu trúc song hành với liên từ \"both... and...\": \"lightweight\" là tính từ, do đó từ đi sau \"and\" cũng phải là một tính từ tương đương (\"durable\").",
+        "difficulty": 2
+      }
+    ]
+  },
+  {
+    "id": "grammar_conjunctions_connectors",
+    "title": "Conjunctions, Prepositions & Sentence Connectors",
+    "description": "Phân biệt liên từ phụ thuộc (Because, Although, While), giới từ tương đương (Because of, Despite, During) và trạng từ liên kết (However, Therefore).",
+    "targetBand": "BAND_3",
+    "orderIndex": 9,
+    "rule": "# Conjunctions, Prepositions, and Connectors in TOEIC\n\nĐây là chủ điểm \"bẫy\" kinh điển nhất trong Part 5 & 6, kiểm tra việc phân biệt:\n1. **Liên từ phụ thuộc (Subordinating Conjunctions)**: Đi với một MỆNH ĐỀ (`Conjunction + S + V`).\n2. **Giới từ tương đương (Prepositions)**: Đi với một DANH TỪ hoặc CỤM DANH TỪ (`Preposition + Noun / V-ing`).\n3. **Trạng từ liên kết (Conjunctive Adverbs)**: Đứng đầu câu sau dấu chấm và trước dấu phẩy (`Connector, S + V`).\n\n## Bảng đối chiếu thần thánh:\n| Ý nghĩa | Liên từ (S + V) | Giới từ (Noun / V-ing) | Trạng từ liên kết (, S + V) |\n| :--- | :--- | :--- | :--- |\n| **Mặc dù, Dù cho** | Although, Even though, Though | Despite, In spite of | However, Nonetheless, Nevertheless |\n| **Bởi vì, Do** | Because, Since, As, Now that | Because of, Due to, Owing to | Therefore, As a result, Consequently |\n| **Trong khi** | While, Whereas | During | Meanwhile |\n| **Miễn là, Nếu** | Provided that, As long as, If | In case of | Otherwise |",
+    "formula": "Conjunction + S + V | Preposition + Noun Phrase | Conjunctive Adverb, S + V",
+    "examples": [
+      {
+        "sentence": "Although the weather was severe, international flights departed on schedule.",
+        "translation": "Mặc dù thời tiết khắc nghiệt, các chuyến bay quốc tế vẫn khởi hành đúng giờ.",
+        "highlight": "Although the weather was severe"
+      },
+      {
+        "sentence": "Despite the severe weather, international flights departed on schedule.",
+        "translation": "Bất chấp thời tiết khắc nghiệt, các chuyến bay quốc tế vẫn khởi hành đúng giờ.",
+        "highlight": "Despite the severe weather"
+      },
+      {
+        "sentence": "The initial marketing campaign was expensive; however, it yielded record-breaking sales.",
+        "translation": "Chiến dịch quảng cáo ban đầu khá tốn kém; tuy nhiên, nó đã mang lại doanh số kỷ lục.",
+        "highlight": "however, it yielded"
+      }
+    ],
+    "tips": "Nhìn ngay phía sau chỗ trống: Nếu thấy có cả Chủ ngữ + Động từ chia thì (S + V), LOẠI NGAY các giới từ (Despite, Due to, During, Because of). Nếu phía sau chỉ có Cụm danh từ (Noun phrase), LOẠI NGAY các liên từ (Although, Because, While, Since).",
+    "commonErrors": [
+      {
+        "wrong": "Despite he worked late, he arrived early.",
+        "correct": "Although he worked late, he arrived early.",
+        "explanation": "\"he worked late\" là một mệnh đề đầy đủ (S + V), phải dùng liên từ \"Although\", không được dùng giới từ \"Despite\"."
+      },
+      {
+        "wrong": "Because the rain, the soccer match was canceled.",
+        "correct": "Because of the rain, the soccer match was canceled.",
+        "explanation": "\"the rain\" chỉ là một danh từ, phải dùng giới từ \"Because of\", không dùng liên từ \"Because\"."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "________ the significant increase in raw material costs, the enterprise maintained its annual profitability targets.",
+        "options": [
+          "Although",
+          "Despite",
+          "Even though",
+          "Because"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Phía sau chỗ trống là một cụm danh từ (\"the significant increase in raw material costs\"), không có động từ chia thì, do đó phải dùng giới từ chỉ sự tương phản: \"Despite\".",
+        "difficulty": 2
+      },
+      {
+        "question": "The branch manager approved the purchase requisition ________ the equipment was urgently required for the project.",
+        "options": [
+          "because",
+          "because of",
+          "due to",
+          "owing to"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Phía sau là mệnh đề hoàn chỉnh có S + V (\"the equipment was urgently required\"), do đó phải chọn liên từ phụ thuộc \"because\".",
+        "difficulty": 2
+      },
+      {
+        "question": "Staff may work remotely up to two days per week ________ their quarterly project deadlines are met.",
+        "options": [
+          "prior to",
+          "provided that",
+          "in spite of",
+          "in addition to"
+        ],
+        "correctAnswer": "B",
+        "explanation": "\"Provided that\" (= with the condition that / miễn là) đóng vai trò là liên từ đi với mệnh đề \"their quarterly project deadlines are met\". Các phương án khác là giới từ.",
+        "difficulty": 3
+      },
+      {
+        "question": "The executive committee debated the merger for four hours; ________, no consensus was reached.",
+        "options": [
+          "despite",
+          "nevertheless",
+          "although",
+          "because of"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đứng sau dấu chấm phẩy (;) và trước dấu phẩy (,) ngăn cách một mệnh đề độc lập, cần dùng trạng từ liên kết \"nevertheless\" (tuy nhiên).",
+        "difficulty": 3
+      }
+    ]
+  },
+  {
+    "id": "grammar_inversion_emphasis",
+    "title": "Negative Adverb Inversion & Parallel Structure",
+    "description": "Đảo ngữ với trạng từ phủ định (Rarely, Seldom, Not only... but also) và cấu trúc song hành (Parallelism).",
+    "targetBand": "BAND_4",
+    "orderIndex": 10,
+    "rule": "# Inversion with Negative Adverbs and Parallel Structure\n\n## 1. Đảo ngữ với Trạng từ mang nghĩa phủ định (Negative Inversion)\nKhi các trạng từ mang nghĩa phủ định hoặc hạn chế đứng ở ĐẦU CÂU nhằm mục đích nhấn mạnh, ta bắt buộc phải đảo trợ động từ lên trước chủ ngữ:\n- Các từ thường gặp: `Rarely`, `Seldom`, `Hardly`, `Scarcely`, `Barely`, `Little`, `Never`, `Under no circumstances`, `Not only... but also`.\n- Cấu trúc: `Negative Adverb + Auxiliary Verb (do/does/did/have/has/can/will) + S + Main Verb`\n  - *Gốc*: The company rarely offers discounts -> *Đảo ngữ*: **Rarely does the company offer** discounts.\n  - *Gốc*: We have seldom witnessed such growth -> *Đảo ngữ*: **Seldom have we witnessed** such growth.\n  - *Ví dụ*: **Under no circumstances should** confidential financial records be disclosed.\n\n## 2. Cấu trúc song hành (Parallel Structure)\nCác thành phần được nối bởi liên từ tương quan (`and`, `or`, `but`, `both... and`, `either... or`, `neither... nor`, `not only... but also`) phải cùng từ loại hoặc cùng dạng ngữ pháp:\n- Noun and Noun: The job requires **dedication** and **creativity**.\n- V-ing and V-ing: The duties include **organizing** files and **answering** calls.\n- Adjective and Adjective: The system is **efficient**, **reliable**, and **affordable**.",
+    "formula": "Rarely/Seldom + Aux + S + V | both X and Y (where X and Y have identical form)",
+    "examples": [
+      {
+        "sentence": "Seldom has our research team encountered such a resilient compound during laboratory trials.",
+        "translation": "Hiếm khi đội ngũ nghiên cứu của chúng tôi lại bắt gặp một hợp chất có khả năng chống chịu tốt như vậy trong các thử nghiệm phòng thí nghiệm.",
+        "highlight": "Seldom has our research team encountered"
+      },
+      {
+        "sentence": "Under no circumstances must unauthorized visitors enter the cleanroom manufacturing area.",
+        "translation": "Trong bất kỳ hoàn cảnh nào, khách không có thẩm quyền tuyệt đối không được bước vào khu vực sản xuất phòng sạch.",
+        "highlight": "Under no circumstances must unauthorized visitors enter"
+      },
+      {
+        "sentence": "The ideal candidate will be responsible for drafting press releases, coordinating media interviews, and managing social channels.",
+        "translation": "Ứng viên lý tưởng sẽ chịu trách nhiệm soạn thảo các thông cáo báo chí, điều phối các cuộc phỏng vấn truyền thông và quản lý các kênh mạng xã hội.",
+        "highlight": "drafting..., coordinating..., and managing..."
+      }
+    ],
+    "tips": "Nếu thấy từ đầu câu là trạng từ phủ định (Rarely, Seldom, Never, Under no circumstances, Not only), hãy chọn ngay phương án có trợ động từ đứng liền kề trước chủ ngữ (has the company..., does the manager...).",
+    "commonErrors": [
+      {
+        "wrong": "Rarely the firm changes its pricing model.",
+        "correct": "Rarely does the firm change its pricing model.",
+        "explanation": "Khi \"Rarely\" đứng đầu câu, bắt buộc phải đảo trợ động từ \"does\" lên trước chủ ngữ \"the firm\"."
+      },
+      {
+        "wrong": "His responsibilities include writing reports, to schedule meetings, and filing invoices.",
+        "correct": "His responsibilities include writing reports, scheduling meetings, and filing invoices.",
+        "explanation": "Cấu trúc song hành yêu cầu tất cả các thành phần sau \"include\" đều phải ở cùng dạng danh động từ V-ing."
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Seldom ________ an employee demonstrated such extraordinary dedication to customer satisfaction.",
+        "options": [
+          "has",
+          "having",
+          "is",
+          "will"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đảo ngữ với trạng từ phủ định \"Seldom\" đứng đầu câu kết hợp với quá khứ phân từ \"demonstrated\" -> chọn trợ động từ hoàn thành \"has\".",
+        "difficulty": 3
+      },
+      {
+        "question": "Under no circumstances ________ company personnel share their computer login credentials with third parties.",
+        "options": [
+          "should",
+          "ought",
+          "have to",
+          "must to"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Cụm từ phủ định tuyệt đối \"Under no circumstances\" đứng đầu câu đòi hỏi đảo trợ động từ lên trước chủ ngữ: \"should company personnel share...\".",
+        "difficulty": 3
+      },
+      {
+        "question": "The new employee handbook clearly outlines company policies, benefits, and ________.",
+        "options": [
+          "expect",
+          "expecting",
+          "expectations",
+          "expectedly"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Cấu trúc song hành với chuỗi danh từ: \"policies\" (danh từ), \"benefits\" (danh từ), \"and [expectations]\" (danh từ).",
+        "difficulty": 2
+      },
+      {
+        "question": "Not only ________ the sales target for the third quarter, but our team also set a new annual revenue record.",
+        "options": [
+          "we reached",
+          "did we reach",
+          "we did reach",
+          "we were reaching"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cấu trúc đảo ngữ với \"Not only\" ở đầu mệnh đề thứ nhất: \"Not only did we reach... but our team also...\".",
+        "difficulty": 4
+      }
+    ]
+  }
+]

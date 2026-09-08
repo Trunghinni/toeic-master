@@ -1,0 +1,2613 @@
+[
+  {
+    "id": "vocab_office_workplace",
+    "title": "Office & Workplace Administration",
+    "description": "Essential business vocabulary for day-to-day office routines, equipment, correspondence, and workspace management.",
+    "targetBand": "BAND_2",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "agenda",
+        "phonetic": "/əˈdʒen.də/",
+        "wordType": "NOUN",
+        "definition": "chương trình nghị sự, lịch trình cuộc họp",
+        "definitionEn": "a list of items to be discussed at a formal meeting",
+        "example": "The board secretary distributed the meeting agenda two days in advance.",
+        "exampleVi": "Thư ký hội đồng quản trị đã phân phát chương trình nghị sự cuộc họp trước hai ngày.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "office",
+          "meetings",
+          "administration"
+        ]
+      },
+      {
+        "word": "correspondence",
+        "phonetic": "/ˌkɒr.ɪˈspɒn.dəns/",
+        "wordType": "NOUN",
+        "definition": "thư từ, thư tín thương mại",
+        "definitionEn": "letters, emails, or other written messages sent and received",
+        "example": "All business correspondence must include our official company letterhead.",
+        "exampleVi": "Mọi thư tín thương mại phải có tiêu đề chính thức của công ty chúng ta.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "communication"
+        ]
+      },
+      {
+        "word": "delegate",
+        "phonetic": "/ˈdel.ɪ.ɡeɪt/",
+        "wordType": "VERB",
+        "definition": "ủy thác, giao phó nhiệm vụ",
+        "definitionEn": "to entrust a task or responsibility to another person",
+        "example": "Effective managers know when to delegate routine duties to their assistants.",
+        "exampleVi": "Những nhà quản lý hiệu quả biết khi nào cần giao phó nhiệm vụ thường nhật cho trợ lý.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "office",
+          "management"
+        ]
+      },
+      {
+        "word": "clerical",
+        "phonetic": "/ˈkler.ɪ.kəl/",
+        "wordType": "ADJECTIVE",
+        "definition": "thuộc văn phòng, việc bàn giấy",
+        "definitionEn": "relating to work done in an office, especially routine tasks",
+        "example": "Temporary staff members were hired to handle clerical duties during the audit.",
+        "exampleVi": "Nhân viên tạm thời đã được thuê để xử lý các công việc bàn giấy trong suốt đợt kiểm toán.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "administration"
+        ]
+      },
+      {
+        "word": "inventory",
+        "phonetic": "/ˈɪn.vən.tər.i/",
+        "wordType": "NOUN",
+        "definition": "hàng tồn kho, bảng kiểm kê tài sản",
+        "definitionEn": "a complete list of items such as property, goods in stock, or the contents of a building",
+        "example": "The office manager takes inventory of stationery supplies at the end of each month.",
+        "exampleVi": "Người quản lý văn phòng tiến hành kiểm kê đồ dùng văn phòng phẩm vào cuối mỗi tháng.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "supplies"
+        ]
+      },
+      {
+        "word": "confidential",
+        "phonetic": "/ˌkɒn.fɪˈden.ʃəl/",
+        "wordType": "ADJECTIVE",
+        "definition": "bảo mật, tuyệt mật",
+        "definitionEn": "intended to be kept secret or private",
+        "example": "Please shred all confidential documents once the client review is complete.",
+        "exampleVi": "Vui lòng hủy tất cả tài liệu bảo mật sau khi quá trình đánh giá khách hàng hoàn tất.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "security"
+        ]
+      },
+      {
+        "word": "stationery",
+        "phonetic": "/ˈsteɪ.ʃən.ər.i/",
+        "wordType": "NOUN",
+        "definition": "văn phòng phẩm (giấy, bút, phong bì)",
+        "definitionEn": "writing materials and office supplies like paper, pens, and envelopes",
+        "example": "Our department placed a bulk order for recycled printer paper and stationery.",
+        "exampleVi": "Phòng ban chúng tôi đã đặt mua số lượng lớn giấy in tái chế và văn phòng phẩm.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "office",
+          "supplies"
+        ]
+      },
+      {
+        "word": "colleague",
+        "phonetic": "/ˈkɒl.iːɡ/",
+        "wordType": "NOUN",
+        "definition": "đồng nghiệp",
+        "definitionEn": "a person with whom one works in a profession or business",
+        "example": "Mr. Tanaka thanked his colleagues for their assistance during the software rollout.",
+        "exampleVi": "Ông Tanaka đã cảm ơn các đồng nghiệp vì sự hỗ trợ của họ trong quá trình triển khai phần mềm.",
+        "bandLevel": "BAND_1",
+        "tags": [
+          "office",
+          "teamwork"
+        ]
+      },
+      {
+        "word": "facilitate",
+        "phonetic": "/fəˈsɪl.ɪ.teɪt/",
+        "wordType": "VERB",
+        "definition": "tạo điều kiện thuận lợi, điều phối",
+        "definitionEn": "to make an action or process easy or easier",
+        "example": "The new cloud storage platform will facilitate smoother collaboration between branches.",
+        "exampleVi": "Nền tảng lưu trữ đám mây mới sẽ tạo điều kiện thuận lợi cho việc hợp tác mượt mà hơn giữa các chi nhánh.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "office",
+          "efficiency"
+        ]
+      },
+      {
+        "word": "memo",
+        "phonetic": "/ˈmem.əʊ/",
+        "wordType": "NOUN",
+        "definition": "thông báo nội bộ, bản ghi nhớ",
+        "definitionEn": "a written message, especially in business, distributed internally",
+        "example": "The HR director issued a memo regarding the revised remote work policy.",
+        "exampleVi": "Giám đốc nhân sự đã ban hành một bản thông báo nội bộ về chính sách làm việc từ xa được sửa đổi.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "office",
+          "communication"
+        ]
+      },
+      {
+        "word": "supervise",
+        "phonetic": "/ˈsuː.pə.vaɪz/",
+        "wordType": "VERB",
+        "definition": "giám sát, quản lý",
+        "definitionEn": "to observe and direct the execution of a task or the work of a person",
+        "example": "Senior associates are expected to supervise interns during their first three months.",
+        "exampleVi": "Các chuyên viên cấp cao dự kiến sẽ giám sát thực tập sinh trong ba tháng đầu tiên.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "management"
+        ]
+      },
+      {
+        "word": "protocol",
+        "phonetic": "/ˈprəʊ.tə.kɒl/",
+        "wordType": "NOUN",
+        "definition": "quy trình chuẩn, nghi thức",
+        "definitionEn": "the official procedure or system of rules governing workplace actions",
+        "example": "Employees must adhere to strict security protocols when handling server data.",
+        "exampleVi": "Nhân viên phải tuân thủ các quy trình an ninh nghiêm ngặt khi xử lý dữ liệu máy chủ.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "office",
+          "policy"
+        ]
+      },
+      {
+        "word": "reception",
+        "phonetic": "/rɪˈsep.ʃən/",
+        "wordType": "NOUN",
+        "definition": "quầy lễ tân, sự đón tiếp",
+        "definitionEn": "the area in an office building where visitors are greeted",
+        "example": "All visitors must register at the ground floor reception and obtain a guest badge.",
+        "exampleVi": "Mọi khách đến thăm đều phải đăng ký tại quầy lễ tân tầng trệt và nhận thẻ khách.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "office",
+          "visitor"
+        ]
+      },
+      {
+        "word": "archive",
+        "phonetic": "/ˈɑː.kaɪv/",
+        "wordType": "VERB",
+        "definition": "lưu trữ hồ sơ tài liệu",
+        "definitionEn": "to place or store in an archive for long-term preservation",
+        "example": "Accounting records older than five years are archived securely off-site.",
+        "exampleVi": "Hồ sơ kế toán cũ hơn 5 năm được lưu trữ an toàn tại kho lưu trữ bên ngoài.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "records"
+        ]
+      },
+      {
+        "word": "procure",
+        "phonetic": "/prəˈkjʊər/",
+        "wordType": "VERB",
+        "definition": "mua sắm trang thiết bị, thu mua",
+        "definitionEn": "to obtain goods or services through formal purchasing channels",
+        "example": "The administrative department procured ergonomic chairs for the entire sales team.",
+        "exampleVi": "Phòng hành chính đã mua sắm ghế công thái học cho toàn bộ đội ngũ kinh doanh.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "office",
+          "purchasing"
+        ]
+      },
+      {
+        "word": "punctual",
+        "phonetic": "/ˈpʌŋk.tʃu.əl/",
+        "wordType": "ADJECTIVE",
+        "definition": "đúng giờ",
+        "definitionEn": "happening or doing something at the agreed or proper time",
+        "example": "All attendees are urged to be punctual for the executive briefing at 9:00 AM.",
+        "exampleVi": "Tất cả người tham dự được yêu cầu phải đúng giờ cho buổi họp điều hành lúc 9:00 sáng.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "office",
+          "professionalism"
+        ]
+      },
+      {
+        "word": "teleconference",
+        "phonetic": "/ˈtel.ɪˌkɒn.fər.əns/",
+        "wordType": "NOUN",
+        "definition": "cuộc họp từ xa qua điện thoại/video",
+        "definitionEn": "a conference involving participants in different locations using telecommunication systems",
+        "example": "We hosted a teleconference with our European regional directors this morning.",
+        "exampleVi": "Chúng tôi đã tổ chức một cuộc họp từ xa với các giám đốc khu vực Châu Âu sáng nay.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "technology"
+        ]
+      },
+      {
+        "word": "workflow",
+        "phonetic": "/ˈwɜːk.fləʊ/",
+        "wordType": "NOUN",
+        "definition": "luồng công việc, tiến trình xử lý",
+        "definitionEn": "the sequence of industrial, administrative, or other processes through which a piece of work passes",
+        "example": "Automating invoice approvals significantly improved the finance department workflow.",
+        "exampleVi": "Việc tự động hóa phê duyệt hóa đơn đã cải thiện đáng kể luồng công việc của phòng tài chính.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "office",
+          "productivity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_travel_hospitality",
+    "title": "Travel, Tourism & Hospitality",
+    "description": "Key vocabulary for corporate travel arrangements, lodging, itineraries, transportation, and hotel customer services.",
+    "targetBand": "BAND_2",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "itinerary",
+        "phonetic": "/aɪˈtɪn.ər.ər.i/",
+        "wordType": "NOUN",
+        "definition": "lịch trình chi tiết chuyến đi",
+        "definitionEn": "a planned route or journey schedule with dates and times",
+        "example": "The travel agency emailed the revised itinerary directly to the executive assistant.",
+        "exampleVi": "Đại lý du lịch đã gửi lịch trình chuyến đi sửa đổi qua email trực tiếp cho trợ lý điều hành.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "planning"
+        ]
+      },
+      {
+        "word": "accommodation",
+        "phonetic": "/əˌkɒm.əˈdeɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "chỗ ở, nơi lưu trú",
+        "definitionEn": "a room, group of rooms, or building in which someone may live or stay",
+        "example": "Hotel accommodations for the annual sales seminar will be covered by the company.",
+        "exampleVi": "Chi phí chỗ ở khách sạn cho hội thảo bán hàng thường niên sẽ do công ty chi trả.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "hospitality"
+        ]
+      },
+      {
+        "word": "commute",
+        "phonetic": "/kəˈmjuːt/",
+        "wordType": "VERB",
+        "definition": "đi lại hàng ngày giữa nhà và nơi làm việc",
+        "definitionEn": "to travel some distance between one's home and place of work on a regular basis",
+        "example": "Many employees commute to the city center headquarters by express subway train.",
+        "exampleVi": "Nhiều nhân viên đi lại hàng ngày tới trụ sở trung tâm thành phố bằng tàu điện ngầm tốc hành.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "travel",
+          "transportation"
+        ]
+      },
+      {
+        "word": "reimburse",
+        "phonetic": "/ˌriː.ɪmˈbɜːs/",
+        "wordType": "VERB",
+        "definition": "hoàn trả công tác phí",
+        "definitionEn": "to repay someone an amount of money that has been spent for business purposes",
+        "example": "The finance team will reimburse your travel expenses upon submission of original receipts.",
+        "exampleVi": "Đội ngũ tài chính sẽ hoàn trả các chi phí đi lại của bạn khi nộp các hóa đơn gốc.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "travel",
+          "finance"
+        ]
+      },
+      {
+        "word": "amenity",
+        "phonetic": "/əˈmiː.nə.ti/",
+        "wordType": "NOUN",
+        "definition": "tiện nghi khách sạn, dịch vụ gia tăng",
+        "definitionEn": "a desirable or useful feature or facility of a building or hotel",
+        "example": "Complimentary high-speed Wi-Fi is one of the most requested hotel amenities.",
+        "exampleVi": "Wi-Fi tốc độ cao miễn phí là một trong những tiện nghi khách sạn được yêu cầu nhiều nhất.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "hospitality"
+        ]
+      },
+      {
+        "word": "reservation",
+        "phonetic": "/ˌrez.əˈveɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "sự đặt chỗ trước",
+        "definitionEn": "an arrangement to have something kept for someone's use at a later time",
+        "example": "Please confirm your flight reservation at least 48 hours prior to departure.",
+        "exampleVi": "Vui lòng xác nhận việc đặt chỗ chuyến bay của bạn ít nhất 48 giờ trước giờ khởi hành.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "travel",
+          "booking"
+        ]
+      },
+      {
+        "word": "cancellation",
+        "phonetic": "/ˌsæn.səlˈeɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "sự hủy bỏ (chuyến bay, phòng)",
+        "definitionEn": "the action of annulling something established or booked",
+        "example": "There is no fee for hotel cancellation if made 24 hours in advance.",
+        "exampleVi": "Không có phí hủy phòng khách sạn nếu được thực hiện trước 24 giờ.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "travel",
+          "policy"
+        ]
+      },
+      {
+        "word": "shuttle",
+        "phonetic": "/ˈʃʌt.əl/",
+        "wordType": "NOUN",
+        "definition": "xe trung chuyển đưa đón",
+        "definitionEn": "a vehicle that travels regularly between two places",
+        "example": "A complimentary shuttle departs every thirty minutes from terminal two to the hotel.",
+        "exampleVi": "Một chuyến xe trung chuyển miễn phí khởi hành cứ 30 phút một lần từ ga số 2 đến khách sạn.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "travel",
+          "transportation"
+        ]
+      },
+      {
+        "word": "concierge",
+        "phonetic": "/kɒn.siˈeəʒ/",
+        "wordType": "NOUN",
+        "definition": "nhân viên hỗ trợ khách hàng tại khách sạn",
+        "definitionEn": "a hotel employee whose job is to assist guests by booking tours, making reservations, etc.",
+        "example": "The hotel concierge booked premium tickets for the international convention opening gala.",
+        "exampleVi": "Nhân viên hỗ trợ khách sạn đã đặt vé hạng nhất cho dạ tiệc khai mạc hội nghị quốc tế.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "travel",
+          "hospitality"
+        ]
+      },
+      {
+        "word": "luggage",
+        "phonetic": "/ˈlʌɡ.ɪdʒ/",
+        "wordType": "NOUN",
+        "definition": "hành lý",
+        "definitionEn": "suitcases or other bags in which to pack personal belongings for traveling",
+        "example": "Passengers are advised to label all checked luggage with their contact phone numbers.",
+        "exampleVi": "Hành khách được khuyên nên gắn nhãn ghi số điện thoại liên lạc lên toàn bộ hành lý ký gửi.",
+        "bandLevel": "BAND_1",
+        "tags": [
+          "travel",
+          "airport"
+        ]
+      },
+      {
+        "word": "departure",
+        "phonetic": "/dɪˈpɑː.tʃər/",
+        "wordType": "NOUN",
+        "definition": "sự khởi hành, giờ xuất phát",
+        "definitionEn": "the action of leaving, especially to start a journey",
+        "example": "The departure gate for flight BA-402 was changed from gate 12 to gate 19.",
+        "exampleVi": "Cổng khởi hành cho chuyến bay BA-402 đã được đổi từ cổng 12 sang cổng 19.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "travel",
+          "airport"
+        ]
+      },
+      {
+        "word": "transit",
+        "phonetic": "/ˈtræn.zɪt/",
+        "wordType": "NOUN",
+        "definition": "sự quá cảnh, sự chuyển tiếp",
+        "definitionEn": "the passage of people or goods from one place to another",
+        "example": "Our flight to London includes a three-hour transit at Incheon International Airport.",
+        "exampleVi": "Chuyến bay của chúng tôi tới London bao gồm thời gian quá cảnh 3 tiếng tại Sân bay Quốc tế Incheon.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "flights"
+        ]
+      },
+      {
+        "word": "destination",
+        "phonetic": "/ˌdes.tɪˈneɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "điểm đến, nơi dự định tới",
+        "definitionEn": "the place to which someone or something is going or being sent",
+        "example": "Tokyo is the most popular destination for our company's regional trade delegations.",
+        "exampleVi": "Tokyo là điểm đến phổ biến nhất cho các đoàn đại biểu thương mại khu vực của công ty chúng tôi.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "travel",
+          "planning"
+        ]
+      },
+      {
+        "word": "complimentary",
+        "phonetic": "/ˌkɒm.plɪˈmen.tər.i/",
+        "wordType": "ADJECTIVE",
+        "definition": "miễn phí (được phục vụ như một món quà kèm theo)",
+        "definitionEn": "given or supplied free of charge as a courtesy",
+        "example": "Guests staying on executive floors enjoy complimentary breakfast and afternoon tea.",
+        "exampleVi": "Du khách ở các tầng điều hành được hưởng bữa sáng và trà chiều miễn phí.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "hospitality"
+        ]
+      },
+      {
+        "word": "boarding",
+        "phonetic": "/ˈbɔː.dɪŋ/",
+        "wordType": "NOUN",
+        "definition": "sự lên máy bay/tàu",
+        "definitionEn": "the action of getting on or into a ship, aircraft, train, or other vehicle",
+        "example": "Boarding begins forty minutes prior to departure for all international long-haul flights.",
+        "exampleVi": "Việc lên máy bay bắt đầu trước giờ khởi hành 40 phút đối với tất cả các chuyến bay dài quốc tế.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "travel",
+          "airport"
+        ]
+      },
+      {
+        "word": "customs",
+        "phonetic": "/ˈkʌs.təmz/",
+        "wordType": "NOUN",
+        "definition": "hải quan, cửa khẩu",
+        "definitionEn": "the official department that administers and collects duties levied by a government on imported goods",
+        "example": "You must present your declaration card when passing through customs and border control.",
+        "exampleVi": "Bạn phải xuất trình tờ khai hải quan khi đi qua khu vực hải quan và kiểm soát biên giới.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "airport"
+        ]
+      },
+      {
+        "word": "extended",
+        "phonetic": "/ɪkˈsten.dɪd/",
+        "wordType": "ADJECTIVE",
+        "definition": "kéo dài, gia hạn",
+        "definitionEn": "made larger or longer in duration",
+        "example": "The vice president took an extended business trip across five Southeast Asian markets.",
+        "exampleVi": "Phó chủ tịch đã có một chuyến công tác kéo dài qua 5 thị trường Đông Nam Á.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "business-trip"
+        ]
+      },
+      {
+        "word": "inconvenience",
+        "phonetic": "/ˌɪn.kənˈviː.ni.əns/",
+        "wordType": "NOUN",
+        "definition": "sự phiền toái, bất tiện",
+        "definitionEn": "trouble or problems that affect you or cause you discomfort",
+        "example": "The airline offered meal vouchers to compensate travelers for the flight delay inconvenience.",
+        "exampleVi": "Hãng hàng không đã cung cấp phiếu ăn để bồi thường cho du khách vì sự bất tiện của việc hoãn chuyến bay.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "travel",
+          "customer-service"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_marketing_advertising",
+    "title": "Marketing, Advertising & Branding",
+    "description": "Terminology for promotional campaigns, market research, brand equity, consumer behavior, and sales channels.",
+    "targetBand": "BAND_3",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "campaign",
+        "phonetic": "/kæmˈpeɪn/",
+        "wordType": "NOUN",
+        "definition": "chiến dịch quảng cáo/truyền thông",
+        "definitionEn": "an organized course of action to promote a product or service",
+        "example": "Our digital marketing campaign generated over fifty thousand qualified leads in one month.",
+        "exampleVi": "Chiến dịch tiếp thị kỹ thuật số của chúng tôi đã tạo ra hơn 50.000 khách hàng tiềm năng trong một tháng.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "marketing",
+          "advertising"
+        ]
+      },
+      {
+        "word": "demographic",
+        "phonetic": "/ˌdem.əˈɡræf.ɪk/",
+        "wordType": "NOUN",
+        "definition": "nhóm nhân khẩu học mục tiêu",
+        "definitionEn": "a particular sector of a population grouped by age, income, or habits",
+        "example": "The new smartphone model is aimed at the tech-savvy young adult demographic.",
+        "exampleVi": "Mẫu điện thoại thông minh mới hướng tới nhóm nhân khẩu học người trẻ am hiểu công nghệ.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "marketing",
+          "research"
+        ]
+      },
+      {
+        "word": "endorse",
+        "phonetic": "/ɪnˈdɔːs/",
+        "wordType": "VERB",
+        "definition": "quảng bá, chứng thực sản phẩm",
+        "definitionEn": "to declare one's public approval or support of a product in advertising",
+        "example": "A famous Olympic athlete was signed to endorse our latest line of running shoes.",
+        "exampleVi": "Một vận động viên Olympic nổi tiếng đã được ký hợp đồng để quảng bá cho dòng giày chạy mới nhất của chúng tôi.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "marketing",
+          "branding"
+        ]
+      },
+      {
+        "word": "penetrate",
+        "phonetic": "/ˈpen.ɪ.treɪt/",
+        "wordType": "VERB",
+        "definition": "thâm nhập (thị trường)",
+        "definitionEn": "to succeed in selling a company's products or services within a new market",
+        "example": "By partnering with local distributors, the brand managed to penetrate the European market.",
+        "exampleVi": "Bằng cách hợp tác với các nhà phân phối địa phương, thương hiệu đã thâm nhập thành công vào thị trường Châu Âu.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "marketing",
+          "strategy"
+        ]
+      },
+      {
+        "word": "brochure",
+        "phonetic": "/ˈbrəʊ.ʃər/",
+        "wordType": "NOUN",
+        "definition": "cuốn tài liệu giới thiệu sản phẩm",
+        "definitionEn": "a small book or magazine containing pictures and information about a product or service",
+        "example": "The sales representatives handed out glossy brochures detailing the luxury apartment project.",
+        "exampleVi": "Các đại diện bán hàng đã phát các cuốn tài liệu giới thiệu bóng bẩy mô tả chi tiết dự án căn hộ cao cấp.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "marketing",
+          "collateral"
+        ]
+      },
+      {
+        "word": "survey",
+        "phonetic": "/ˈsɜː.veɪ/",
+        "wordType": "NOUN",
+        "definition": "cuộc khảo sát thị trường",
+        "definitionEn": "an investigation of the opinions or experience of a group of people based on a series of questions",
+        "example": "According to a recent consumer survey, brand loyalty has increased by fifteen percent.",
+        "exampleVi": "Theo một cuộc khảo sát người tiêu dùng gần đây, lòng trung thành với thương hiệu đã tăng thêm 15%.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "marketing",
+          "research"
+        ]
+      },
+      {
+        "word": "benchmark",
+        "phonetic": "/ˈbentʃ.mɑːk/",
+        "wordType": "NOUN",
+        "definition": "tiêu chuẩn đối sánh, mốc chuẩn",
+        "definitionEn": "a standard or point of reference against which things may be compared or assessed",
+        "example": "The company uses international customer satisfaction ratings as an operational benchmark.",
+        "exampleVi": "Công ty sử dụng xếp hạng hài lòng khách hàng quốc tế làm tiêu chuẩn đối sánh hoạt động.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "marketing",
+          "analytics"
+        ]
+      },
+      {
+        "word": "promotional",
+        "phonetic": "/prəˈməʊ.ʃən.əl/",
+        "wordType": "ADJECTIVE",
+        "definition": "mang tính xúc tiến, khuyến mãi",
+        "definitionEn": "relating to the advertisement and popularization of a product or brand",
+        "example": "We sent promotional discount codes to all subscribers who joined the mailing list.",
+        "exampleVi": "Chúng tôi đã gửi mã giảm giá khuyến mãi cho tất cả người đăng ký tham gia danh sách gửi thư.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "marketing",
+          "sales"
+        ]
+      },
+      {
+        "word": "loyalty",
+        "phonetic": "/ˈlɔɪ.əl.ti/",
+        "wordType": "NOUN",
+        "definition": "lòng trung thành của khách hàng",
+        "definitionEn": "the quality of being loyal to a brand or company by continuing to buy its products",
+        "example": "The new rewards program is designed to cultivate long-term customer loyalty.",
+        "exampleVi": "Chương trình tích điểm đổi quà mới được thiết kế để xây dựng lòng trung thành lâu dài của khách hàng.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "marketing",
+          "retention"
+        ]
+      },
+      {
+        "word": "sponsorship",
+        "phonetic": "/ˈspɒn.sə.ʃɪp/",
+        "wordType": "NOUN",
+        "definition": "sự tài trợ thương mại",
+        "definitionEn": "financial support received from a sponsor to promote business publicity",
+        "example": "The telecommunications company announced its official sponsorship of the national marathon.",
+        "exampleVi": "Công ty viễn thông đã công bố việc tài trợ chính thức cho giải chạy marathon quốc gia.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "marketing",
+          "pr"
+        ]
+      },
+      {
+        "word": "segment",
+        "phonetic": "/ˈseɡ.mənt/",
+        "wordType": "NOUN",
+        "definition": "phân khúc thị trường",
+        "definitionEn": "each of the parts into which a market is divided based on customer characteristics",
+        "example": "Our luxury cosmetics division focuses exclusively on the premium retail segment.",
+        "exampleVi": "Bộ phận mỹ phẩm xa xỉ của chúng tôi chỉ tập trung duy nhất vào phân khúc bán lẻ cao cấp.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "marketing",
+          "segmentation"
+        ]
+      },
+      {
+        "word": "publicity",
+        "phonetic": "/pʌbˈlɪs.ə.ti/",
+        "wordType": "NOUN",
+        "definition": "sự chú ý của công chúng, quan hệ công chúng",
+        "definitionEn": "notice or attention given to someone or something by the media",
+        "example": "The innovative product design received tremendous publicity in national trade magazines.",
+        "exampleVi": "Thiết kế sản phẩm sáng tạo đã nhận được sự chú ý vô cùng lớn của công chúng trên các tạp chí thương mại quốc gia.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "marketing",
+          "pr"
+        ]
+      },
+      {
+        "word": "competitor",
+        "phonetic": "/kəmˈpet.ɪ.tər/",
+        "wordType": "NOUN",
+        "definition": "đối thủ cạnh tranh",
+        "definitionEn": "a person, company, or team that is competing with others in a commercial field",
+        "example": "Our main competitor launched a rival product priced ten percent below ours.",
+        "exampleVi": "Đối thủ cạnh tranh chính của chúng tôi đã tung ra sản phẩm cạnh tranh có giá thấp hơn 10% so với chúng tôi.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "marketing",
+          "competition"
+        ]
+      },
+      {
+        "word": "launch",
+        "phonetic": "/lɔːntʃ/",
+        "wordType": "VERB",
+        "definition": "tung ra thị trường, ra mắt",
+        "definitionEn": "to introduce a new product or service to the public market",
+        "example": "The automotive company plans to launch three electric vehicle models next spring.",
+        "exampleVi": "Công ty ô tô có kế hoạch ra mắt ba mẫu xe điện vào mùa xuân tới.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "marketing",
+          "product"
+        ]
+      },
+      {
+        "word": "flyer",
+        "phonetic": "/ˈflaɪ.ər/",
+        "wordType": "NOUN",
+        "definition": "tờ rơi quảng cáo",
+        "definitionEn": "a small sheet of printed paper used to advertise an event or product",
+        "example": "Volunteers distributed promotional flyers outside the convention exhibition hall.",
+        "exampleVi": "Các tình nguyện viên đã phát tờ rơi quảng cáo bên ngoài hội trường triển lãm của hội nghị.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "marketing",
+          "advertising"
+        ]
+      },
+      {
+        "word": "commercial",
+        "phonetic": "/kəˈmɜː.ʃəl/",
+        "wordType": "NOUN",
+        "definition": "đoạn quảng cáo truyền hình/phát thanh",
+        "definitionEn": "a television or radio advertisement",
+        "example": "The thirty-second television commercial was broadcast during prime-time sports programming.",
+        "exampleVi": "Đoạn quảng cáo truyền hình 30 giây đã được phát sóng trong khung giờ vàng của chương trình thể thao.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "marketing",
+          "media"
+        ]
+      },
+      {
+        "word": "reputation",
+        "phonetic": "/ˌrep.jʊˈteɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "danh tiếng, uy tín thương hiệu",
+        "definitionEn": "the beliefs or opinions that are generally held about a company or brand",
+        "example": "The firm has earned an international reputation for delivering unmatched customer care.",
+        "exampleVi": "Công ty đã tạo dựng được uy tín quốc tế nhờ cung cấp dịch vụ chăm sóc khách hàng vô song.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "marketing",
+          "brand"
+        ]
+      },
+      {
+        "word": "target",
+        "phonetic": "/ˈtɑː.ɡɪt/",
+        "wordType": "VERB",
+        "definition": "nhắm tới mục tiêu, hướng đến",
+        "definitionEn": "to aim an advertisement or campaign at a specific group of people",
+        "example": "The advertising campaign specifically targets busy working parents seeking healthy snacks.",
+        "exampleVi": "Chiến dịch quảng cáo đặc biệt nhắm tới các bậc cha mẹ đi làm bận rộn đang tìm kiếm đồ ăn nhẹ lành mạnh.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "marketing",
+          "targeting"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_human_resources",
+    "title": "Human Resources & Hiring",
+    "description": "Vocabulary for recruitment, interviews, employee benefits, performance reviews, compensation, and staff development.",
+    "targetBand": "BAND_3",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "applicant",
+        "phonetic": "/ˈæp.lɪ.kənt/",
+        "wordType": "NOUN",
+        "definition": "ứng viên xin việc",
+        "definitionEn": "a person who formally applies for something, especially a job vacancy",
+        "example": "More than two hundred applicants submitted their résumés for the graphic designer post.",
+        "exampleVi": "Hơn hai trăm ứng viên đã nộp hồ sơ xin việc cho vị trí thiết kế đồ họa.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "hr",
+          "recruitment"
+        ]
+      },
+      {
+        "word": "candidate",
+        "phonetic": "/ˈkæn.dɪ.dət/",
+        "wordType": "NOUN",
+        "definition": "ứng viên triển vọng",
+        "definitionEn": "a person who applies for a job or is nominated for an election and is under consideration",
+        "example": "The hiring committee selected three shortlisted candidates for final round interviews.",
+        "exampleVi": "Hội đồng tuyển dụng đã chọn ra ba ứng viên trong danh sách rút gọn cho vòng phỏng vấn cuối.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "hr",
+          "recruitment"
+        ]
+      },
+      {
+        "word": "compensation",
+        "phonetic": "/ˌkɒm.pənˈseɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "tiền lương bổng và đãi ngộ",
+        "definitionEn": "the money and benefits that an employee receives for their work",
+        "example": "The executive compensation package includes stock options, annual bonuses, and health coverage.",
+        "exampleVi": "Gói lương bổng và đãi ngộ của giám đốc điều hành bao gồm quyền mua cổ phiếu, thưởng hàng năm và bảo hiểm y tế.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "hr",
+          "payroll"
+        ]
+      },
+      {
+        "word": "probationary",
+        "phonetic": "/prəˈbeɪ.ʃən.ər.i/",
+        "wordType": "ADJECTIVE",
+        "definition": "thử việc, trong giai đoạn tập sự",
+        "definitionEn": "relating to a process of testing or trial during a preliminary period of employment",
+        "example": "New software engineers serve a three-month probationary period before receiving full benefits.",
+        "exampleVi": "Các kỹ sư phần mềm mới sẽ trải qua thời gian thử việc ba tháng trước khi nhận đầy đủ phúc lợi.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "hr",
+          "employment"
+        ]
+      },
+      {
+        "word": "curriculum vitae",
+        "phonetic": "/kəˌrɪk.jʊ.ləm ˈviː.taɪ/",
+        "wordType": "NOUN",
+        "definition": "hồ sơ sơ yếu lý lịch (CV)",
+        "definitionEn": "a brief account of a person's education, qualifications, and previous experience",
+        "example": "Candidates must submit an updated curriculum vitae along with two reference letters.",
+        "exampleVi": "Các ứng viên phải nộp sơ yếu lý lịch mới nhất kèm theo hai thư giới thiệu.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "hr",
+          "application"
+        ]
+      },
+      {
+        "word": "appraisal",
+        "phonetic": "/əˈpreɪ.zəl/",
+        "wordType": "NOUN",
+        "definition": "đánh giá hiệu quả công việc",
+        "definitionEn": "an assessment or evaluation of the performance or value of an employee",
+        "example": "Annual performance appraisals determine end-of-year bonuses and promotion eligibility.",
+        "exampleVi": "Các đợt đánh giá hiệu quả công việc thường niên sẽ quyết định tiền thưởng cuối năm và tiêu chuẩn thăng chức.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "hr",
+          "performance"
+        ]
+      },
+      {
+        "word": "recruit",
+        "phonetic": "/rɪˈkruːt/",
+        "wordType": "VERB",
+        "definition": "tuyển dụng, chiêu mộ",
+        "definitionEn": "to enlist someone in a business or organization as a worker",
+        "example": "We are seeking to recruit an experienced supply chain coordinator for our Da Nang branch.",
+        "exampleVi": "Chúng tôi đang tìm kiếm để tuyển dụng một điều phối viên chuỗi cung ứng giàu kinh nghiệm cho chi nhánh Đà Nẵng.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "hr",
+          "hiring"
+        ]
+      },
+      {
+        "word": "qualification",
+        "phonetic": "/ˌkwɒl.ɪ.fɪˈkeɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "bằng cấp, năng lực chuyên môn",
+        "definitionEn": "an official record of achievement, skill, or experience required for a job",
+        "example": "Applicants must possess strong analytical qualifications and fluency in spoken Japanese.",
+        "exampleVi": "Ứng viên phải có bằng cấp chuyên môn vững vàng về phân tích và nói tiếng Nhật lưu loát.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "hr",
+          "requirements"
+        ]
+      },
+      {
+        "word": "pension",
+        "phonetic": "/ˈpen.ʃən/",
+        "wordType": "NOUN",
+        "definition": "lương hưu, chế độ hưu trí",
+        "definitionEn": "a regular payment made during a person's retirement from an investment fund",
+        "example": "The firm matches up to six percent of employee contributions to their retirement pension fund.",
+        "exampleVi": "Công ty đóng góp đối ứng lên tới 6% khoản đóng góp của nhân viên vào quỹ lương hưu của họ.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "hr",
+          "benefits"
+        ]
+      },
+      {
+        "word": "severance",
+        "phonetic": "/ˈsev.ər.əns/",
+        "wordType": "NOUN",
+        "definition": "trợ cấp thôi việc",
+        "definitionEn": "an amount in money paid to an employee upon dismissal or end of contract",
+        "example": "Laid-off workers received six months of salary as part of their severance package.",
+        "exampleVi": "Những công nhân bị cho thôi việc đã nhận được sáu tháng lương như một phần của gói trợ cấp thôi việc.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "hr",
+          "policy"
+        ]
+      },
+      {
+        "word": "turnover",
+        "phonetic": "/ˈtɜːnˌəʊ.vər/",
+        "wordType": "NOUN",
+        "definition": "tỷ lệ luân chuyển nhân sự",
+        "definitionEn": "the rate at which employees leave a company and are replaced by new staff",
+        "example": "Improved workplace wellness initiatives helped reduce staff turnover by twenty percent.",
+        "exampleVi": "Các sáng kiến nâng cao phúc lợi tại nơi làm việc đã giúp giảm tỷ lệ luân chuyển nhân sự đi 20%.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "hr",
+          "analytics"
+        ]
+      },
+      {
+        "word": "personnel",
+        "phonetic": "/ˌpɜː.sənˈel/",
+        "wordType": "NOUN",
+        "definition": "nhân sự, đội ngũ nhân viên",
+        "definitionEn": "people employed in an organization or used in an undertaking",
+        "example": "All security personnel must wear identification badges at all times on company premises.",
+        "exampleVi": "Tất cả nhân viên an ninh phải đeo thẻ định danh vào mọi thời điểm trong khuôn viên công ty.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "hr",
+          "staff"
+        ]
+      },
+      {
+        "word": "promote",
+        "phonetic": "/prəˈməʊt/",
+        "wordType": "VERB",
+        "definition": "thăng chức, đề bạt",
+        "definitionEn": "to raise someone to a higher position or rank",
+        "example": "The board voted to promote Ms. Davis to regional vice president of marketing.",
+        "exampleVi": "Hội đồng quản trị đã biểu quyết thăng chức bà Davis lên làm phó chủ tịch tiếp thị khu vực.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "hr",
+          "career"
+        ]
+      },
+      {
+        "word": "resign",
+        "phonetic": "/rɪˈzaɪn/",
+        "wordType": "VERB",
+        "definition": "từ chức, xin thôi việc",
+        "definitionEn": "voluntarily leave a job or position of office",
+        "example": "The chief financial officer decided to resign due to personal health reasons.",
+        "exampleVi": "Giám đốc tài chính đã quyết định từ chức vì lý do sức khỏe cá nhân.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "hr",
+          "career"
+        ]
+      },
+      {
+        "word": "orientation",
+        "phonetic": "/ˌɔː.ri.enˈteɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "buổi định hướng cho nhân viên mới",
+        "definitionEn": "a course or period introducing a new employee to their job and work environment",
+        "example": "New hires attend a full-day orientation session covering company values and IT tools.",
+        "exampleVi": "Nhân viên mới tham dự buổi định hướng trọn ngày giới thiệu các giá trị công ty và công cụ CNTT.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "hr",
+          "training"
+        ]
+      },
+      {
+        "word": "mentor",
+        "phonetic": "/ˈmen.tɔːr/",
+        "wordType": "NOUN",
+        "definition": "người hướng dẫn, cố vấn",
+        "definitionEn": "an experienced and trusted adviser who guides an inexperienced colleague",
+        "example": "Each junior accountant is assigned a senior mentor during their first fiscal quarter.",
+        "exampleVi": "Mỗi kế toán viên sơ cấp được phân công một người cố vấn cấp cao trong quý tài chính đầu tiên của họ.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "hr",
+          "training"
+        ]
+      },
+      {
+        "word": "remuneration",
+        "phonetic": "/rɪˌmjuː.nərˈeɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "tiền thù lao, tiền công",
+        "definitionEn": "money paid for work or a service provided",
+        "example": "The consulting firm offers competitive remuneration commensurate with candidate experience.",
+        "exampleVi": "Công ty tư vấn đưa ra mức thù lao cạnh tranh tương xứng với kinh nghiệm của ứng viên.",
+        "bandLevel": "BAND_5",
+        "tags": [
+          "hr",
+          "payroll"
+        ]
+      },
+      {
+        "word": "vacancy",
+        "phonetic": "/ˈveɪ.kən.si/",
+        "wordType": "NOUN",
+        "definition": "vị trí tuyển dụng còn trống",
+        "definitionEn": "an unoccupied position or job waiting to be filled",
+        "example": "We currently have an immediate vacancy for a bilingual executive assistant.",
+        "exampleVi": "Hiện tại chúng tôi có một vị trí tuyển dụng còn trống ngay cho chức danh trợ lý điều hành song ngữ.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "hr",
+          "recruitment"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_contracts_negotiations",
+    "title": "Contracts, Legal Agreements & Negotiations",
+    "description": "Vital terminology for contract clauses, legal obligations, binding agreements, terms and conditions, and business bargaining.",
+    "targetBand": "BAND_4",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "clause",
+        "phonetic": "/klɔːz/",
+        "wordType": "NOUN",
+        "definition": "điều khoản trong hợp đồng",
+        "definitionEn": "a particular and separate article, stipulation, or condition in a legal document",
+        "example": "The contract contains an explicit confidentiality clause prohibiting disclosures to third parties.",
+        "exampleVi": "Hợp đồng chứa một điều khoản bảo mật rõ ràng nghiêm cấm tiết lộ thông tin cho bên thứ ba.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "contracts",
+          "legal"
+        ]
+      },
+      {
+        "word": "binding",
+        "phonetic": "/ˈbaɪn.dɪŋ/",
+        "wordType": "ADJECTIVE",
+        "definition": "có tính ràng buộc pháp lý",
+        "definitionEn": "involving an obligation that cannot be legally broken",
+        "example": "Both corporate parties signed a legally binding agreement in the presence of an attorney.",
+        "exampleVi": "Cả hai bên doanh nghiệp đã ký kết một thỏa thuận có tính ràng buộc pháp lý trước sự chứng kiến của luật sư.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "legal"
+        ]
+      },
+      {
+        "word": "breach",
+        "phonetic": "/briːtʃ/",
+        "wordType": "NOUN",
+        "definition": "sự vi phạm (hợp đồng, thỏa thuận)",
+        "definitionEn": "an act of breaking or failing to observe a law, agreement, or code of conduct",
+        "example": "Failing to deliver the machinery by November 15 constitutes a material breach of contract.",
+        "exampleVi": "Việc không giao máy móc trước ngày 15 tháng 11 cấu thành một sự vi phạm nghiêm trọng hợp đồng.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "legal"
+        ]
+      },
+      {
+        "word": "stipulate",
+        "phonetic": "/ˈstɪp.jə.leɪt/",
+        "wordType": "VERB",
+        "definition": "quy định, đặt điều kiện bắt buộc",
+        "definitionEn": "to demand or specify a requirement as part of a bargain or agreement",
+        "example": "The procurement guidelines stipulate that all purchases over ten thousand dollars require executive approval.",
+        "exampleVi": "Hướng dẫn thu mua quy định rằng tất cả các khoản mua sắm trên mười nghìn đô la đều cần có sự phê duyệt của ban điều hành.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "requirements"
+        ]
+      },
+      {
+        "word": "compromise",
+        "phonetic": "/ˈkɒm.prə.maɪz/",
+        "wordType": "NOUN",
+        "definition": "sự thỏa hiệp, nhượng bộ lẫn nhau",
+        "definitionEn": "an agreement reached by each side making concessions",
+        "example": "After six hours of negotiation, the union and management finally reached an equitable compromise.",
+        "exampleVi": "Sau sáu giờ đàm phán, công đoàn và ban quản lý cuối cùng đã đạt được sự thỏa hiệp công bằng.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "contracts",
+          "negotiations"
+        ]
+      },
+      {
+        "word": "indemnify",
+        "phonetic": "/ɪnˈdem.nɪ.faɪ/",
+        "wordType": "VERB",
+        "definition": "bồi thường, bồi hoàn thiệt hại",
+        "definitionEn": "to compensate someone for harm, loss, or legal liability incurred",
+        "example": "The vendor agreed to indemnify the university against any future copyright infringement claims.",
+        "exampleVi": "Nhà cung cấp đã đồng ý bồi thường cho trường đại học trước bất kỳ khiếu nại vi phạm bản quyền nào trong tương lai.",
+        "bandLevel": "BAND_5",
+        "tags": [
+          "contracts",
+          "legal"
+        ]
+      },
+      {
+        "word": "terminate",
+        "phonetic": "/ˈtɜː.mɪ.neɪt/",
+        "wordType": "VERB",
+        "definition": "chấm dứt (hợp đồng, thỏa thuận)",
+        "definitionEn": "to bring something to an end or close",
+        "example": "Either party may terminate the lease agreement by providing thirty days written notice.",
+        "exampleVi": "Bất kỳ bên nào cũng có thể chấm dứt hợp đồng thuê bằng cách gửi văn bản thông báo trước 30 ngày.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "contracts",
+          "terms"
+        ]
+      },
+      {
+        "word": "null and void",
+        "phonetic": "/ˌnʌl ənd ˈvɔɪd/",
+        "wordType": "PHRASE",
+        "definition": "vô hiệu lực pháp lý",
+        "definitionEn": "having no legal force or validity",
+        "example": "If the required deposit is not received within seven banking days, this agreement becomes null and void.",
+        "exampleVi": "Nếu khoản tiền đặt cọc theo yêu cầu không được nhận trong vòng bảy ngày làm việc của ngân hàng, thỏa thuận này sẽ trở nên vô hiệu lực.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "legal"
+        ]
+      },
+      {
+        "word": "counteroffer",
+        "phonetic": "/ˈkaʊn.tərˌɒf.ər/",
+        "wordType": "NOUN",
+        "definition": "lời đề nghị đối ứng, đề xuất ngược lại",
+        "definitionEn": "an offer made in response to another offer during negotiation",
+        "example": "The supplier rejected our initial quotation and submitted a counteroffer with a five percent reduction.",
+        "exampleVi": "Nhà cung cấp đã từ chối bảng báo giá ban đầu của chúng tôi và đưa ra một đề xuất đối ứng với mức giảm 5%.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "bargaining"
+        ]
+      },
+      {
+        "word": "concession",
+        "phonetic": "/kənˈseʃ.ən/",
+        "wordType": "NOUN",
+        "definition": "sự nhượng bộ trong đàm phán",
+        "definitionEn": "a thing that is granted, especially in response to demands during negotiations",
+        "example": "Both negotiating teams made significant concessions to finalize the joint venture agreement.",
+        "exampleVi": "Cả hai đội đàm phán đều đã đưa ra những sự nhượng bộ đáng kể để hoàn thiện hợp đồng liên doanh.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "negotiations"
+        ]
+      },
+      {
+        "word": "party",
+        "phonetic": "/ˈpɑː.ti/",
+        "wordType": "NOUN",
+        "definition": "bên tham gia (hợp đồng, vụ kiện)",
+        "definitionEn": "a person or group participating in an action or affair, such as a contract",
+        "example": "Neither party shall be liable for delays caused by circumstances beyond reasonable control.",
+        "exampleVi": "Không bên nào phải chịu trách nhiệm về những sự chậm trễ gây ra bởi các hoàn cảnh nằm ngoài tầm kiểm soát hợp lý.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "contracts",
+          "parties"
+        ]
+      },
+      {
+        "word": "warranty",
+        "phonetic": "/ˈwɒr.ən.ti/",
+        "wordType": "NOUN",
+        "definition": "cam kết bảo hành, điều khoản bảo hành",
+        "definitionEn": "a written guarantee promising to repair or replace an article if necessary within a specified period",
+        "example": "The industrial printer is covered under a three-year manufacturer warranty for all parts and labor.",
+        "exampleVi": "Máy in công nghiệp được bảo hành bởi nhà sản xuất trong ba năm cho toàn bộ linh kiện và công thợ.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "contracts",
+          "guarantee"
+        ]
+      },
+      {
+        "word": "liability",
+        "phonetic": "/ˌlaɪ.əˈbɪl.ə.ti/",
+        "wordType": "NOUN",
+        "definition": "trách nhiệm pháp lý",
+        "definitionEn": "the state of being legally responsible for something",
+        "example": "The logistics provider accepts full liability for damaged cargo during ocean freight transport.",
+        "exampleVi": "Đơn vị vận chuyển chấp nhận toàn bộ trách nhiệm pháp lý đối với hàng hóa bị hư hại trong quá trình vận chuyển đường biển.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "legal"
+        ]
+      },
+      {
+        "word": "enforceable",
+        "phonetic": "/ɪnˈfɔː.sə.bəl/",
+        "wordType": "ADJECTIVE",
+        "definition": "có thể cưỡng chế thi hành, có hiệu lực",
+        "definitionEn": "able to be imposed so that it must be complied with",
+        "example": "The judge ruled that the non-compete covenant was legally valid and enforceable.",
+        "exampleVi": "Thẩm phán đã phán quyết rằng thỏa thuận không cạnh tranh là hoàn toàn hợp pháp và có thể cưỡng chế thi hành.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "court"
+        ]
+      },
+      {
+        "word": "obligation",
+        "phonetic": "/ˌɒb.lɪˈɡeɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "nghĩa vụ pháp lý, bổn phận",
+        "definitionEn": "an act or course of action to which a person is morally or legally bound",
+        "example": "Both corporations fulfilled all contractual obligations well ahead of the agreed deadline.",
+        "exampleVi": "Cả hai tập đoàn đã hoàn thành mọi nghĩa vụ theo hợp đồng trước thời hạn đã thỏa thuận.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "contracts",
+          "terms"
+        ]
+      },
+      {
+        "word": "provisional",
+        "phonetic": "/prəˈvɪʒ.ən.əl/",
+        "wordType": "ADJECTIVE",
+        "definition": "tạm thời, có giá trị lâm thời",
+        "definitionEn": "arranged or existing for the present, possibly to be changed later",
+        "example": "The companies signed a provisional memorandum of understanding pending regulatory approval.",
+        "exampleVi": "Các công ty đã ký một biên bản ghi nhớ tạm thời trong khi chờ đợi sự chấp thuận từ cơ quan quản lý.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "agreement"
+        ]
+      },
+      {
+        "word": "settlement",
+        "phonetic": "/ˈset.əl.mənt/",
+        "wordType": "NOUN",
+        "definition": "sự dàn xếp, hòa giải ngoài tòa",
+        "definitionEn": "an official agreement intended to resolve a dispute or conflict",
+        "example": "The commercial partners reached an out-of-court settlement, avoiding lengthy litigation.",
+        "exampleVi": "Các đối tác thương mại đã đạt được sự dàn xếp ngoài tòa án, tránh được vụ kiện tụng kéo dài.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "contracts",
+          "disputes"
+        ]
+      },
+      {
+        "word": "validity",
+        "phonetic": "/vəˈlɪd.ə.ti/",
+        "wordType": "NOUN",
+        "definition": "tính hiệu lực, giá trị pháp lý",
+        "definitionEn": "the state of being legally or officially acceptable and binding",
+        "example": "The license maintains its validity for five consecutive years from the issuance date.",
+        "exampleVi": "Giấy phép duy trì hiệu lực trong năm năm liên tiếp kể từ ngày cấp.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "contracts",
+          "legal"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_corporate_finance",
+    "title": "Corporate Finance & Accounting",
+    "description": "Core financial vocabulary for financial statements, auditing, budgeting, revenue, profitability, and taxation.",
+    "targetBand": "BAND_4",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "revenue",
+        "phonetic": "/ˈrev.ən.juː/",
+        "wordType": "NOUN",
+        "definition": "doanh thu, tổng thu",
+        "definitionEn": "income generated from normal business operations and sales",
+        "example": "Quarterly revenue surpassed Wall Street projections due to stellar export sales.",
+        "exampleVi": "Doanh thu hàng quý đã vượt qua các dự báo của phố Wall nhờ doanh số xuất khẩu xuất sắc.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "accounting"
+        ]
+      },
+      {
+        "word": "expenditure",
+        "phonetic": "/ɪkˈspen.dɪ.tʃər/",
+        "wordType": "NOUN",
+        "definition": "chi phí, chi tiêu tài chính",
+        "definitionEn": "an amount of money spent on goods or business assets",
+        "example": "Capital expenditure on automated production equipment will increase by ten percent next fiscal year.",
+        "exampleVi": "Chi tiêu vốn cho các thiết bị sản xuất tự động sẽ tăng 10% trong năm tài chính tới.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "budget"
+        ]
+      },
+      {
+        "word": "audit",
+        "phonetic": "/ˈɔː.dɪt/",
+        "wordType": "NOUN",
+        "definition": "cuộc kiểm toán tài chính",
+        "definitionEn": "an official systematic inspection of an organization's accounts by an independent body",
+        "example": "An independent external accounting firm was hired to conduct the annual financial audit.",
+        "exampleVi": "Một công ty kế toán độc lập bên ngoài đã được thuê để tiến hành cuộc kiểm toán tài chính thường niên.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "compliance"
+        ]
+      },
+      {
+        "word": "dividend",
+        "phonetic": "/ˈdɪv.ɪ.dend/",
+        "wordType": "NOUN",
+        "definition": "cổ tức",
+        "definitionEn": "a sum of money paid regularly by a company to its shareholders out of profits",
+        "example": "The board voted to declare an annual cash dividend of two dollars per common share.",
+        "exampleVi": "Hội đồng quản trị đã biểu quyết công bố mức cổ tức tiền mặt hàng năm là hai đô la cho mỗi cổ phiếu phổ thông.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "stocks"
+        ]
+      },
+      {
+        "word": "fiscal",
+        "phonetic": "/ˈfɪs.kəl/",
+        "wordType": "ADJECTIVE",
+        "definition": "thuộc về tài chính, năm tài khóa",
+        "definitionEn": "relating to government revenue, taxes, or the public and corporate financial year",
+        "example": "The company reported record operating profits at the conclusion of the fourth fiscal quarter.",
+        "exampleVi": "Công ty đã báo cáo lợi nhuận hoạt động kỷ lục vào thời điểm kết thúc quý tài chính thứ tư.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "calendar"
+        ]
+      },
+      {
+        "word": "deficit",
+        "phonetic": "/ˈdef.ɪ.sɪt/",
+        "wordType": "NOUN",
+        "definition": "thâm hụt tài chính",
+        "definitionEn": "the amount by which spending exceeds income over a given period",
+        "example": "The administration introduced cost-cutting initiatives to shrink the operating budget deficit.",
+        "exampleVi": "Ban quản trị đã đưa ra các sáng kiến cắt giảm chi phí để thu hẹp mức thâm hụt ngân sách hoạt động.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "economy"
+        ]
+      },
+      {
+        "word": "asset",
+        "phonetic": "/ˈæs.et/",
+        "wordType": "NOUN",
+        "definition": "tài sản của doanh nghiệp",
+        "definitionEn": "a useful or valuable thing, person, or quality possessed by a company",
+        "example": "Current assets on the balance sheet include cash reserves and short-term accounts receivable.",
+        "exampleVi": "Tài sản ngắn hạn trên bảng cân đối kế toán bao gồm quỹ tiền mặt và các khoản phải thu ngắn hạn.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "accounting"
+        ]
+      },
+      {
+        "word": "balance sheet",
+        "phonetic": "/ˈbæl.əns ˌʃiːt/",
+        "wordType": "NOUN",
+        "definition": "bảng cân đối kế toán",
+        "definitionEn": "a statement of the assets, liabilities, and capital of a business at a particular point in time",
+        "example": "The chief accountant presented the audited balance sheet to the investment committee.",
+        "exampleVi": "Kế toán trưởng đã trình bày bảng cân đối kế toán đã kiểm toán trước hội đồng đầu tư.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "statements"
+        ]
+      },
+      {
+        "word": "depreciation",
+        "phonetic": "/dɪˌpriː.ʃiˈeɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "khấu hao tài sản cố định",
+        "definitionEn": "a reduction in the value of an asset with the passage of time, due in particular to wear and tear",
+        "example": "The tax accountant calculated straight-line depreciation for the fleet of commercial delivery vans.",
+        "exampleVi": "Kế toán thuế đã tính khấu hao đường thẳng cho đội xe van giao hàng thương mại.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "accounting"
+        ]
+      },
+      {
+        "word": "subsidy",
+        "phonetic": "/ˈsʌb.sɪ.di/",
+        "wordType": "NOUN",
+        "definition": "trợ cấp tài chính từ chính phủ",
+        "definitionEn": "a sum of money granted by the government to assist an industry or business",
+        "example": "Renewable energy manufacturers received substantial government subsidies to expand solar farms.",
+        "exampleVi": "Các nhà sản xuất năng lượng tái tạo đã nhận được những khoản trợ cấp đáng kể từ chính phủ để mở rộng các trang trại năng lượng mặt trời.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "government"
+        ]
+      },
+      {
+        "word": "turnover",
+        "phonetic": "/ˈtɜːnˌəʊ.vər/",
+        "wordType": "NOUN",
+        "definition": "doanh số thương mại, doanh thu bán lẻ",
+        "definitionEn": "the amount of money taken by a business in a particular period",
+        "example": "Annual retail turnover reached eighty million euros across our department store chain.",
+        "exampleVi": "Doanh số thương mại hàng năm đạt 80 triệu euro trên toàn bộ chuỗi cửa hàng bách hóa của chúng tôi.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "sales"
+        ]
+      },
+      {
+        "word": "lucrative",
+        "phonetic": "/ˈluː.krə.tɪv/",
+        "wordType": "ADJECTIVE",
+        "definition": "sinh lời cao, béo bở",
+        "definitionEn": "producing a great deal of profit or income",
+        "example": "The enterprise entered into a lucrative partnership with a global cloud computing provider.",
+        "exampleVi": "Doanh nghiệp đã tham gia vào một mối quan hệ đối tác sinh lời cao với nhà cung cấp điện toán đám mây toàn cầu.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "business"
+        ]
+      },
+      {
+        "word": "solvent",
+        "phonetic": "/ˈsɒl.vənt/",
+        "wordType": "ADJECTIVE",
+        "definition": "có khả năng thanh toán nợ nần",
+        "definitionEn": "having assets in excess of liabilities; able to pay one's debts",
+        "example": "Strong operating cash flow ensured that the regional airline remained solvent during the recession.",
+        "exampleVi": "Dòng tiền hoạt động mạnh mẽ đã đảm bảo hãng hàng không khu vực vẫn có đủ khả năng thanh toán nợ trong suốt thời kỳ suy thoái.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "solvency"
+        ]
+      },
+      {
+        "word": "reconcile",
+        "phonetic": "/ˈrek.ən.saɪl/",
+        "wordType": "VERB",
+        "definition": "đối chiếu tài khoản kế toán",
+        "definitionEn": "to compare two sets of records to ensure figures agree and are accurate",
+        "example": "The bookkeeper must reconcile monthly bank statements with internal ledger accounts.",
+        "exampleVi": "Người ghi chép sổ sách phải đối chiếu sao kê ngân hàng hàng tháng với các tài khoản sổ cái nội bộ.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "accounting"
+        ]
+      },
+      {
+        "word": "collateral",
+        "phonetic": "/kəˈlæt.ər.əl/",
+        "wordType": "NOUN",
+        "definition": "tài sản thế chấp khoản vay",
+        "definitionEn": "something pledged as security for repayment of a loan, to be forfeited in the event of default",
+        "example": "The manufacturing company pledged its central warehouse as collateral for the bank loan.",
+        "exampleVi": "Công ty sản xuất đã thế chấp nhà kho trung tâm của mình làm tài sản bảo đảm cho khoản vay ngân hàng.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "banking"
+        ]
+      },
+      {
+        "word": "portfolio",
+        "phonetic": "/pɔːtˈfəʊ.li.əʊ/",
+        "wordType": "NOUN",
+        "definition": "danh mục đầu tư tài chính",
+        "definitionEn": "a range of investments held by a person or organization",
+        "example": "The pension fund manager diversified the equity portfolio to minimize downside risk.",
+        "exampleVi": "Người quản lý quỹ hưu trí đã đa dạng hóa danh mục vốn cổ phần để giảm thiểu rủi ro thua lỗ.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "investments"
+        ]
+      },
+      {
+        "word": "overhead",
+        "phonetic": "/ˈəʊ.və.hed/",
+        "wordType": "NOUN",
+        "definition": "chi phí quản lý gián tiếp, chi phí cố định",
+        "definitionEn": "ongoing business expenses not directly attributed to creating a product or service",
+        "example": "Relocating to a modern suburban campus reduced our office rental overhead by thirty percent.",
+        "exampleVi": "Việc chuyển địa điểm sang một khu làm việc ngoại ô hiện đại đã giảm 30% chi phí gián tiếp thuê văn phòng của chúng tôi.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "finance",
+          "expenses"
+        ]
+      },
+      {
+        "word": "yield",
+        "phonetic": "/jiːld/",
+        "wordType": "NOUN",
+        "definition": "tỷ suất lợi nhuận, lợi tức",
+        "definitionEn": "the income return on an investment, such as the interest or dividends received",
+        "example": "Corporate treasury bonds currently offer an attractive annual yield of 4.8 percent.",
+        "exampleVi": "Trái phiếu kho bạc doanh nghiệp hiện đem lại tỷ suất lợi nhuận hàng năm hấp dẫn ở mức 4,8%.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "finance",
+          "bonds"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_it_technology",
+    "title": "Information Technology & Systems",
+    "description": "Technical terminology for software, cloud infrastructure, cybersecurity, network diagnostics, and database management.",
+    "targetBand": "BAND_3",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "compatible",
+        "phonetic": "/kəmˈpæt.ə.bəl/",
+        "wordType": "ADJECTIVE",
+        "definition": "tương thích (phần mềm/hệ thống)",
+        "definitionEn": "able to exist or occur together without conflict; able to be used with other hardware or software",
+        "example": "The updated ERP system is fully compatible with both Windows and macOS workstations.",
+        "exampleVi": "Hệ thống ERP cập nhật hoàn toàn tương thích với cả máy trạm chạy Windows lẫn macOS.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "software"
+        ]
+      },
+      {
+        "word": "configure",
+        "phonetic": "/kənˈfɪɡ.ər/",
+        "wordType": "VERB",
+        "definition": "cấu hình hệ thống phần mềm/phần cứng",
+        "definitionEn": "to set up or arrange equipment or a system so that it can be used for a particular purpose",
+        "example": "Network engineers must configure the firewall to block unauthorized external port access.",
+        "exampleVi": "Các kỹ sư mạng phải cấu hình tường lửa để chặn quyền truy cập cổng bên ngoài trái phép.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "networking"
+        ]
+      },
+      {
+        "word": "downtime",
+        "phonetic": "/ˈdaʊn.taɪm/",
+        "wordType": "NOUN",
+        "definition": "thời gian hệ thống ngừng hoạt động",
+        "definitionEn": "time during which a machine, especially a computer network, is out of action",
+        "example": "Routine database server maintenance was scheduled on Sunday night to prevent business downtime.",
+        "exampleVi": "Bảo trì máy chủ cơ sở dữ liệu định kỳ đã được lên lịch vào tối Chủ nhật để tránh thời gian ngừng hoạt động kinh doanh.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "maintenance"
+        ]
+      },
+      {
+        "word": "encryption",
+        "phonetic": "/ɪnˈkrɪp.ʃən/",
+        "wordType": "NOUN",
+        "definition": "sự mã hóa dữ liệu",
+        "definitionEn": "the process of converting information or data into a code, especially to prevent unauthorized access",
+        "example": "End-to-end 256-bit encryption safeguards sensitive credit card numbers during checkout.",
+        "exampleVi": "Mã hóa đầu cuối 256-bit bảo vệ an toàn các số thẻ tín dụng nhạy cảm trong quá trình thanh toán.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "it",
+          "security"
+        ]
+      },
+      {
+        "word": "troubleshoot",
+        "phonetic": "/ˈtrʌb.əl.ʃuːt/",
+        "wordType": "VERB",
+        "definition": "khắc phục sự cố kỹ thuật",
+        "definitionEn": "to trace and solve problems in a computer system or piece of machinery",
+        "example": "The IT helpdesk technician remoted into my laptop to troubleshoot the VPN connectivity issue.",
+        "exampleVi": "Kỹ thuật viên phòng trợ giúp CNTT đã truy cập từ xa vào máy tính xách tay của tôi để khắc phục sự cố kết nối VPN.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "support"
+        ]
+      },
+      {
+        "word": "scalable",
+        "phonetic": "/ˈskeɪ.lə.bəl/",
+        "wordType": "ADJECTIVE",
+        "definition": "có khả năng mở rộng quy mô linh hoạt",
+        "definitionEn": "able to be changed in size or scale to handle growing amounts of work",
+        "example": "We chose a scalable cloud architecture that effortlessly handles holiday traffic spikes.",
+        "exampleVi": "Chúng tôi đã chọn kiến trúc đám mây có khả năng mở rộng linh hoạt để xử lý dễ dàng lưu lượng truy cập tăng vọt dịp lễ.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "it",
+          "cloud"
+        ]
+      },
+      {
+        "word": "infrastructure",
+        "phonetic": "/ˈɪn.frəˌstrʌk.tʃər/",
+        "wordType": "NOUN",
+        "definition": "cơ sở hạ tầng kỹ thuật số",
+        "definitionEn": "the basic systems and services that are necessary for an organization or system to run",
+        "example": "Substantial investment in IT infrastructure ensured 99.99 percent uptime for all online banking services.",
+        "exampleVi": "Khoản đầu tư đáng kể vào cơ sở hạ tầng CNTT đã đảm bảo thời gian hoạt động 99,99% cho mọi dịch vụ ngân hàng trực tuyến.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "systems"
+        ]
+      },
+      {
+        "word": "vulnerability",
+        "phonetic": "/ˌvʌl.nər.əˈbɪl.ə.ti/",
+        "wordType": "NOUN",
+        "definition": "lỗ hổng bảo mật",
+        "definitionEn": "a weakness in a computer system or software that can be exploited by an attacker",
+        "example": "The security team released an urgent patch to eliminate a critical zero-day vulnerability.",
+        "exampleVi": "Đội ngũ an ninh đã phát hành một bản vá khẩn cấp để loại bỏ một lỗ hổng bảo mật zero-day nghiêm trọng.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "it",
+          "security"
+        ]
+      },
+      {
+        "word": "backup",
+        "phonetic": "/ˈbæk.ʌp/",
+        "wordType": "NOUN",
+        "definition": "bản sao lưu dữ liệu dự phòng",
+        "definitionEn": "a copy of a file or other item of data made in case the original is lost or damaged",
+        "example": "Automated nightly backups ensure company files can be recovered instantly after hardware failure.",
+        "exampleVi": "Các bản sao lưu tự động hàng đêm đảm bảo các tập tin công ty có thể được phục hồi ngay lập tức sau sự cố phần cứng.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "it",
+          "data"
+        ]
+      },
+      {
+        "word": "retrieve",
+        "phonetic": "/rɪˈtriːv/",
+        "wordType": "VERB",
+        "definition": "truy xuất dữ liệu, tìm lại",
+        "definitionEn": "to find and bring back stored information from a computer system",
+        "example": "The business intelligence tool allows analysts to retrieve sales reports in seconds.",
+        "exampleVi": "Công cụ trí tuệ kinh doanh cho phép các chuyên gia phân tích truy xuất các báo cáo bán hàng trong vài giây.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "database"
+        ]
+      },
+      {
+        "word": "bandwidth",
+        "phonetic": "/ˈbænd.wɪtθ/",
+        "wordType": "NOUN",
+        "definition": "băng thông truyền dữ liệu",
+        "definitionEn": "the capacity for data transfer of an electronic communications system",
+        "example": "Upgrading to commercial fiber-optic internet provided ample bandwidth for 4K video conferencing.",
+        "exampleVi": "Nâng cấp lên internet cáp quang thương mại đã cung cấp băng thông dồi dào cho các cuộc họp truyền hình 4K.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "network"
+        ]
+      },
+      {
+        "word": "outdated",
+        "phonetic": "/ˌaʊtˈdeɪ.tɪd/",
+        "wordType": "ADJECTIVE",
+        "definition": "lỗi thời, quá hạn",
+        "definitionEn": "obsolete; no longer useful, valid, or modern",
+        "example": "Replacing outdated server hardware decreased power consumption by forty percent.",
+        "exampleVi": "Việc thay thế phần cứng máy chủ lỗi thời đã giúp giảm 40% lượng điện năng tiêu thụ.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "it",
+          "hardware"
+        ]
+      },
+      {
+        "word": "authenticate",
+        "phonetic": "/ɔːˈθen.tɪ.keɪt/",
+        "wordType": "VERB",
+        "definition": "xác thực danh tính người dùng",
+        "definitionEn": "to prove or verify the identity of a user or process",
+        "example": "Users must authenticate their login via two-factor authentication on mobile devices.",
+        "exampleVi": "Người dùng phải xác thực đăng nhập thông qua xác thực hai yếu tố trên thiết bị di động.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "security"
+        ]
+      },
+      {
+        "word": "migrate",
+        "phonetic": "/maɪˈɡreɪt/",
+        "wordType": "VERB",
+        "definition": "chuyển đổi dữ liệu sang nền tảng mới",
+        "definitionEn": "to move from one operating environment or database to another",
+        "example": "The firm contracted specialists to migrate on-premise servers to AWS cloud environments.",
+        "exampleVi": "Công ty đã thuê các chuyên gia để chuyển đổi các máy chủ tại chỗ sang môi trường đám mây AWS.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "it",
+          "cloud"
+        ]
+      },
+      {
+        "word": "malfunction",
+        "phonetic": "/ˌmælˈfʌŋk.ʃən/",
+        "wordType": "NOUN",
+        "definition": "sự cố trục trặc kỹ thuật",
+        "definitionEn": "a failure to function normally or properly",
+        "example": "A hardware malfunction in the primary router interrupted internet access across the third floor.",
+        "exampleVi": "Một trục trặc phần cứng ở bộ định tuyến chính đã làm gián đoạn truy cập internet trên khắp tầng ba.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "hardware"
+        ]
+      },
+      {
+        "word": "protocol",
+        "phonetic": "/ˈprəʊ.tə.kɒl/",
+        "wordType": "NOUN",
+        "definition": "giao thức mạng máy tính",
+        "definitionEn": "a set of rules governing the exchange or transmission of data between devices",
+        "example": "HTTPS is the secure communication protocol utilized for all web transactions.",
+        "exampleVi": "HTTPS là giao thức truyền thông an toàn được sử dụng cho tất cả các giao dịch trên web.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "networking"
+        ]
+      },
+      {
+        "word": "specifications",
+        "phonetic": "/ˌspes.ɪ.fɪˈkeɪ.ʃənz/",
+        "wordType": "NOUN",
+        "definition": "thông số kỹ thuật chi tiết",
+        "definitionEn": "a detailed description of the design and materials used to make something",
+        "example": "Review the technical specifications before purchasing memory modules for the server.",
+        "exampleVi": "Hãy xem lại các thông số kỹ thuật chi tiết trước khi mua các thanh bộ nhớ cho máy chủ.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "it",
+          "hardware"
+        ]
+      },
+      {
+        "word": "deployment",
+        "phonetic": "/dɪˈplɔɪ.mənt/",
+        "wordType": "NOUN",
+        "definition": "sự triển khai phần mềm lên hệ thống",
+        "definitionEn": "the action of bringing resources or software into effective action and use",
+        "example": "The continuous deployment pipeline automatically pushes verified code to staging servers.",
+        "exampleVi": "Quy trình triển khai liên tục tự động đẩy mã nguồn đã qua kiểm định lên các máy chủ kiểm thử.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "it",
+          "devops"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_healthcare_medical",
+    "title": "Healthcare & Medical Services",
+    "description": "Medical and wellness vocabulary covering clinical procedures, pharmaceuticals, health insurance, occupational safety, and patient care.",
+    "targetBand": "BAND_3",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "prescription",
+        "phonetic": "/prɪˈskrɪp.ʃən/",
+        "wordType": "NOUN",
+        "definition": "đơn thuốc, toa thuốc",
+        "definitionEn": "an instruction written by a medical practitioner authorizing a patient to be issued with a medicine",
+        "example": "The physician wrote a prescription for antibiotics to treat the respiratory infection.",
+        "exampleVi": "Bác sĩ đã kê một đơn thuốc kháng sinh để điều trị bệnh nhiễm trùng đường hô hấp.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "health",
+          "medical"
+        ]
+      },
+      {
+        "word": "practitioner",
+        "phonetic": "/prækˈtɪʃ.ən.ər/",
+        "wordType": "NOUN",
+        "definition": "bác sĩ đa khoa, người hành nghề y",
+        "definitionEn": "a person actively engaged in an art, discipline, or profession, especially medicine",
+        "example": "Employees should visit a registered medical practitioner to obtain an official medical certificate.",
+        "exampleVi": "Nhân viên nên đến gặp bác sĩ hành nghề y đã đăng ký để xin giấy chứng nhận y tế chính thức.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "doctor"
+        ]
+      },
+      {
+        "word": "coverage",
+        "phonetic": "/ˈkʌv.ər.ɪdʒ/",
+        "wordType": "NOUN",
+        "definition": "phạm vi bảo hiểm y tế",
+        "definitionEn": "the amount of protection given by an insurance policy",
+        "example": "Our corporate health plan provides comprehensive dental and optical insurance coverage.",
+        "exampleVi": "Gói bảo hiểm sức khỏe doanh nghiệp của chúng tôi cung cấp phạm vi bảo hiểm nha khoa và thị lực toàn diện.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "insurance"
+        ]
+      },
+      {
+        "word": "preventive",
+        "phonetic": "/prɪˈven.tɪv/",
+        "wordType": "ADJECTIVE",
+        "definition": "mang tính phòng ngừa bệnh",
+        "definitionEn": "designed to keep something undesirable, such as illness, from occurring",
+        "example": "The company sponsors free annual preventive health screenings for all factory workers.",
+        "exampleVi": "Công ty tài trợ khám sức khỏe phòng ngừa định kỳ hàng năm miễn phí cho toàn bộ công nhân nhà máy.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "wellness"
+        ]
+      },
+      {
+        "word": "clinic",
+        "phonetic": "/ˈklɪn.ɪk/",
+        "wordType": "NOUN",
+        "definition": "phòng khám chữa bệnh",
+        "definitionEn": "an establishment or hospital department where outpatients are given medical treatment",
+        "example": "The corporate park opened an on-site health clinic to treat minor workplace injuries.",
+        "exampleVi": "Khu công viên văn phòng đã mở một phòng khám sức khỏe tại chỗ để điều trị các chấn thương nhẹ tại nơi làm việc.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "health",
+          "facilities"
+        ]
+      },
+      {
+        "word": "sanitation",
+        "phonetic": "/ˌsæn.ɪˈteɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "vệ sinh dịch tễ, vệ sinh môi trường",
+        "definitionEn": "conditions relating to public health, especially the provision of clean drinking water and sewage disposal",
+        "example": "Food processing facilities must maintain the highest standards of hygiene and sanitation.",
+        "exampleVi": "Các cơ sở chế biến thực phẩm phải duy trì các tiêu chuẩn vệ sinh dịch tễ và an toàn cao nhất.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "safety"
+        ]
+      },
+      {
+        "word": "symptom",
+        "phonetic": "/ˈsɪmp.təm/",
+        "wordType": "NOUN",
+        "definition": "triệu chứng bệnh",
+        "definitionEn": "a physical or mental feature indicating a condition of disease",
+        "example": "Staff members exhibiting flu symptoms are instructed to work from home.",
+        "exampleVi": "Những nhân viên có triệu chứng cúm được hướng dẫn làm việc tại nhà.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "health",
+          "medical"
+        ]
+      },
+      {
+        "word": "pharmaceutical",
+        "phonetic": "/ˌfɑː.məˈsjuː.tɪ.kəl/",
+        "wordType": "ADJECTIVE",
+        "definition": "thuộc về dược phẩm",
+        "definitionEn": "relating to medicinal drugs, or their preparation, use, or sale",
+        "example": "The pharmaceutical corporation invested millions into research for a groundbreaking vaccine.",
+        "exampleVi": "Tập đoàn dược phẩm đã đầu tư hàng triệu đô la vào nghiên cứu một loại vắc-xin mang tính đột phá.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "industry"
+        ]
+      },
+      {
+        "word": "ergonomic",
+        "phonetic": "/ˌɜː.ɡəˈnɒm.ɪk/",
+        "wordType": "ADJECTIVE",
+        "definition": "công thái học (thiết kế phù hợp với cơ thể)",
+        "definitionEn": "designed for efficiency and comfort in the working environment",
+        "example": "Ergonomic office keyboards help reduce the risk of repetitive strain injuries among programmers.",
+        "exampleVi": "Bàn phím văn phòng công thái học giúp giảm nguy cơ chấn thương do căng thẳng lặp đi lặp lại ở các lập trình viên.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "health",
+          "ergonomics"
+        ]
+      },
+      {
+        "word": "consultation",
+        "phonetic": "/ˌkɒn.sʌlˈteɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "buổi hội chẩn, tư vấn sức khỏe",
+        "definitionEn": "a meeting with an expert or doctor, such as a medical specialist, in order to seek advice",
+        "example": "The specialist offers virtual consultations for employees working overseas.",
+        "exampleVi": "Bác sĩ chuyên khoa cung cấp các buổi tư vấn trực tuyến cho những nhân viên làm việc ở nước ngoài.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "advice"
+        ]
+      },
+      {
+        "word": "first-aid",
+        "phonetic": "/ˌfɜːst ˈeɪd/",
+        "wordType": "NOUN",
+        "definition": "sơ cứu y tế ban đầu",
+        "definitionEn": "help given to a sick or injured person until full medical treatment is available",
+        "example": "Fully stocked first-aid kits are stationed on every floor near the fire exits.",
+        "exampleVi": "Các hộp sơ cứu được trang bị đầy đủ thuốc men được bố trí ở mỗi tầng gần các lối thoát hiểm chống cháy.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "health",
+          "safety"
+        ]
+      },
+      {
+        "word": "dosage",
+        "phonetic": "/ˈdəʊ.sɪdʒ/",
+        "wordType": "NOUN",
+        "definition": "liều lượng thuốc",
+        "definitionEn": "the size or frequency of a dose of a medicine or drug",
+        "example": "Do not exceed the recommended daily dosage stated on the medication label.",
+        "exampleVi": "Không được vượt quá liều lượng thuốc hàng ngày được khuyến cáo ghi trên nhãn thuốc.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "medicine"
+        ]
+      },
+      {
+        "word": "admission",
+        "phonetic": "/ədˈmɪʃ.ən/",
+        "wordType": "NOUN",
+        "definition": "việc nhập viện",
+        "definitionEn": "the process or fact of entering or being allowed to enter a place or organization, especially a hospital",
+        "example": "Hospital admission procedures were expedited for emergency room patients.",
+        "exampleVi": "Thủ tục nhập viện đã được xúc tiến nhanh chóng cho các bệnh nhân tại phòng cấp cứu.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "hospital"
+        ]
+      },
+      {
+        "word": "chronic",
+        "phonetic": "/ˈkrɒn.ɪk/",
+        "wordType": "ADJECTIVE",
+        "definition": "mãn tính (kéo dài kinh niên)",
+        "definitionEn": "persisting for a long time or constantly recurring",
+        "example": "The wellness seminar focused on managing stress to prevent chronic health conditions.",
+        "exampleVi": "Hội thảo sức khỏe tập trung vào việc quản lý căng thẳng để ngăn ngừa các tình trạng bệnh mãn tính.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "health",
+          "wellness"
+        ]
+      },
+      {
+        "word": "disability",
+        "phonetic": "/ˌdɪs.əˈbɪl.ə.ti/",
+        "wordType": "NOUN",
+        "definition": "sự thương tật, khuyết tật lao động",
+        "definitionEn": "a physical or mental condition that limits a person's movements, senses, or activities",
+        "example": "Short-term disability insurance replaces sixty percent of an employee's wages during illness.",
+        "exampleVi": "Bảo hiểm thương tật ngắn hạn thay thế 60% tiền lương của nhân viên trong suốt thời gian ốm đau.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "health",
+          "benefits"
+        ]
+      },
+      {
+        "word": "nutrition",
+        "phonetic": "/njuːˈtrɪʃ.ən/",
+        "wordType": "NOUN",
+        "definition": "chế độ dinh dưỡng",
+        "definitionEn": "the process of providing or obtaining the food necessary for health and growth",
+        "example": "The company cafeteria revised its menu in consultation with a certified nutrition specialist.",
+        "exampleVi": "Nhà ăn công ty đã sửa đổi thực đơn sau khi tham khảo ý kiến của chuyên gia dinh dưỡng được chứng nhận.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "health",
+          "wellness"
+        ]
+      },
+      {
+        "word": "allergic",
+        "phonetic": "/əˈlɜː.dʒɪk/",
+        "wordType": "ADJECTIVE",
+        "definition": "bị dị ứng",
+        "definitionEn": "caused by or relating to an allergy",
+        "example": "Caterers must be informed if any attendees are allergic to nuts or dairy products.",
+        "exampleVi": "Đơn vị phục vụ tiệc phải được thông báo nếu có bất kỳ người tham dự nào bị dị ứng với các loại hạt hoặc sản phẩm từ sữa.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "health",
+          "safety"
+        ]
+      },
+      {
+        "word": "rehabilitation",
+        "phonetic": "/ˌriː.həˌbɪl.ɪˈteɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "phục hồi chức năng sau chấn thương",
+        "definitionEn": "the action of restoring someone to health or normal life through training and therapy",
+        "example": "Physical rehabilitation programs assist employees in returning to work safely after injury.",
+        "exampleVi": "Các chương trình phục hồi chức năng thể chất hỗ trợ nhân viên quay trở lại làm việc an toàn sau chấn thương.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "health",
+          "therapy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_retail_sales",
+    "title": "Retail, Sales & Customer Service",
+    "description": "Practical vocabulary for retail operations, discount promotions, inventory clearance, returns, warranties, and client satisfaction.",
+    "targetBand": "BAND_2",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "clearance",
+        "phonetic": "/ˈklɪə.rəns/",
+        "wordType": "NOUN",
+        "definition": "xả hàng, giải phóng hàng tồn",
+        "definitionEn": "the disposal of unwanted goods or inventory at reduced prices",
+        "example": "The electronics outlet is holding a massive end-of-season clearance sale this weekend.",
+        "exampleVi": "Cửa hàng điện máy đang tổ chức một đợt bán hàng xả kho cuối mùa quy mô lớn vào cuối tuần này.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "sales"
+        ]
+      },
+      {
+        "word": "voucher",
+        "phonetic": "/ˈvaʊ.tʃər/",
+        "wordType": "NOUN",
+        "definition": "phiếu quà tặng, phiếu giảm giá",
+        "definitionEn": "a small printed piece of paper or code that entitles the holder to a discount or goods",
+        "example": "Shoppers who spend over fifty dollars receive a complimentary ten-dollar grocery voucher.",
+        "exampleVi": "Người mua sắm chi tiêu trên 50 đô la sẽ nhận được một phiếu mua hàng tạp hóa 10 đô la miễn phí.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "promotions"
+        ]
+      },
+      {
+        "word": "wholesale",
+        "phonetic": "/ˈhəʊl.seɪl/",
+        "wordType": "ADJECTIVE",
+        "definition": "bán buôn, bán sỉ",
+        "definitionEn": "the selling of goods in large quantities to be retailed by others",
+        "example": "Restaurants can purchase fresh organic produce directly at wholesale prices from local farms.",
+        "exampleVi": "Các nhà hàng có thể mua nông sản hữu cơ tươi trực tiếp với giá bán buôn từ các nông trại địa phương.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "retail",
+          "commerce"
+        ]
+      },
+      {
+        "word": "refund",
+        "phonetic": "/ˈriː.fʌnd/",
+        "wordType": "NOUN",
+        "definition": "khoản tiền hoàn lại",
+        "definitionEn": "a repayment of a sum of money, typically to a dissatisfied customer",
+        "example": "Customers may request a full refund within thirty days by showing the original register receipt.",
+        "exampleVi": "Khách hàng có thể yêu cầu hoàn lại tiền đầy đủ trong vòng 30 ngày bằng cách xuất trình biên lai gốc.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "customer-service"
+        ]
+      },
+      {
+        "word": "patron",
+        "phonetic": "/ˈpeɪ.trən/",
+        "wordType": "NOUN",
+        "definition": "khách hàng quen, người bảo trợ",
+        "definitionEn": "a person who gives financial or other support to a person, organization, cause, or shop",
+        "example": "The bookstore offered an exclusive preview night for its loyal club patrons.",
+        "exampleVi": "Hiệu sách đã tổ chức một đêm xem trước độc quyền dành cho các khách hàng quen thuộc câu lạc bộ.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "retail",
+          "customers"
+        ]
+      },
+      {
+        "word": "restock",
+        "phonetic": "/ˌriːˈstɒk/",
+        "wordType": "VERB",
+        "definition": "bổ sung hàng lên kệ, nhập thêm hàng",
+        "definitionEn": "to replenish with fresh stock or supplies",
+        "example": "Supermarket staff work overnight to restock shelves with dairy and bakery goods.",
+        "exampleVi": "Nhân viên siêu thị làm việc qua đêm để bổ sung hàng lên kệ đối với các mặt hàng sữa và bánh mì.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "inventory"
+        ]
+      },
+      {
+        "word": "inquiry",
+        "phonetic": "/ɪnˈkwaɪə.ri/",
+        "wordType": "NOUN",
+        "definition": "thắc mắc, câu hỏi của khách hàng",
+        "definitionEn": "an act of asking for information from customer support",
+        "example": "Our support team responds to every online customer inquiry within two hours.",
+        "exampleVi": "Đội ngũ hỗ trợ của chúng tôi phản hồi mọi câu hỏi thắc mắc trực tuyến của khách hàng trong vòng hai giờ.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "support"
+        ]
+      },
+      {
+        "word": "discount",
+        "phonetic": "/ˈdɪs.kaʊnt/",
+        "wordType": "NOUN",
+        "definition": "chiết khấu, giảm giá",
+        "definitionEn": "a deduction from the usual cost of something",
+        "example": "Students and senior citizens are entitled to a fifteen percent discount on all book purchases.",
+        "exampleVi": "Học sinh sinh viên và người cao tuổi được hưởng mức giảm giá 15% cho tất cả các đơn mua sách.",
+        "bandLevel": "BAND_1",
+        "tags": [
+          "retail",
+          "pricing"
+        ]
+      },
+      {
+        "word": "merchandise",
+        "phonetic": "/ˈmɜː.tʃən.daɪs/",
+        "wordType": "NOUN",
+        "definition": "hàng hóa bán lẻ",
+        "definitionEn": "goods to be bought and sold in commerce",
+        "example": "The flagship store displays its newest seasonal merchandise in eye-catching window arrangements.",
+        "exampleVi": "Cửa hàng hàng đầu trưng bày hàng hóa mùa mới nhất trong các ô cửa kính bắt mắt.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "retail",
+          "goods"
+        ]
+      },
+      {
+        "word": "guarantee",
+        "phonetic": "/ˌɡær.ənˈtiː/",
+        "wordType": "VERB",
+        "definition": "cam kết, đảm bảo chất lượng",
+        "definitionEn": "to provide a formal assurance that certain conditions will be fulfilled",
+        "example": "We guarantee that all electronics sold in our store are 100 percent authentic.",
+        "exampleVi": "Chúng tôi đảm bảo rằng tất cả các sản phẩm điện tử bán trong cửa hàng đều là hàng chính hãng 100%.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "quality"
+        ]
+      },
+      {
+        "word": "receipt",
+        "phonetic": "/rɪˈsiːt/",
+        "wordType": "NOUN",
+        "definition": "biên lai, hóa đơn mua hàng",
+        "definitionEn": "a written acknowledgment of having received a specified amount of money or goods",
+        "example": "A digital copy of your purchase receipt was automatically sent to your registered email.",
+        "exampleVi": "Bản sao kỹ thuật số biên lai mua hàng của bạn đã tự động được gửi tới email đã đăng ký.",
+        "bandLevel": "BAND_1",
+        "tags": [
+          "retail",
+          "billing"
+        ]
+      },
+      {
+        "word": "complaint",
+        "phonetic": "/kəmˈpleɪnt/",
+        "wordType": "NOUN",
+        "definition": "khiếu nại của khách hàng",
+        "definitionEn": "a statement that a situation is unsatisfactory or unacceptable",
+        "example": "The store manager personally addressed the customer complaint regarding late package delivery.",
+        "exampleVi": "Quản lý cửa hàng đã đích thân giải quyết khiếu nại của khách hàng về việc giao kiện hàng trễ.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "customer-service"
+        ]
+      },
+      {
+        "word": "installment",
+        "phonetic": "/ɪnˈstɔːl.mənt/",
+        "wordType": "NOUN",
+        "definition": "trả góp từng kỳ",
+        "definitionEn": "a sum of money due as one of several equal payments for something, spread over an agreed period",
+        "example": "Customers can buy the home theater system in twelve monthly interest-free installments.",
+        "exampleVi": "Khách hàng có thể mua hệ thống rạp hát gia đình theo mười hai kỳ trả góp hàng tháng không lãi suất.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "retail",
+          "payment"
+        ]
+      },
+      {
+        "word": "defect",
+        "phonetic": "/ˈdiː.fekt/",
+        "wordType": "NOUN",
+        "definition": "lỗi kỹ thuật, khuyết tật của sản phẩm",
+        "definitionEn": "a shortcoming, imperfection, or lack of perfection in a manufactured product",
+        "example": "The company recalled five thousand coffee makers due to an electrical heating defect.",
+        "exampleVi": "Công ty đã thu hồi 5.000 máy pha cà phê do lỗi gia nhiệt về điện.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "retail",
+          "quality"
+        ]
+      },
+      {
+        "word": "satisfaction",
+        "phonetic": "/ˌsæt.ɪsˈfæk.ʃən/",
+        "wordType": "NOUN",
+        "definition": "sự hài lòng của người tiêu dùng",
+        "definitionEn": "fulfillment of one's wishes, expectations, or needs, or the pleasure derived from this",
+        "example": "Client satisfaction remains the primary metric for evaluating our customer support agents.",
+        "exampleVi": "Sự hài lòng của khách hàng vẫn là chỉ số đo lường chính để đánh giá các chuyên viên hỗ trợ của chúng tôi.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "kpi"
+        ]
+      },
+      {
+        "word": "express",
+        "phonetic": "/ɪkˈspres/",
+        "wordType": "ADJECTIVE",
+        "definition": "chuyển phát nhanh, tốc hành",
+        "definitionEn": "operating at high speed or traveling with few or no stops",
+        "example": "For urgent orders, customers can opt for express delivery to receive packages within 24 hours.",
+        "exampleVi": "Đối với các đơn hàng khẩn cấp, khách hàng có thể chọn giao hàng chuyển phát nhanh để nhận gói hàng trong 24 giờ.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "shipping"
+        ]
+      },
+      {
+        "word": "bargain",
+        "phonetic": "/ˈbɑː.ɡɪn/",
+        "wordType": "NOUN",
+        "definition": "món hàng giá hời",
+        "definitionEn": "a thing bought or offered for sale more cheaply than is usual or expected",
+        "example": "At half the retail price, this designer winter coat is an extraordinary bargain.",
+        "exampleVi": "Với mức giá chỉ bằng một nửa giá bán lẻ, chiếc áo khoác mùa đông của nhà thiết kế này là một món hàng giá hời đặc biệt.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "deals"
+        ]
+      },
+      {
+        "word": "loyalty card",
+        "phonetic": "/ˈlɔɪ.əl.ti ˌkɑːd/",
+        "wordType": "NOUN",
+        "definition": "thẻ khách hàng thân thiết",
+        "definitionEn": "a card issued by a store to one of its customers, used to record points earned",
+        "example": "Present your loyalty card at the cashier desk to collect reward points on every transaction.",
+        "exampleVi": "Xuất trình thẻ khách hàng thân thiết tại quầy thu ngân để tích lũy điểm thưởng trên mỗi giao dịch.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "retail",
+          "rewards"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vocab_manufacturing_logistics",
+    "title": "Manufacturing, Logistics & Quality Control",
+    "description": "Technical terminology for assembly lines, warehousing, supply chain distribution, safety compliance, and ISO quality standards.",
+    "targetBand": "BAND_3",
+    "isPublic": true,
+    "cards": [
+      {
+        "word": "assembly line",
+        "phonetic": "/əˈsem.bli ˌlaɪn/",
+        "wordType": "NOUN",
+        "definition": "dây chuyền lắp ráp công nghiệp",
+        "definitionEn": "a series of workers and machines in a factory by which a succession of identical items is progressively assembled",
+        "example": "The automotive plant introduced robotic welders along the main assembly line.",
+        "exampleVi": "Nhà máy sản xuất ô tô đã đưa máy hàn robot vào hoạt động dọc theo dây chuyền lắp ráp chính.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "factory"
+        ]
+      },
+      {
+        "word": "consignment",
+        "phonetic": "/kənˈsaɪn.mənt/",
+        "wordType": "NOUN",
+        "definition": "lô hàng gửi đi, chuyến hàng ký gửi",
+        "definitionEn": "a batch of goods destined for or delivered to someone",
+        "example": "The first consignment of industrial solar panels arrived safely at the port of Hai Phong.",
+        "exampleVi": "Lô hàng tấm pin năng lượng mặt trời công nghiệp đầu tiên đã cập cảng Hải Phòng an toàn.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "manufacturing",
+          "shipping"
+        ]
+      },
+      {
+        "word": "warehouse",
+        "phonetic": "/ˈweə.haʊs/",
+        "wordType": "NOUN",
+        "definition": "nhà kho tổng, kho hàng hóa",
+        "definitionEn": "a large building where raw materials or manufactured goods may be stored prior to distribution",
+        "example": "Our central logistics warehouse utilizes automated sorting conveyors for rapid dispatch.",
+        "exampleVi": "Kho hậu cần trung tâm của chúng tôi sử dụng băng chuyền phân loại tự động để điều phối hàng hóa nhanh chóng.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "manufacturing",
+          "storage"
+        ]
+      },
+      {
+        "word": "logistics",
+        "phonetic": "/ləˈdʒɪs.tɪks/",
+        "wordType": "NOUN",
+        "definition": "hậu cần, quản trị chuỗi cung ứng",
+        "definitionEn": "the detailed coordination of a complex operation involving many people, facilities, or supplies",
+        "example": "The company hired a global logistics specialist to streamline its Asian distribution network.",
+        "exampleVi": "Công ty đã thuê một chuyên gia hậu cần toàn cầu để tối ưu hóa mạng lưới phân phối tại Châu Á.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "distribution"
+        ]
+      },
+      {
+        "word": "freight",
+        "phonetic": "/freɪt/",
+        "wordType": "NOUN",
+        "definition": "hàng hóa chuyên chở (đường biển/hàng không)",
+        "definitionEn": "goods transported in bulk by truck, train, ship, or aircraft",
+        "example": "Air freight is more expensive than sea cargo but reduces delivery lead times from weeks to days.",
+        "exampleVi": "Vận chuyển hàng hóa bằng đường hàng không đắt hơn đường biển nhưng giúp giảm thời gian giao hàng từ vài tuần xuống còn vài ngày.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "shipping"
+        ]
+      },
+      {
+        "word": "inventory",
+        "phonetic": "/ˈɪn.vən.tər.i/",
+        "wordType": "NOUN",
+        "definition": "lượng hàng trong kho, việc kiểm kê",
+        "definitionEn": "a complete list of items such as property, goods in stock, or the contents of a building",
+        "example": "Just-in-time manufacturing keeps inventory carrying costs to an absolute minimum.",
+        "exampleVi": "Sản xuất tức thời (Just-in-time) giúp giảm chi phí lưu giữ hàng trong kho xuống mức tối thiểu tuyệt đối.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "operations"
+        ]
+      },
+      {
+        "word": "procurement",
+        "phonetic": "/prəˈkjʊə.mənt/",
+        "wordType": "NOUN",
+        "definition": "sự thu mua nguyên vật liệu, mua sắm",
+        "definitionEn": "the action of obtaining or procuring goods and services for production",
+        "example": "The procurement manager negotiates volume discounts directly with raw steel mills.",
+        "exampleVi": "Người quản lý thu mua đàm phán mức chiết khấu khối lượng trực tiếp với các nhà máy thép thô.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "manufacturing",
+          "sourcing"
+        ]
+      },
+      {
+        "word": "calibrate",
+        "phonetic": "/ˈkæl.ɪ.breɪt/",
+        "wordType": "VERB",
+        "definition": "hiệu chuẩn máy móc, căn chỉnh thiết bị",
+        "definitionEn": "to mark or adjust a gauge or instrument with a standard scale of readings",
+        "example": "Technicians must calibrate optical measuring sensors every morning before production commences.",
+        "exampleVi": "Các kỹ thuật viên phải hiệu chuẩn các cảm biến đo lường quang học mỗi buổi sáng trước khi quá trình sản xuất bắt đầu.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "manufacturing",
+          "quality"
+        ]
+      },
+      {
+        "word": "dispatch",
+        "phonetic": "/dɪˈspætʃ/",
+        "wordType": "VERB",
+        "definition": "gửi đi, điều động vận chuyển",
+        "definitionEn": "to send off to a destination or for a purpose",
+        "example": "Orders placed before 2:00 PM are dispatched from the distribution center on the same day.",
+        "exampleVi": "Các đơn hàng đặt trước 2:00 chiều sẽ được gửi đi từ trung tâm phân phối ngay trong cùng ngày.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "logistics"
+        ]
+      },
+      {
+        "word": "compliance",
+        "phonetic": "/kəmˈplaɪ.əns/",
+        "wordType": "NOUN",
+        "definition": "sự tuân thủ tiêu chuẩn/quy định",
+        "definitionEn": "the state or fact of according with or meeting rules or standards",
+        "example": "The chemical plant underwent a safety audit to confirm strict compliance with environmental laws.",
+        "exampleVi": "Nhà máy hóa chất đã trải qua một cuộc kiểm tra an toàn để xác nhận sự tuân thủ nghiêm ngặt luật môi trường.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "standards"
+        ]
+      },
+      {
+        "word": "output",
+        "phonetic": "/ˈaʊt.pʊt/",
+        "wordType": "NOUN",
+        "definition": "sản lượng sản xuất",
+        "definitionEn": "the amount of something produced by a person, machine, or industry",
+        "example": "Factory output rose by twelve percent following the installation of faster conveyor belts.",
+        "exampleVi": "Sản lượng nhà máy đã tăng 12% sau khi lắp đặt các băng chuyền có tốc độ nhanh hơn.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "productivity"
+        ]
+      },
+      {
+        "word": "overhaul",
+        "phonetic": "/ˈəʊ.və.hɔːl/",
+        "wordType": "VERB",
+        "definition": "đại tu, kiểm tra và bảo dưỡng toàn diện",
+        "definitionEn": "to take apart a piece of machinery or equipment in order to examine it and repair it if necessary",
+        "example": "Engineers will overhaul turbine generator unit three during the scheduled plant shutdown.",
+        "exampleVi": "Các kỹ sư sẽ đại tu tổ máy phát tuabin số 3 trong đợt dừng máy theo kế hoạch của nhà máy.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "manufacturing",
+          "maintenance"
+        ]
+      },
+      {
+        "word": "raw materials",
+        "phonetic": "/ˌrɔː məˈtɪə.ri.əlz/",
+        "wordType": "NOUN",
+        "definition": "nguyên liệu thô đầu vào",
+        "definitionEn": "the basic material from which a product is made",
+        "example": "A sudden price hike in raw materials compressed manufacturing profit margins.",
+        "exampleVi": "Sự tăng giá đột ngột của các nguyên liệu thô đầu vào đã thu hẹp biên lợi nhuận sản xuất.",
+        "bandLevel": "BAND_2",
+        "tags": [
+          "manufacturing",
+          "supply"
+        ]
+      },
+      {
+        "word": "specification",
+        "phonetic": "/ˌspes.ɪ.fɪˈkeɪ.ʃən/",
+        "wordType": "NOUN",
+        "definition": "tiêu chuẩn kỹ thuật quy định",
+        "definitionEn": "a detailed description of the design and materials used to make something",
+        "example": "Every metal component must be fabricated according to exact client specifications.",
+        "exampleVi": "Mỗi linh kiện kim loại đều phải được chế tạo theo đúng các tiêu chuẩn kỹ thuật chính xác của khách hàng.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "quality"
+        ]
+      },
+      {
+        "word": "lead time",
+        "phonetic": "/ˈliːd ˌtaɪm/",
+        "wordType": "NOUN",
+        "definition": "thời gian từ lúc đặt hàng đến khi nhận hàng",
+        "definitionEn": "the time between the initiation and completion of a production process",
+        "example": "By sourcing parts locally, the factory cut customer lead time from six weeks to twelve days.",
+        "exampleVi": "Bằng cách tìm nguồn linh kiện tại địa phương, nhà máy đã cắt giảm thời gian giao hàng từ 6 tuần xuống còn 12 ngày.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "manufacturing",
+          "supply-chain"
+        ]
+      },
+      {
+        "word": "defect",
+        "phonetic": "/ˈdiː.fekt/",
+        "wordType": "NOUN",
+        "definition": "khuyết tật sản phẩm, phế phẩm",
+        "definitionEn": "an imperfection or flaw in a manufactured product",
+        "example": "Optical inspection cameras automatically flag any microscopic defects on circuit boards.",
+        "exampleVi": "Camera kiểm tra quang học tự động đánh dấu mọi khuyết tật siêu nhỏ trên các bo mạch điện tử.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "qc"
+        ]
+      },
+      {
+        "word": "carrier",
+        "phonetic": "/ˈkær.i.ər/",
+        "wordType": "NOUN",
+        "definition": "hãng vận chuyển hàng hóa",
+        "definitionEn": "a person or company that undertakes the professional conveyance of goods or people",
+        "example": "We partner with an insured maritime carrier to ship heavy machinery across the Pacific.",
+        "exampleVi": "Chúng tôi hợp tác với một hãng vận chuyển hàng hải có bảo hiểm để chở máy móc hạng nặng qua Thái Bình Dương.",
+        "bandLevel": "BAND_3",
+        "tags": [
+          "manufacturing",
+          "shipping"
+        ]
+      },
+      {
+        "word": "yield",
+        "phonetic": "/jiːld/",
+        "wordType": "NOUN",
+        "definition": "sản lượng thành phẩm đạt chuẩn",
+        "definitionEn": "the amount of an agricultural or industrial product produced",
+        "example": "The wafer manufacturing plant achieved a 98 percent semiconductor fabrication yield.",
+        "exampleVi": "Nhà máy sản xuất tấm wafer đã đạt tỷ lệ sản lượng bán dẫn thành phẩm đạt chuẩn là 98%.",
+        "bandLevel": "BAND_4",
+        "tags": [
+          "manufacturing",
+          "metrics"
+        ]
+      }
+    ]
+  }
+]
