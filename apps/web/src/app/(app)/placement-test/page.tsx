@@ -88,6 +88,22 @@ export default function PlacementTestPage() {
     };
   }, []);
 
+  const handleSubmit = useCallback(async () => {
+    if (isSubmitting || questions.length === 0) return;
+
+    setIsSubmitting(true);
+    if (timerRef.current) clearInterval(timerRef.current);
+
+    const res = await placementApi.submit(answers) as ApiResult<PlacementResult>;
+
+    if (res.success) {
+      setResult(res.data);
+    } else {
+      setErrorMessage(res.error.message || 'Lỗi khi chấm điểm bài thi.');
+    }
+    setIsSubmitting(false);
+  }, [isSubmitting, questions.length, answers]);
+
   // Timer countdown
   useEffect(() => {
     if (!isTimerRunning || result) return;
@@ -125,22 +141,6 @@ export default function PlacementTestPage() {
   const progressPercent = questions.length > 0 ? (answeredCount / questions.length) * 100 : 0;
   const currentQuestion = questions[currentIndex];
   const isTimeLow = timeLeft < 5 * 60; // Under 5 minutes
-
-  const handleSubmit = useCallback(async () => {
-    if (isSubmitting || questions.length === 0) return;
-
-    setIsSubmitting(true);
-    if (timerRef.current) clearInterval(timerRef.current);
-
-    const res = await placementApi.submit(answers) as ApiResult<PlacementResult>;
-
-    if (res.success) {
-      setResult(res.data);
-    } else {
-      setErrorMessage(res.error.message || 'Lỗi khi chấm điểm bài thi.');
-    }
-    setIsSubmitting(false);
-  }, [isSubmitting, questions.length, answers]);
 
   const handleGenerateRoadmapFromResult = async () => {
     if (!result) return;

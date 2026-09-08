@@ -83,6 +83,21 @@ export default function TestTakingPage() {
     };
   }, [testId]);
 
+  const handleFinalSubmit = useCallback(async () => {
+    if (isSubmitting || !test) return;
+    setIsSubmitting(true);
+    setShowConfirmModal(false);
+    if (timerRef.current) clearInterval(timerRef.current);
+
+    const timeSpentSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
+    const res = await testApi.submitAttempt(test.id, answers, timeSpentSeconds) as ApiResult<TestResultData>;
+
+    if (res.success && res.data) {
+      setResult(res.data);
+    }
+    setIsSubmitting(false);
+  }, [isSubmitting, test, answers]);
+
   useEffect(() => {
     if (isLoading || result) return;
 
@@ -111,21 +126,6 @@ export default function TestTakingPage() {
   const handleSelectOption = (questionId: string, optionId: string) => {
     setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
   };
-
-  const handleFinalSubmit = useCallback(async () => {
-    if (isSubmitting || !test) return;
-    setIsSubmitting(true);
-    setShowConfirmModal(false);
-    if (timerRef.current) clearInterval(timerRef.current);
-
-    const timeSpentSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
-    const res = await testApi.submitAttempt(test.id, answers, timeSpentSeconds) as ApiResult<TestResultData>;
-
-    if (res.success && res.data) {
-      setResult(res.data);
-    }
-    setIsSubmitting(false);
-  }, [isSubmitting, test, answers]);
 
   if (isLoading) {
     return (

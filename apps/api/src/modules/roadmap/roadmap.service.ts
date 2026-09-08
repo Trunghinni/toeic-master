@@ -239,7 +239,6 @@ export class RoadmapService {
       const progress = (week - 1) / Math.max(1, totalWeeks - 1); // 0→1 linear
       const isEarly  = progress < 0.33;
       const isMid    = progress >= 0.33 && progress < 0.75;
-      const _isLate   = progress >= 0.75;
 
       // Milestone at every MILESTONE_INTERVAL_WEEKS
       const isMilestone = week % MILESTONE_INTERVAL_WEEKS === 0;

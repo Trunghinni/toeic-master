@@ -186,8 +186,11 @@ export default function SocialCouplePage() {
       await socialApi.acceptFriendRequest(friendshipId);
       const res = await socialApi.getFriends();
       if (res.success && res.data) {
-        setFriends(res.data.friends);
-        setPending(res.data.pendingRequests);
+        setPending(res.data.pendingRequests || []);
+      }
+      const dashRes = await socialApi.getCoupleDashboard();
+      if (dashRes && dashRes.success && dashRes.data) {
+        setData(dashRes.data);
       }
     } catch (err) {
       console.error('Failed to accept friend request', err);

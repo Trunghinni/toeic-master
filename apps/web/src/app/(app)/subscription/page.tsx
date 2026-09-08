@@ -13,8 +13,16 @@ import {
 } from 'lucide-react';
 import { subscriptionApi } from '@/lib/api-client';
 
+interface SubscriptionData {
+  tier: string;
+  aiGradingsLimit: number;
+  aiGradingsUsed: number;
+  testAttemptsLimit: number;
+  testAttemptsUsed: number;
+}
+
 export default function SubscriptionPage() {
-  const [currentSub, setCurrentSub] = useState<Record<string, unknown> | null>(null);
+  const [currentSub, setCurrentSub] = useState<SubscriptionData | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<'PRO_MONTHLY' | 'COUPLE_VIP_YEARLY'>('COUPLE_VIP_YEARLY');
   const [paymentMethod, setPaymentMethod] = useState<'VNPAY' | 'STRIPE' | 'MOMO'>('VNPAY');
   const [processing, setProcessing] = useState(false);
@@ -25,7 +33,7 @@ export default function SubscriptionPage() {
       try {
         const res = await subscriptionApi.getMySubscription();
         if (res.success && res.data) {
-          setCurrentSub(res.data);
+          setCurrentSub(res.data as unknown as SubscriptionData);
         }
       } catch (err) {
         console.error('Failed to load subscription info', err);
@@ -48,7 +56,7 @@ export default function SubscriptionPage() {
         setSuccessMsg(res.data.message);
         // Refresh sub info
         const updated = await subscriptionApi.getMySubscription();
-        if (updated.success) setCurrentSub(updated.data);
+        if (updated.success) setCurrentSub(updated.data as unknown as SubscriptionData);
       }
     } catch (err: unknown) {
       alert(err instanceof Error ? err.message : 'Lỗi thanh toán');
