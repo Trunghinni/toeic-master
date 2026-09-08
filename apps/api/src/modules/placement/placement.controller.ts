@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, HttpCode, HttpStatus, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
-import { IsObject, IsString } from 'class-validator';
+import { IsObject } from 'class-validator';
 
 import { PlacementService } from './placement.service';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';

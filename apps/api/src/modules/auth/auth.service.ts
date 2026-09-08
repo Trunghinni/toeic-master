@@ -3,7 +3,6 @@ import {
   ConflictException,
   UnauthorizedException,
   BadRequestException,
-  NotFoundException,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
@@ -237,7 +236,7 @@ export class AuthService {
     return { message: 'If that email exists, a reset link has been sent' };
   }
 
-  async resetPassword(token: string, newPassword: string) {
+  async resetPassword(_token: string, _newPassword: string) {
     // TODO Phase 2: look up token from DB, verify TTL, hash + update password
     throw new BadRequestException('Password reset via email not yet implemented — Phase 2');
   }

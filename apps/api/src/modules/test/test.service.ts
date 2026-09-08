@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../../common/prisma/prisma.service';
-import { SEED_TESTS, TestSeedQuestion } from './test.data';
+import { SEED_TESTS } from './test.data';
 
 export interface SubmitTestResult {
   attemptId: string;

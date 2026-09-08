@@ -63,9 +63,9 @@ export class SpeakingWritingService {
       : 0.8;
 
     // Pronunciation & Fluency Rubrics (0 - 100)
-    let pronunciationScore = Math.min(95, Math.max(50, Math.round(70 + keywordRatio * 25)));
-    let fluencyScore = Math.min(95, Math.max(50, Math.round(65 + Math.min(wpm / 130, 1) * 30)));
-    let intonationScore = Math.min(95, Math.max(50, Math.round(70 + (words.length > 20 ? 20 : 5))));
+    const pronunciationScore = Math.min(95, Math.max(50, Math.round(70 + keywordRatio * 25)));
+    const fluencyScore = Math.min(95, Math.max(50, Math.round(65 + Math.min(wpm / 130, 1) * 30)));
+    const intonationScore = Math.min(95, Math.max(50, Math.round(70 + (words.length > 20 ? 20 : 5))));
 
     // Calculate TOEIC Speaking Scaled Score (0 - 200, rounded to nearest 10)
     const compositePercent = (pronunciationScore * 0.4 + fluencyScore * 0.35 + intonationScore * 0.25) / 100;
@@ -119,7 +119,7 @@ export class SpeakingWritingService {
     const wordCount = words.length;
 
     // Check given words for Picture Sentence
-    let missingGivenWords: string[] = [];
+    const missingGivenWords: string[] = [];
     if (prompt.givenWords) {
       prompt.givenWords.forEach((gw) => {
         if (!cleanText.toLowerCase().includes(gw.toLowerCase())) {
@@ -129,7 +129,7 @@ export class SpeakingWritingService {
     }
 
     // Rubric Scoring (0 - 50 each, total 0 - 200)
-    let grammarScore = 38;
+    const grammarScore = 38;
     let vocabScore = 37;
     let organizationScore = 38;
     let relevanceScore = 40;

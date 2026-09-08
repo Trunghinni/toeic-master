@@ -1,6 +1,6 @@
-import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../common/prisma/prisma.service';
-import { UserRole, SubscriptionTier } from '@prisma/client';
+import { Prisma, UserRole } from '@prisma/client';
 
 @Injectable()
 export class AdminService {
@@ -45,7 +45,7 @@ export class AdminService {
   async getUsers(page: number = 1, limit: number = 20, search?: string) {
     const skip = (page - 1) * limit;
 
-    const where: any = {};
+    const where: Prisma.UserWhereInput = {};
     if (search && search.trim()) {
       where.OR = [
         { email: { contains: search.trim(), mode: 'insensitive' } },

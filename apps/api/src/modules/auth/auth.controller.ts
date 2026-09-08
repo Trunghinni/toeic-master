@@ -3,7 +3,6 @@ import {
   Post,
   Body,
   Res,
-  Req,
   HttpCode,
   HttpStatus,
   UseGuards,
@@ -17,7 +16,7 @@ import {
   ApiCookieAuth,
 } from '@nestjs/swagger';
 import { IsEmail, IsString, MinLength, MaxLength, Matches } from 'class-validator';
-import { Response, Request } from 'express';
+import { Response } from 'express';
 import { ConfigService } from '@nestjs/config';
 
 import { AuthService } from './auth.service';
