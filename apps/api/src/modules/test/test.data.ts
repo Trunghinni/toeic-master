@@ -12,7 +12,7 @@ export interface TestSeedItem {
   id: string;
   title: string;
   description: string;
-  mode: 'PRACTICE' | 'MOCK_TEST';
+  mode: 'PRACTICE' | 'MINI_TEST' | 'FULL_TEST';
   durationMins: number;
   totalQuestions: number;
   parts: ('PART_1' | 'PART_2' | 'PART_3' | 'PART_4' | 'PART_5' | 'PART_6' | 'PART_7')[];
@@ -24,7 +24,7 @@ export const SEED_TESTS: TestSeedItem[] = [
     id: 'test_mini_01',
     title: 'TOEIC Mini-Test 01 (30 Questions)',
     description: 'Đề thi rút gọn 30 câu kiểm tra nhanh 7 Part TOEIC — thời gian 25 phút',
-    mode: 'PRACTICE',
+    mode: 'MINI_TEST',
     durationMins: 25,
     totalQuestions: 15,
     parts: ['PART_1', 'PART_2', 'PART_5', 'PART_6', 'PART_7'],
@@ -236,7 +236,7 @@ export const SEED_TESTS: TestSeedItem[] = [
     id: 'test_full_01',
     title: 'TOEIC Full Practice Test (Standard 120-min)',
     description: 'Đề thi mô phỏng chuẩn format ETS với đầy đủ phần Listening (Part 1-4) và Reading (Part 5-7)',
-    mode: 'MOCK_TEST',
+    mode: 'FULL_TEST',
     durationMins: 120,
     totalQuestions: 200,
     parts: ['PART_1', 'PART_2', 'PART_3', 'PART_4', 'PART_5', 'PART_6', 'PART_7'],
