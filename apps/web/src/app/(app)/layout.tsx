@@ -56,6 +56,12 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     };
   }, [isHydrated, setAuth, setHydrated]);
 
+  useEffect(() => {
+    if (isHydrated && !user) {
+      router.replace('/login');
+    }
+  }, [isHydrated, user, router]);
+
   const handleLogout = async () => {
     try {
       await authApi.logout();
@@ -76,6 +82,19 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     { href: '/writing', label: 'Luyện viết', icon: PenTool },
     { href: '/social', label: 'Góc đôi 💕', icon: Heart, isSpecial: true },
   ];
+
+  if (!isHydrated || !user) {
+    return (
+      <div className="min-h-screen bg-pastel-gradient flex flex-col items-center justify-center p-4">
+        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-400 to-indigo-400 flex items-center justify-center text-white text-2xl shadow-md animate-pulse mb-4">
+          🌸
+        </div>
+        <p className="text-sm font-semibold text-[#3F3355]">
+          {!isHydrated ? 'Đang khởi tạo phiên học... 🌸' : 'Đang chuyển hướng tới trang đăng nhập...'}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-pastel-gradient flex flex-col selection:bg-pink-200 selection:text-rose-900 text-[#3F3355]">

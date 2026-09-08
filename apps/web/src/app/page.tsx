@@ -57,12 +57,12 @@ export default function HomePage() {
     <div className="min-h-screen bg-pastel-gradient text-[#3F3355] selection:bg-pink-200 selection:text-rose-900 overflow-hidden">
       {/* ── Nav ────────────────────────────────────────────── */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-pink-200/60 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-rose-400 to-indigo-400 flex items-center justify-center text-white text-lg shadow-sm shadow-rose-300/40 font-bold">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-400 to-indigo-400 flex items-center justify-center text-white text-xl shadow-sm shadow-rose-300/40 font-bold">
               🌸
             </div>
-            <span className="font-extrabold text-lg tracking-tight text-gradient-brand">
+            <span className="font-extrabold text-xl tracking-tight text-gradient-brand">
               TOEIC Master
             </span>
           </div>
@@ -82,11 +82,11 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <Link
               href="/login"
-              className="btn-secondary text-sm py-2 px-4"
+              className="btn-secondary text-sm py-2.5 px-4"
             >
               Đăng nhập
             </Link>
-            <Link href="/register" className="btn-primary text-sm py-2 px-4">
+            <Link href="/register" className="btn-primary text-sm py-2.5 px-4">
               Bắt đầu miễn phí
             </Link>
           </div>
@@ -94,7 +94,7 @@ export default function HomePage() {
       </nav>
 
       {/* ── Hero ────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-36 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Background glow orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[500px] rounded-full bg-rose-200/40 blur-3xl" />
